@@ -1,13 +1,16 @@
 import React from 'react';
-
+import { useTheme } from '@/utils/provider';
+import { comp_theme } from '@/utils/variables';
 // styled components imports
 import { ButtonCont } from './styles';
 
 
-const Button = () => {
+const Button = ({txt = "default"}) => {
+  const {theme,setTheme} = useTheme()
+
   return (
-      <ButtonCont> 
-          Hello There this is the start 
+      <ButtonCont btnTxt={comp_theme[theme].mainTxt}> 
+          {txt}
       </ButtonCont>
   
   )

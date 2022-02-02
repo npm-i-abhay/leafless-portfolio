@@ -1,7 +1,14 @@
 import React from 'react';
 
-const index = () => {
-  return <div></div>;
+
+
+// styled components imports
+import { ImageCont, Image } from './styles';
+
+export const ImageContainer = () => {
+  return <ImageCont>
+      <Image src='http://placekitten.com/300/400'/>
+    </ImageCont>;
 };
 
-export default index;
+
