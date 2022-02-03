@@ -29,7 +29,7 @@ import { ProjectInfo } from '@/components/ProjectInfo'
 
 
 
-export default function Home() {
+export default function About() {
 
   const [menu,setMenu] = useState(true)
   var references = MenuReferences
@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      { references.map ((o,i)=> <Menu 
+        { references.map ((o,i)=> <Menu 
                                         key={i}
                                         rightHam={o.rightPositionChain}
                                         rightPosition={o.rightPositionChain}
@@ -54,30 +54,12 @@ export default function Home() {
                                         transLine3={o.transLine3Chain}
                                         onClick={()=> setMenu(!menu)}
                                         />)
-      }
-      <Tags  txt='<h1>'/>
-          <WelcomeHeading
-            lineOne='Hi'
-            lineTwo="I'm"
-            accentOne=' Abhay,'
-            lineThree='Front-End'
-            accentTwo=' Developer'/>
-      <Tags txt='</h1>'/>
-      
-      <Tags txt='<button>'/>
-          <MyButton/>
-      <Tags txt='</button>'/>
+        }
+        
+        <WelcomeHeading 
+            lineOne='Hello there! Nice To Meet You'/>
 
-      <MyChart/>
-
-      <Tags txt='<Img src="../'/>
-        <ImageContainer/>
-      <Tags txt='/>'/>
-      <ProjectInfo/>
-
-
-      <div style={{color:'white'}}>djbdskjadsbdsak</div>
-      <Footer/> 
+            <ImageContainer/>
 
     </Wrapper>
   )

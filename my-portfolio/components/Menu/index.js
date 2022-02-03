@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import React, {useState} from 'react';
-
+import Router from 'next/router';
 
 const MenuContainer = styled.div `
 height:${props => props.expandMenu};
@@ -18,7 +18,7 @@ transition:all .4s;
 
 
 const MenuItemsHead = styled.div `
-
+cursor:pointer;
 `
 
 
@@ -140,7 +140,7 @@ export const Menu = ({
         
 
    
-    console.log(toggle);
+
     return <MenuContainer 
             expandMenu={menuHeight}
             bgMenu = {menuBg} >
@@ -173,28 +173,28 @@ export const Menu = ({
                         showMenu = {revealMenu}
                         visibleCont ={contVisble}>
                         
-                        <div onClick = {()=> router.push("/home")}>
+                        <div onClick = {()=> router.push("/")}>
                             <MenuItemsHead>
                                 Home
                             </MenuItemsHead>
                         </div>
                         
                         
-                        <div onClick = {()=> router.push("/category")} >
+                        <div onClick = {()=> router.push("/about")} >
                             <MenuItemsHead>
                                 About
                             </MenuItemsHead>
                             
                         </div>
                             
-                        <div onClick = {()=> router.push("/subcat/organic")} >
+                        <div onClick = {()=> router.push("/work")} >
                             <MenuItemsHead> 
                                 Work
                             </MenuItemsHead>
                             
                         </div>
                             
-                        <div onClick = {()=> router.push("/subcat/inorganic")} 
+                        <div onClick = {()=> router.push("/resume")} 
                         >
                             <MenuItemsHead>
                                 Resume 

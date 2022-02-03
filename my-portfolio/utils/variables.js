@@ -29,3 +29,13 @@ export const comp_theme={
 
     }
 }
+
+export const font= {
+    link : "@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap')" ,
+    name : "'Roboto Mono', monospace"
+}
+
+export const font_two = {
+    link: "@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap')",
+    name:"'Nanum Pen Script', cursive"
+}

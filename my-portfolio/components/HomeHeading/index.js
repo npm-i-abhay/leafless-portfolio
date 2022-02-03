@@ -4,22 +4,41 @@ import { comp_theme } from '@/utils/variables';
 // styled components imports 
 import { Heading, SubHeading } from './styles';
 
-export const WelcomeHeading = () => {
+export const WelcomeHeading = (
+  {
+    lineOne="",
+    lineTwo="",
+    accentOne="",
+    accentTwo = "",
+    lineThree="",
+  }
+) => {
 const {theme,setTheme} = useTheme()
 
   return <div>
     <div>
-      <Heading headCol={comp_theme[theme].mainTxt} > Hi </Heading>
+      <Heading headCol={comp_theme[theme].mainTxt} > 
+        {lineOne} 
+      </Heading>
     </div>
     
     <div>
-      <Heading headCol={comp_theme[theme].mainTxt}> I'm</Heading>
-      <SubHeading subHeadCol={comp_theme[theme].accentTxt}> Abhay, </SubHeading>
+      <Heading headCol={comp_theme[theme].mainTxt}> 
+        {lineTwo}
+      </Heading>
+      
+      <SubHeading subHeadCol={comp_theme[theme].accentTxt}> 
+        {accentOne}
+      </SubHeading>
     </div>
     
     <div>
-      <Heading headCol={comp_theme[theme].mainTxt}> Front End </Heading>
-      <SubHeading subHeadCol={comp_theme[theme].accentTxt}>Developer </SubHeading>
+      <Heading headCol={comp_theme[theme].mainTxt}> 
+        {lineThree}
+      </Heading>
+      <SubHeading subHeadCol={comp_theme[theme].accentTxt}> 
+        {accentTwo}
+      </SubHeading>
     </div>
     
     

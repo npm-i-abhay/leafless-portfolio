@@ -5,7 +5,7 @@ import { comp_theme } from '@/utils/variables';
 import { ButtonCont } from './styles';
 
 
-const Button = ({txt = "default"}) => {
+export const MyButton = ({txt = "default"}) => {
   const {theme,setTheme} = useTheme()
 
   return (
@@ -16,4 +16,4 @@ const Button = ({txt = "default"}) => {
   )
 };
 
-export default Button;
+
