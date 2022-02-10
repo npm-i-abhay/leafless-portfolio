@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const ChartCont = styled.div`
 // height:500px;
-width:600px;
+width:65%;
 // border:2px solid red;
 `
 
 export const DataBox = styled.div`
-// border:2px solid green;
+border:2px solid green;
 height:50px;
 margin-bottom:10px;
 width:${props => props.boxWidth};

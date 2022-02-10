@@ -6,14 +6,23 @@ import { useState } from 'react'
 
 // styled components 
 const Wrapper = styled.div`
-
+height:1400px;
+display:flex;
+flex-direction:column;
+// align-items:center;
+justify-content:space-between;
+`
+const Header = styled.div`
+// border:2px solid blue;
+display:flex;
+justify-content:flex-end;
 `
 
 
 // other imports
 import { MenuReferences } from '@/props/props';
 import { MenuReferences2 } from '@/props/props';
-
+import SmoothScroll from '@/components/SmoothScroll'
 
 // Component imports
 import {MyButton} from '@/components/Button'
@@ -26,7 +35,9 @@ import { WelcomeHeading } from '@/components/HomeHeading'
 import { ImageContainer } from '@/components/ImageCard'
 import { Tags } from '@/components/Tags'
 import { ProjectInfo } from '@/components/ProjectInfo'
-
+import { Element } from '@/components/Element'
+import {HeaderHam} from '@/components/HeaderHam'
+import {Navigation} from '@/components/Navigation'
 
 
 export default function Home() {
@@ -38,23 +49,34 @@ export default function Home() {
     references = MenuReferences2
   }
 
-
+  const [toggle,setToggle] = useState(false)
+  const [hammer, setHammer]= useState(false)
   return (
     <Wrapper>
-      { references.map ((o,i)=> <Menu 
-                                        key={i}
-                                        rightHam={o.rightPositionChain}
-                                        rightPosition={o.rightPositionChain}
-                                        revealMenu={o.revealMenuChain}
-                                        menuHeight={o.menuHeightChain}
-                                        menuBg={o.menuBgChain}
-                                        contVisble={o.contVisbleChain}
-                                        transLine1={o.transLine1Chain}
-                                        transLineOp2={o.transLineOp2Chain}
-                                        transLine3={o.transLine3Chain}
-                                        onClick={()=> setMenu(!menu)}
-                                        />)
-      }
+      <Header>
+          <HeaderHam 
+            onHamClick={()=>{ 
+            setHammer(!hammer)
+            setToggle(!toggle)
+            }}
+        
+            ham={hammer} 
+            // setHam={setHammer} 
+            />
+
+      </Header>
+
+
+    <Navigation 
+    toggleMenu={toggle}  
+    setToggleMenu={setToggle}
+    myHam = {hammer}
+    hamClick={()=>
+                {
+                setHammer(!hammer)
+                setToggle(!toggle)
+                }}
+    />
       <Tags  txt='<h1>'/>
           <WelcomeHeading
             lineOne='Hi'
@@ -69,6 +91,7 @@ export default function Home() {
       <Tags txt='</button>'/>
 
       <MyChart/>
+      {/* <Element/> */}
 
       <Tags txt='<Img src="../'/>
         <ImageContainer/>
@@ -76,9 +99,8 @@ export default function Home() {
       <ProjectInfo/>
 
 
-      <div style={{color:'white'}}>djbdskjadsbdsak</div>
+      {/* <div style={{color:'white'}}>djbdskjadsbdsak</div> */}
       <Footer/> 
-
     </Wrapper>
   )
 }

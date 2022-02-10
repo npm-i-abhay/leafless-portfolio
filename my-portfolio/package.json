@@ -8,14 +8,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^8.8.1",
+    "@react-three/fiber": "^7.0.26",
     "axios": "^0.25.0",
     "chart.js": "^3.7.0",
+    "framer-motion": "^6.2.4",
+    "lerp": "^1.0.3",
     "next": "12.0.8",
     "react": "17.0.2",
     "react-chartjs-2": "^4.0.1",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "styled-components": "^5.3.3"
+    "react-spring": "^9.4.2",
+    "resize-observer-polyfill": "^1.5.1",
+    "styled-components": "^5.3.3",
+    "three": "^0.137.5"
   },
   "devDependencies": {
     "eslint": "8.7.0",
