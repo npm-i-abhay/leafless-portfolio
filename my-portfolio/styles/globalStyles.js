@@ -134,7 +134,7 @@ export const CloseNav = styled.div`
 `
 
 export const NavList = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -209,4 +209,22 @@ export const NavVideos = styled.div`
       height: 50%;
     }
   }
+`
+
+// styles for Home Page
+
+export const ChartCont = styled.div`
+// background-color:blue;
+display:flex;
+justify-content:center;
+padding:20px 0 20px 0;
+`
+
+export const IntroHeading = styled.div`
+// background-color:blue;
+display:flex;
+flex-direction:column;
+// justify-content:space-evenly;
+padding-left:30px;
+padding-bottom:20px;
 `

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { useTheme } from '@/utils/provider';
+import { comp_theme } from '@/utils/variables';
 
 import {BsGithub} from 'react-icons/bs'
 import {FiLinkedin} from 'react-icons/fi'
@@ -8,9 +9,11 @@ import {AiTwotoneMail} from 'react-icons/ai'
 
 import { FooterCont, IconContainer, QuickCont, QuickLinks, SocialCont, SocialLinks, Text } from './styles';
 
+
 export const Footer = () => {
+  const {theme} = useTheme()
   return (
-  <FooterCont>
+  <FooterCont bgCol={comp_theme[theme].footer} >
     <SocialCont>
       <Text>
         Get In Touch

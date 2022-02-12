@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from '@/utils/provider';
 import { comp_theme } from '@/utils/variables';
 // styled components imports 
-import { Heading, SubHeading } from './styles';
+import { Heading, SubHeading, HeadingCont } from './styles';
 
 export const WelcomeHeading = (
   {
@@ -15,7 +15,7 @@ export const WelcomeHeading = (
 ) => {
 const {theme,setTheme} = useTheme()
 
-  return <div>
+  return <HeadingCont>
     <div>
       <Heading headCol={comp_theme[theme].mainTxt} > 
         {lineOne} 
@@ -42,7 +42,7 @@ const {theme,setTheme} = useTheme()
     </div>
     
     
-  </div>;
+  </HeadingCont>;
 };
 
 

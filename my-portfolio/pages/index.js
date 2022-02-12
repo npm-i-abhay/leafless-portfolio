@@ -6,11 +6,12 @@ import { useState } from 'react'
 
 // styled components 
 const Wrapper = styled.div`
-height:1400px;
+height:100%;
 display:flex;
 flex-direction:column;
 // align-items:center;
 justify-content:space-between;
+overflow:hidden;
 `
 const Header = styled.div`
 // border:2px solid blue;
@@ -18,9 +19,15 @@ display:flex;
 justify-content:flex-end;
 `
 
+import { 
+  ChartCont,
+  IntroHeading
+
+} from '@/styles/globalStyles'
+
 
 // other imports
-import { MenuReferences } from '@/props/props';
+import { info, MenuReferences } from '@/props/props';
 import { MenuReferences2 } from '@/props/props';
 import SmoothScroll from '@/components/SmoothScroll'
 
@@ -41,6 +48,30 @@ import {Navigation} from '@/components/Navigation'
 
 
 export default function Home() {
+
+const techStackOne= 
+[  
+  '/tech/react.png',
+  '/tech/javascript.png',
+  '/tech/php.png',
+  '/tech/expo.png',
+  '/tech/styled.png',
+  '/tech/next.png',
+  '/tech/node.png',
+  '/tech/npm.png',
+]
+const techStackTwo= 
+[  
+  '/tech/react.png',
+  '/tech/javascript.png',
+  '/tech/styled.png',
+  '/tech/next.png',
+  '/tech/node.png',
+  '/tech/npm.png',
+  '/tech/story.png',
+]
+
+
 
   const [menu,setMenu] = useState(true)
   var references = MenuReferences
@@ -77,6 +108,9 @@ export default function Home() {
                 setToggle(!toggle)
                 }}
     />
+    <IntroHeading>
+
+    
       <Tags  txt='<h1>'/>
           <WelcomeHeading
             lineOne='Hi'
@@ -89,14 +123,32 @@ export default function Home() {
       <Tags txt='<button>'/>
           <MyButton/>
       <Tags txt='</button>'/>
-
-      <MyChart/>
-      {/* <Element/> */}
+      
+      </IntroHeading>
+      
+      <ChartCont>
+        <MyChart/>
+      </ChartCont>
 
       <Tags txt='<Img src="../'/>
-        <ImageContainer/>
+        <ProjectInfo
+          stackData={techStackOne}
+          img='/test/ss1.jpeg'
+          description={info.buzzyBee}
+       
+          />
       <Tags txt='/>'/>
-      <ProjectInfo/>
+
+      <Tags txt='<Img src="../'/>
+        <ProjectInfo
+          stackData={techStackTwo}
+          order={-1}
+          img='/test/ss3.jpeg'
+          description={info.buzzyBee}
+          
+          />
+      <Tags txt='/>'/>
+
 
 
       {/* <div style={{color:'white'}}>djbdskjadsbdsak</div> */}

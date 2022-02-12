@@ -5,10 +5,13 @@ import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 
 // styled components 
-const Wrapper = styled.div`
-display:flex;
-flex-direction:column;
-`
+// const Wrapper = styled.div`
+// display:flex;
+// flex-direction:column;
+// `
+
+import { Wrapper, HeroContainer, AboutContent, CarouselCont } from '@/styles/aboutStyles'
+
 const aboutMe = 'My name is Abhay Bakshi (ub-hey). I’m a full stack developer and designer specializing in streamlined interactive development. I have a keen interest in building engaging solutions that helps communities across the globe. I’m a consistent learner and I aspire to augument digital experiences '
 
 // other imports
@@ -21,11 +24,9 @@ import {MyButton} from '@/components/Button'
 import {Hamburger} from '@/components/Hamburger'
 import { Carousel } from '@/components/Caraousel'
 import { Footer } from '@/components/Footer'
-import { Menu } from '@/components/Menu'
 import { WelcomeHeading } from '@/components/HomeHeading'
 import { ImageContainer } from '@/components/ImageCard'
 import { Tags } from '@/components/Tags'
-import { ProjectInfo } from '@/components/ProjectInfo'
 import { AboutMe } from '@/components/AboutMe'
 import { HeaderHam } from '@/components/HeaderHam'
 import { Navigation } from '@/components/Navigation'
@@ -80,12 +81,26 @@ const [hammer, setHammer]= useState(false)
                 setToggle(!toggle)
                 }}
     />
-        <WelcomeHeading 
-            lineOne='Hello there! Nice To Meet You'/>
+    <WelcomeHeading lineOne='Hello there! Nice To Meet You'/>
+    <HeroContainer>
 
-            <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
-            <AboutMe txt={aboutMe}/>
+              
+
+                <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
+
+            <AboutContent>
+                <AboutMe txt={aboutMe}/>
+                <AboutMe txt={aboutMe}/>
+            </AboutContent>
+
+    </HeroContainer>
+        
+
+            <CarouselCont>
+
             <Carousel dim={ 40 } imgData={imgData} />
+            </CarouselCont>
+            <Footer/>
     </Wrapper>
   )
 }

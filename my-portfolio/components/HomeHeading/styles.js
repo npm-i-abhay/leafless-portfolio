@@ -15,6 +15,7 @@ font-family: 'Roboto Mono', monospace;
 font-size:36px;
 font-weight:400;
 color:${props => props.subHeadCol};
-
-
+`
+export const HeadingCont = styled.div`
+padding:10px;
 `

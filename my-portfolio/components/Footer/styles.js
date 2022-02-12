@@ -4,10 +4,11 @@ export const FooterCont = styled.div`
 display:flex;
 // align-items:flex-start;
 flex-direction:column;
-border:2px solid white;
+// border:2px solid white;
 padding:10px;
-height:100px;
-justify-content:space-between;
+height:300px;
+background-color:${props => props.bgCol};
+justify-content:space-around;
 `
 
 export const SocialCont = styled.div`
@@ -19,7 +20,7 @@ export const SocialLinks = styled.div`
 width:70%;
 display:flex;
 justify-content:space-around;
-border:2px solid red;
+// border:2px solid red;
 `
 export const QuickCont = styled.div`
 display:flex;

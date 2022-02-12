@@ -7,6 +7,7 @@ import { comp_theme } from '@/utils/variables';
 const Container = styled.div`
 color:${props=>props.txtCol};
 width:50%;
+margin:10px;
 `
 
 export const AboutMe = ({txt=""}) => {

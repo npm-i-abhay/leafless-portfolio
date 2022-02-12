@@ -4,6 +4,8 @@ import { comp_theme } from '@/utils/variables';
 
 // component imports 
 import { MyButton } from '../Button';
+import { ImageContainer } from '../ImageCard';
+
 
 // styled components imports
 import { 
@@ -11,27 +13,42 @@ import {
     Description, 
     StackCont, 
     TechStack,
-    Explore 
+    Explore,
+    ContentCont,
+    
 } from './styles';
 
 export const ProjectInfo = ({
     description="some paragraph",
-    imgUrl="https://placekitten.com/50/50"
-
-
+    stackData=[
+        "https://placekitten.com/100/100",
+        "https://placekitten.com/100/100",
+        "https://placekitten.com/100/100",
+        "https://placekitten.com/100/100",
+    ],
+    img,
+    order=0,
+    radius='5px'
 }) => {
     
     const { theme, setTheme} = useTheme()
     
   return (
-      <InfoContainer>
-            <Description txtCol={comp_theme[theme].mainTxt}> 
-                {description}
-            </Description>
-            <StackCont> 
-                <TechStack src={imgUrl}/>
-            </StackCont>
-            <MyButton txt='Explore'/>
-      </InfoContainer>
+        <InfoContainer>
+            <ImageContainer imgUrl={img}/>
+            
+            <ContentCont order={order}>
+                
+                <Description txtCol={comp_theme[theme].mainTxt}> 
+                    {description}
+                </Description>
+                <StackCont> 
+                    {stackData.map((o,i)=>(<TechStack key={i} radius={radius} src={o}/>))}
+                </StackCont>
+                <MyButton txt='Explore'/>
+                
+            </ContentCont>
+
+        </InfoContainer>
   );
 };

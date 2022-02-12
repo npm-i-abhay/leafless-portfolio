@@ -6,4 +6,5 @@ export const TaggedCont = styled.div`
 color:#3e92cc;
 ${font_two.link}
 font-family: ${font_two.name};
+padding:10px;
 `

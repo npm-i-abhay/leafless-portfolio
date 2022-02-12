@@ -21,9 +21,11 @@ import { CarouselVerticle } from '@/components/CarouselVerticle';
 const Header = styled.div`
 display:flex;
 justify-content:flex-end;
-border:2px solid red;
+// border:2px solid red;
 width:87vw;
 `
+
+
 const links =[
     {
         id:0,
@@ -62,6 +64,15 @@ export default function Work  (
         video:"",
         key:0
     })
+    const [sWidth, setSwidth] = useState(0)
+
+useEffect(()=>{
+
+ window.onresize=()=>{setSwidth(window.innerWidth)}
+ console.log(sWidth)
+},[sWidth])
+// useEffect updating the the state of in real time as the window resizes to dynamically show components
+
 
 const newData = [
   "/test/Col1.jpeg",
@@ -102,17 +113,17 @@ const [data, setData] = useState("")
                 </Header>
 
                 <Navigation toggleMenu={toggle}  
-    setToggleMenu={setToggle}
-    myHam = {hammer}
-    hamClick={()=>
-                {
-                setHammer(!hammer)
-                setToggle(!toggle)
-                }}/>
+                    setToggleMenu={setToggle}
+                    myHam = {hammer}
+                    hamClick={()=>
+                            {
+                            setHammer(!hammer)
+                            setToggle(!toggle)
+                            }}/>
             </Flex>
         </NavHeader>
+    {sWidth >= 800?
         <NavList>
-
 
         <motion.div 
             onHoverStart={()=> {  
@@ -121,7 +132,7 @@ const [data, setData] = useState("")
             onHoverEnd={()=> setReveal({
             show: false,
             })}
->
+        >
             <CarouselVerticle 
                 // onClick={handleSource}
                 dim={250} 
@@ -131,9 +142,9 @@ const [data, setData] = useState("")
                 data={data}
                 setData={setData} />
         </motion.div>
-{/* add a filtering algorithim to filter our the projects based on categories */}
 
         </NavList>
+:null}
         <NavVideos  >
             <motion.div 
                 className='reveal'

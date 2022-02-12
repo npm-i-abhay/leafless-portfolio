@@ -89,7 +89,7 @@ export const CarouselVerticle = ({
     }
     if (i>imgData.length-1)
     {
-      i = imgData.length-1
+      i = 0
     }
 
     setIndex(i)
@@ -114,22 +114,22 @@ export const CarouselVerticle = ({
             // console.log(data)
           // onClick={()=> setIndex(i)}
           //changes the image size for card not in focus 
-          dim = {i=== index?dim : dim-90}
+          dim = {i=== index?dim : dim-120}
           //changes the opacity for card not in focus 
           op = {i===index? 1 : .5}
           z={i===index? imgData.length+1 : imgData - 1}
           // topOne={i*(dim +50)}
-          top={i*(dim -70)-200}
+          top={i*(dim -100)-300}
           src={o} 
           key={i}/>)}
       </CardWrapper>
     </CardCont>
 
 
-    <Controls > 
+    {/* <Controls > 
         <CtrlButton onClick={()=> handleCarousel(index-1)}>P</CtrlButton>
         <CtrlButton onClick={()=> handleCarousel(index+1)}>N</CtrlButton>
-    </Controls>
+    </Controls> */}
 
   </Cont>;
 };

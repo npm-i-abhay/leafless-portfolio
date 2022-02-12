@@ -1,40 +1,13 @@
-
-export const MenuReferences = 
-[
-    {
-      
-        rightPositionChain: "0",
-        contVisbleChain: "hidden",
-        revealMenuChain: "flex",
-        menuHeightChain: "10vh",
-        bgColorTrackChain: "#5EBA92",
-        hideIconsChain: 1,
-        bgColorCont: "#5EBA9250",
-        toggleChain: false,
-        menuBgChain: "",
-        buttonBg: "#70B794",
-        transLine1Chain: "rotate(0deg) translate(0,0)",
-        transLineOp2Chain: "1",
-        transLine3Chain: "rotate(0deg) translate(0,0)",   
-    }
+export const data = [
+    {title:'JavaScript', width:"100%"},
+    {title:'React', width:"80%"},
+    {title:'ReactNative', width:"75%"},
+    {title:'HTML', width:"100%"},
+    {title:'CSS', width:"100%"},
 ]
 
-export const MenuReferences2 = 
-[
-    {
-        rightPositionChain: "0",
-        contVisbleChain: "visible",
-        revealMenuChain: "flex",
-        menuHeightChain: "100vh",
-        hideIconsChain: 0,
-        bgColorCont: "#5EBA9250",
-        toggleChain: false,
-        menuBgChain: "#8B3AF3",
-        transLine1Chain: "rotate(405deg) translate(12px, 6px)",
-        transLineOp2Chain: "0",
-        transLine3Chain: "rotate(-405deg) translate(11px, -6px)",   
-       
-        
-    
-    }
-]
+export const info={
+    buzzyBee:`Buzzy Bee is a native organizer application that fetches data from the school’s portal (mocked) and automatically adds the student’s course schedule to the built in calendar.
+    The user can:
+    create groups and the app will compare members’ schedules and provide the user with times when everyone is available.create tasks ( Personal, Academic, Group) and add them to the built-in calendar. `
+}
