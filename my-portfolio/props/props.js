@@ -11,3 +11,10 @@ export const info={
     The user can:
     create groups and the app will compare members’ schedules and provide the user with times when everyone is available.create tasks ( Personal, Academic, Group) and add them to the built-in calendar. `
 }
+
+export const buzzDesign =[
+"/caseStudies/buzzy/buzzLow.png",
+"/caseStudies/buzzy/buzzHigh1.png",
+"/caseStudies/buzzy/buzzHigh2.png",
+
+]

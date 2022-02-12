@@ -24,3 +24,13 @@ font-size: 10rem;
     font-size: 6rem;
   }
 `
+
+export const HeroContainer= styled.div`
+display:flex;
+// border:2px solid green;
+justify-content:space-around;
+@media (max-width: 500px) {
+  flex-direction:column;
+  align-items:center;
+}
+`

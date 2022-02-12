@@ -29,7 +29,7 @@ export const MyChart = () => {
 const {theme,setTheme} = useTheme()
   return (
     <ChartCont>
-      {data.map((o,i)=>(<SkillCont col={comp_theme[theme].mainTxt} >
+      {data.map((o,i)=>(<SkillCont key={i} col={comp_theme[theme].mainTxt} >
                         <SkillName> {o.title} </SkillName>
                         <DataBox
                           key={i}

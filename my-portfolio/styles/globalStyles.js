@@ -2,8 +2,9 @@ import styled, { css } from "styled-components"
 import { motion } from "framer-motion"
 export const Container = styled.div`
   flex-grow: 1;
-  margin: 0 auto;
-  padding: 0 32px;
+  // margin: 0 auto;
+  left:0;
+  padding: 0 12px;
   position: relative;
   width: auto;
   height: 100%;
@@ -101,7 +102,7 @@ export const MainCont = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: block;
-  background: #133F73;
+  background: ${props=>props.bgCol};
   color: #000;
   z-index: 100;
   overflow: hidden;
@@ -138,6 +139,8 @@ export const NavList = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  left:0;
+  // background:yellow;
   ul {
     padding: 0;
     li {
@@ -192,7 +195,7 @@ export const NavVideos = styled.div`
   background: #000;
   .reveal {
     width: 50%;
-    background: #8B3AF3;
+    background: ${props=>props.bgReveal};
     position: absolute;
     top: 0;
     bottom: 0;

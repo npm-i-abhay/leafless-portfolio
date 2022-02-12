@@ -2,6 +2,11 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 
+import { MyButton } from '@/components/Button';
+import { comp_theme } from '@/utils/variables';
+import { useTheme } from '@/utils/provider';
+
+
 const Cont = styled.div`
 display:inline-flex;
 flex-direction:column;
@@ -18,6 +23,8 @@ overflow:hidden;
 // justify-content:center;
 // border:5px solid yellow;
 // padding:5px;
+transition:all 1s;
+
 `
 
 const CardWrapper = styled.div`
@@ -42,6 +49,8 @@ opacity:${props => props.op};
 margin-top:1.5em;
 justify-content:space-between;
 transition: all .5s;
+box-shadow:${props=>props.shadow};
+
 `
 
 const Controls = styled.div`
@@ -51,7 +60,13 @@ justify-content:space-between;
 width:25%;
 `
 
-const CtrlButton = styled.button``
+
+const CtrlButton = styled.button`
+position:absolute;
+z-index:1;
+width:200px;
+margin:10px;
+`
 
 
 const default_data = 
@@ -76,6 +91,7 @@ export const CarouselVerticle = ({
   onClick=()=>{}
 }) => {
 
+  const {theme,setTheme} = useTheme()
   // when index is 0 left=0, when index is 1, left = -100, index is 2 left is -200 and so on........ 
   // const [index, setIndex] = useState(0)
   const [left, setLeft] = useState(0)
@@ -105,14 +121,14 @@ export const CarouselVerticle = ({
       
        top={index * -50}>
           {imgData.map ((o,i)=>
-          <Card
+// (      <div style={{backgroundColor:'red',height:'100%',display:'flex',flexDirection:'column'}}>    
+        // <CtrlButton/>
+        <Card
           onMouseOver={()=> {
             setIndex(i)
             setData(o)
           }}
           onClick={onClick}
-            // console.log(data)
-          // onClick={()=> setIndex(i)}
           //changes the image size for card not in focus 
           dim = {i=== index?dim : dim-120}
           //changes the opacity for card not in focus 
@@ -121,7 +137,13 @@ export const CarouselVerticle = ({
           // topOne={i*(dim +50)}
           top={i*(dim -100)-300}
           src={o} 
-          key={i}/>)}
+          key={i}
+          shadow={i===index?`-0px -5px 50px ${comp_theme[theme].accentTxt}`:null}
+          />
+          
+          // </div>)
+          )}
+          
       </CardWrapper>
     </CardCont>
 
