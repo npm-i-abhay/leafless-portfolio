@@ -16,7 +16,8 @@ export const comp_theme={
         chart:'#8B3AF3',
         footer:'#242424',
         mainTxt:'#D8D8F6',
-        accentTxt:'#F2422B'
+        accentTxt:'#F2422B',
+        buzzTxt:'#94BDD4'
     },
     light:{
         menu:'#8B3AF3',
@@ -24,7 +25,8 @@ export const comp_theme={
         chart:'#8B3AF3',
         footer:'#0D0D0D',
         mainTxt:'#0D0D0D',
-        accentTxt:'#F2422B'
+        accentTxt:'#F2422B',
+        buzzTxt:'#3D5A80'
 
 
     }

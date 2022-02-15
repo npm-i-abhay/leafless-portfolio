@@ -34,3 +34,10 @@ justify-content:space-around;
   align-items:center;
 }
 `
+export const AnimCont = styled.div`
+width:20%;
+position:absolute;
+top:${props=>props.top}px;
+left:${props=>props.left}px;
+transition:all .5s;
+`

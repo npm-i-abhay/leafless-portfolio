@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Main.module.css'
 import styled from 'styled-components'
 import { useState } from 'react'
-
+import { LottieControl } from '@/components/ScrollAnimation'
 // styled components 
 const Wrapper = styled.div`
 height:100%;
@@ -109,8 +109,8 @@ const techStackTwo=
                 }}
     />
     <IntroHeading>
-
     
+    <LottieControl/>
       <Tags  txt='<h1>'/>
           <WelcomeHeading
             lineOne='Hi'
