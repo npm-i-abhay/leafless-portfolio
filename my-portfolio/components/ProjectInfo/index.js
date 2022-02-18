@@ -28,7 +28,9 @@ export const ProjectInfo = ({
     ],
     img,
     order=0,
-    radius='5px'
+    radius='5px',
+    onButtClick=()=>{}
+
 }) => {
     
     const { theme, setTheme} = useTheme()
@@ -45,7 +47,10 @@ export const ProjectInfo = ({
                 <StackCont> 
                     {stackData.map((o,i)=>(<TechStack key={i} radius={radius} src={o}/>))}
                 </StackCont>
-                <MyButton txt='Explore'/>
+                <MyButton 
+                    txt='Explore'
+                    onButtClick={onButtClick}
+                    />
                 
             </ContentCont>
 

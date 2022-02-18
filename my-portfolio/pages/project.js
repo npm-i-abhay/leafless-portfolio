@@ -67,20 +67,27 @@ const themer = comp_theme[theme]
 const [top, setScrollTop]=useState(0)
 const [animTop,setAnimTop] = useState(0)
 const [animLeft,setAnimLeft] = useState(0)
+const [sWidth, setSwidth] = useState(0)
 
 useEffect(()=>{
+    
+        setSwidth(window.innerWidth)
+    window.onresize=()=>{setSwidth(window.innerWidth)}
+    console.log(sWidth)
+      // detecting when the screen resizes
+
 window.onscroll = ()=>{
 
     setScrollTop(window.scrollY)
     setAnimTop(window.scrollY)
     setTimeout(()=>{
 
-        setAnimLeft(Math.floor((Math.random() * 1000) + 1))
-
+        setAnimLeft(Math.floor((Math.random() * sWidth >=700? 1000:200) + 1))
+        // setting the left position of the animation based on the current screen size
     },2000)
     console.log(animTop)
 }
-},[animTop])
+},[animTop, sWidth])
   return (
     <Wrapper>
 
@@ -108,7 +115,7 @@ window.onscroll = ()=>{
     <AnimCont
         top={animTop}
         left={animLeft}>
-        <Animation/>
+        <Animation path='/animation/bee.json'/>
     </AnimCont>
 
     <ProjectHeading

@@ -11,4 +11,10 @@ color:${props=>props.txtCol};
 font-size:28px;
 text-align:center;
 width:60%;
+@media (max-width: 500px) {
+    font-size:18px;
+    width:90%;
+    text-align:center;
+
+}
 `

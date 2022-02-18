@@ -219,6 +219,8 @@ export const NavVideos = styled.div`
 export const ChartCont = styled.div`
 // background-color:blue;
 display:flex;
+width:50%;
+height:50%;
 justify-content:center;
 padding:20px 0 20px 0;
 `

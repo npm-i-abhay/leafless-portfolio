@@ -8,6 +8,9 @@ const Container = styled.div`
 color:${props=>props.txtCol};
 width:50%;
 margin:10px;
+@media (max-width: 600px) {
+  width:90%;
+}
 `
 
 export const AboutMe = ({txt=""}) => {

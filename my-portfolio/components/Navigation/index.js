@@ -11,29 +11,6 @@ import { HeaderHam} from '../HeaderHam';
 import { Container, Flex } from '@/styles/globalStyles';
 import { Nav, NavHeader,CloseNav, NavList, NavVideos, HamIconCont } from './styles';
 
-// const links =[
-//     {
-//         id:0,
-//         title:"Home",
-//         link:'/'
-//     },
-//     {
-//         id:1,
-//         title:"About",
-//         link:'/about'
-//     },
-//     {
-//         id:2,
-//         title:"Work",
-//         link:'/work'
-//     },
-//     {
-//         id:4,
-//         title:"Resume",
-//         link:'/resume'
-//     },
-// ]
-
 export const Navigation = (
     {
     toggleMenu,
@@ -65,6 +42,8 @@ export const Navigation = (
     
     ) => {
     const r =useRouter()
+
+    console.log(r)
     const [reveal,setReveal] = useState({
         show:false,
         video:"",
@@ -84,34 +63,14 @@ export const Navigation = (
         >
     <Container>
         <NavHeader>
-            
-                {/* <h2> Projects</h2> */}
-        
-
                 <HeaderHam
                     ham={myHam}
-                    onHamClick={hamClick}/>
-            
-                    
-            
-        
+                    onHamClick={hamClick}/>       
         </NavHeader>
         <NavList  linkCol={comp_theme[theme].mainTxt}>
             <ul>
                 {links.map((o,i)=> (<motion.li
                                         key={i}
-                                        onHoverStart={()=> {
-                                            setReveal({
-                                            show: true,
-                                            key: o.id
-                                        })
-                                        console.log(reveal.show)
-                                    }}
-                                        onHoverEnd={()=> setReveal({
-                                            show: false,
-                                            key: o.id
-                                        })}
-                                        
                                         >
                     <motion.div 
                         className='link'
@@ -119,7 +78,7 @@ export const Navigation = (
                         whileHover={{x:-40}}
                         
                         >
-                    <div  onClick={()=>r.push(o.link)}>
+                    <div onClick={()=>r.push(o.link)}>
                         <span className='arrow'>
                         {
                                 <svg

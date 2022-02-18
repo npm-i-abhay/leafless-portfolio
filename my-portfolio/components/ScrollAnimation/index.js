@@ -1,9 +1,9 @@
 import * as React from "react";
 // import "./styles.css";
 import lottie from "lottie-web";
-import animationData from "@/public/animation/plant.json";
+import animationData from "@/public/animation/plants.json";
 
-export const LottieControl = () => {
+export const LottieControl = ({animData}) => {
   const lottieRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -21,7 +21,7 @@ export const LottieControl = () => {
       const scrollPosition = window.scrollY;
       const maxFrames = anim.totalFrames;
 
-      const frame = (maxFrames / 20) * (scrollPosition / (duration / 100));
+      const frame = (maxFrames / 70) * (scrollPosition / (duration / 100));
 
       anim.goToAndStop(frame, true);
     }
@@ -38,7 +38,7 @@ export const LottieControl = () => {
     };
   }, []);
 
-  return <div style={{ position: "fixed" }} ref={lottieRef}></div>;
+  return <div style={{ position: "fixed" , zIndex:-1, width:'100vw'}} ref={lottieRef}></div>;
 };
 
 

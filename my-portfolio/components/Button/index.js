@@ -7,7 +7,8 @@ import { ButtonCont, CtaButton } from './styles';
 
 export const MyButton = ({
   txt = "default",
-  width= "200px"
+  width= "200px",
+  onButtClick=()=>{}
 
 }) => {
   const {theme,setTheme} = useTheme()
@@ -15,7 +16,9 @@ export const MyButton = ({
   return (<ButtonCont>
             <CtaButton 
               width={width}
-              btnTxt={comp_theme[theme].mainTxt}> 
+              btnTxt={comp_theme[theme].mainTxt} 
+              onClick={onButtClick}
+              > 
           {txt}
       </CtaButton>
   </ButtonCont>

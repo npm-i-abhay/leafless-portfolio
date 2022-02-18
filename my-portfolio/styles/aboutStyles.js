@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-
-export const Wrapper = styled.div`
+import { motion } from 'framer-motion'
+export const Wrapper = styled(motion.div)`
 display:flex;
 flex-direction:column;
 height:100%;
@@ -9,8 +9,11 @@ height:100%;
 export const HeroContainer = styled.div`
 display:flex;
 justify-content:space-evenly;
-// background-color:red;
 flex:1;
+// // @media (max-width: 600px) {
+//     flex-direction:column;
+//     align-items:center;
+// }
 `
 
 export const AboutContent = styled.div`

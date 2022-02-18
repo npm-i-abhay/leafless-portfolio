@@ -39,5 +39,5 @@ width:20%;
 position:absolute;
 top:${props=>props.top}px;
 left:${props=>props.left}px;
-transition:all .5s;
+transition:all 3s;
 `

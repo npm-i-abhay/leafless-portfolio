@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Main.module.css'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
-
+import animationData from "@/public/animation/rock.json";
 // styled components 
 // const Wrapper = styled.div`
 // display:flex;
@@ -20,9 +20,6 @@ import { MenuReferences2 } from '@/props/props';
 
 
 // Component imports
-import {MyButton} from '@/components/Button'
-import {Hamburger} from '@/components/Hamburger'
-import { Carousel } from '@/components/Caraousel'
 import { Footer } from '@/components/Footer'
 import { WelcomeHeading } from '@/components/HomeHeading'
 import { ImageContainer } from '@/components/ImageCard'
@@ -30,7 +27,12 @@ import { Tags } from '@/components/Tags'
 import { AboutMe } from '@/components/AboutMe'
 import { HeaderHam } from '@/components/HeaderHam'
 import { Navigation } from '@/components/Navigation'
-
+import { ProjectHero } from '@/components/ProjectHero'
+import { ScrollImage } from '@/components/ScrollImage'
+import { ScrollImageTwo } from '@/components/ScrollImageTwo'
+import { Animation } from '@/components/Animation'
+import { LottieControl } from '@/components/ScrollAnimation'
+import { RockControl } from '@/components/RockScrollAnimation'
 
 const Header = styled.div`
 display:flex;
@@ -48,16 +50,54 @@ export default function About() {
   if (menu === false) {
     references = MenuReferences2
   }
-const imgData = [
-  "/about/bcfs.png",
-  "/about/personal1.png",
+const imgData = 
+[
   "/about/sa1.jpeg",
   "/about/sa2.jpeg",
 ]
+const imgData2 = 
+[
+  "/about/bcfs.png",
+  "/about/personal1.png",
+]
+const imgData3 = 
+[
+  "/about/music2.jpeg",
+  "/about/synth.png",
+]
 const [toggle,setToggle] = useState(false)
 const [hammer, setHammer]= useState(false)
+const [left,setLeft] = useState(-1000)
+const [sWidth, setSwidth] = useState(0)
+const [desk, setDesk] = useState(true)
+
+useEffect(()=>{
+  setSwidth(window.innerWidth)
+window.onresize=()=>{setSwidth(window.innerWidth)}
+// detecting when the screen resizes
+},[sWidth])
+
+const variants = {
+  hidden:{
+    x:-1000
+  },
+  visible:{
+    x: 0,
+    transition:{
+      duration:.5, type:'spring', stiffness:50
+    }
+  }
+}
+
+// varients allows us to
+// 1) organize the code a bit better
+// 2) pass the name of the parent motion container's initial=''hidden and animate='visible' down to each and every motion children within that container so we don't have to specify those 2 lines again as long as the children's variant's key's are the same 
+
   return (
-    <Wrapper>
+    <Wrapper
+    variants={variants}
+    initial='hidden'
+    animate='visible'>
       <Header>
 
         <HeaderHam 
@@ -71,36 +111,58 @@ const [hammer, setHammer]= useState(false)
             />
       </Header>
 
-    <Navigation 
-    toggleMenu={toggle}  
-    setToggleMenu={setToggle}
-    myHam = {hammer}
-    hamClick={()=>
-                {
-                setHammer(!hammer)
-                setToggle(!toggle)
-                }}
-    />
-    <WelcomeHeading lineOne='Hello there! Nice To Meet You'/>
-    <HeroContainer>
+      <Navigation 
+      toggleMenu={toggle}  
+      setToggleMenu={setToggle}
+      myHam = {hammer}
+      hamClick={()=>
+                  {
+                  setHammer(!hammer)
+                  setToggle(!toggle)
+                  }}
+      />
 
               
 
-                <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
 
-            <AboutContent>
-                <AboutMe txt={aboutMe}/>
-                <AboutMe txt={aboutMe}/>
-            </AboutContent>
+      <WelcomeHeading lineOne='Hello there! Nice To Meet You'/>
+      <HeroContainer>
+      </HeroContainer>
+      { sWidth >=650 ? 
+        // checking if the screen width is
+    <>
+              <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
+              <AboutContent>
+                  <AboutMe txt={aboutMe}/>
+                  <AboutMe txt={aboutMe}/>
+              </AboutContent>
+          <ScrollImage img={imgData.map((o,i)=>(<ProjectHero src={o} />))} />
+          <ScrollImageTwo img={<Animation path='/animation/lead.json' />} />
+          <ScrollImage img={imgData2.map((o,i)=>(<ProjectHero src={o} />))} />
+          <HeroContainer>
+            <RockControl/>
+            <ProjectHero src='/about/music3.jpeg'/>
+          </HeroContainer>
+          <ScrollImage img={imgData3.map((o,i)=>(<ProjectHero src={o} />))} />
+    </>
+          
+    :
+    <>
+        <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
+              <AboutContent>
+                  <AboutMe txt={aboutMe}/>
+              </AboutContent>
 
-    </HeroContainer>
-        
-
-            <CarouselCont>
-
-            <Carousel dim={ 40 } imgData={imgData} />
-            </CarouselCont>
-            <Footer/>
+        <ScrollImage direction='column' img={ <ImageContainer/> } />
+        <ScrollImage img={<Animation path='/animation/lead.json' />} />
+        <ScrollImage direction='column' img={ <ImageContainer/> } />
+        <HeroContainer>
+            <RockControl width='100vh'/>
+            <ProjectHero src='/about/music3.jpeg'/>
+        </HeroContainer>
+    </> 
+    }
+      <Footer/>
     </Wrapper>
   )
 }
