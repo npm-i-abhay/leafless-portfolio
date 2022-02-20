@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto Mono;
 }
 
 a {
@@ -13,4 +15,32 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.change{
+  font-family: 'Marck Script';
+}
+
+.SwipeContainer {
+  width: 100vw;
+  height: 50vh;
+  border:2px solid red;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 'red';
+}
+
+.container{
+  position: absolute;
+    width: 60vw;
+    height: 90vh;
+    overflow: hidden;
+    background: white;
+    border-radius: 30px;
+    top: -45vh;
+  
 }

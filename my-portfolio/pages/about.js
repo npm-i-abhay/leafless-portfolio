@@ -33,7 +33,9 @@ import { ScrollImageTwo } from '@/components/ScrollImageTwo'
 import { Animation } from '@/components/Animation'
 import { LottieControl } from '@/components/ScrollAnimation'
 import { RockControl } from '@/components/RockScrollAnimation'
-
+import  Slider  from '@/components/MobSlider'
+import { MiniCarousel } from '@/components/MiniCarousel'
+import { MobCarousel } from '@/components/MobCarousel'
 const Header = styled.div`
 display:flex;
 justify-content:flex-end;
@@ -144,6 +146,8 @@ const variants = {
             <ProjectHero src='/about/music3.jpeg'/>
           </HeroContainer>
           <ScrollImage img={imgData3.map((o,i)=>(<ProjectHero src={o} />))} />
+        {/* <Slider  /> */}
+
     </>
           
     :
@@ -160,6 +164,10 @@ const variants = {
             <RockControl width='100vh'/>
             <ProjectHero src='/about/music3.jpeg'/>
         </HeroContainer>
+        {/* <Slider  /> */}
+        <MobCarousel dim={50} />
+        <MobCarousel dim={50} />
+
     </> 
     }
       <Footer/>

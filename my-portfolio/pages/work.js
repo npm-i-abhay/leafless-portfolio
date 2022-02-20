@@ -9,23 +9,26 @@ import { HeaderHam } from '@/components/HeaderHam';
 import { Navigation } from '@/components/Navigation';
 // styled components
 import { 
-    Container, 
-    Flex, 
-    NavHeader,
-    NavList, 
-    NavVideos, 
-    MainCont } from '@/styles/globalStyles';
+    
+
+MainCont } from '@/styles/globalStyles';
 import { CarouselVerticle } from '@/components/CarouselVerticle';
 import { MyButton } from '@/components/Button';
-import { CatButts, CatCont, CatName } from '@/styles/workStyles';
+import { 
+    CatButts, 
+    CatCont, 
+    CatName,
+    BaseContainer,
+    NavHeader,
+    Header,
+    ProjectsContainer,
+    RevealContainer
 
-// import { Nav, NavHeader,CloseNav, NavList, NavVideos } from './styles';
-const Header = styled.div`
-display:flex;
-justify-content:flex-end;
-// border:2px solid red;
-width:87vw;
-`
+} from '@/styles/workStyles';
+import { MobCarousel } from '@/components/MobCarousel';
+
+
+
 
 
 export default function Work  (
@@ -54,14 +57,26 @@ useEffect(()=>{
 // useEffect updating the the state of in real time as the window resizes to dynamically show components
 
 
+const variants ={
+// framer motion animation propertiesfor reveal container
+    animate:{
+        width:reveal.show ? 0 :"100%",
+        transition:{
+            type:'spring',
+            duration:.5, 
+            mass:.2, 
+            damping:10 
+        }
+    },
+    
+}
+
 
 
 const newData = [
   "/test/Col1.jpeg",
   "/test/Col2.jpeg",
   "/test/ss1.jpeg",
-  "/test/ss3.jpeg",
-  "/test/ss3.jpeg",
   "/test/ss1.jpeg",
 ]
 const newData_two = [
@@ -80,7 +95,8 @@ const [data, setData] = useState("")
 
 const [category,setCategory] = useState('dev')
 
-const handleDev=()=>{
+const handleDev=()=>
+{
     if(category != 'dev')
         {
             setCategory('dev')
@@ -95,9 +111,9 @@ const handleDes=()=>{
     
 }
 
-    useEffect(()=>{setSource(data)},[data])
+useEffect(()=>{setSource(data)},[data])
 
-  return <>
+return <>
 
     <MainCont
         bgCol={global_theme[theme].body}
@@ -106,11 +122,12 @@ const handleDes=()=>{
         animate={{x:toggleMenu?0:0}}
         transition={{duration:.8,ease:[.6,.05,-.01,.9]}}
         >
-    <Container>
-        <NavHeader>
-            <Flex spaceBetween noHeight>
-                <Header>
+        {sWidth >= 800?
+    <BaseContainer>
+        
 
+        <NavHeader>
+                <Header>
                     <HeaderHam 
                         onHamClick={()=>{ 
                         setHammer(!hammer)
@@ -127,10 +144,11 @@ const handleDes=()=>{
                             setHammer(!hammer)
                             setToggle(!toggle)
                             }}/>
-            </Flex>
         </NavHeader>
-    {sWidth >= 800?
-        <NavList>
+        
+
+   
+        <ProjectsContainer>
         <CatCont>
             <CatButts
                 onClick={handleDev}
@@ -156,7 +174,6 @@ const handleDes=()=>{
             })}
         >
             <CarouselVerticle 
-                // onClick={handleSource}
                 dim={250} 
                 imgData={category == 'dev'? newData:newData_two } 
                 index={index} 
@@ -165,13 +182,15 @@ const handleDes=()=>{
                 setData={setData} />
         </motion.div>
 
-        </NavList>
-:null}
-        <NavVideos 
+        </ProjectsContainer>
+
+        <RevealContainer 
             bgReveal={comp_theme[theme].footer}>
             <motion.div 
                 className='reveal'
-                animate={{width:reveal.show ? 0 :"100%"}}>
+                variants={variants}
+                animate='animate'
+                >
             </motion.div>
             
             <div className='video'> 
@@ -180,7 +199,12 @@ const handleDes=()=>{
                 exitBeforeEnter>
 
                 <motion.img
-                style={{objectFit:'contain'}} 
+                style={{
+                    objectFit:'contain', 
+                    width:'100vw',
+                    height:'100%',
+                    
+                }} 
                     key={index}
                     src={source}
                     initial={{opacity:0}}
@@ -196,8 +220,32 @@ const handleDes=()=>{
                 autoPlay > 
                 </video> */}
             </div>
-        </NavVideos>
-    </Container>
+        </RevealContainer>
+    </BaseContainer>
+: <>   
+            <NavHeader>
+                <Header>
+                    <HeaderHam 
+                        onHamClick={()=>{ 
+                        setHammer(!hammer)
+                        setToggle(!toggle)}}
+                        ham={hammer} 
+                        />
+                </Header>
+
+                <Navigation toggleMenu={toggle}  
+                    setToggleMenu={setToggle}
+                    myHam = {hammer}
+                    hamClick={()=>
+                            {
+                            setHammer(!hammer)
+                            setToggle(!toggle)
+                            }}/>
+            </NavHeader>
+
+            <MobCarousel dim={40}/>
+
+</>}
   </MainCont> 
   
   </>

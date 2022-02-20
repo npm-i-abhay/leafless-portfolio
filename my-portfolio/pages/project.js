@@ -71,7 +71,7 @@ const [sWidth, setSwidth] = useState(0)
 
 useEffect(()=>{
     
-        setSwidth(window.innerWidth)
+    setSwidth(window.innerWidth)
     window.onresize=()=>{setSwidth(window.innerWidth)}
     console.log(sWidth)
       // detecting when the screen resizes
@@ -201,7 +201,7 @@ window.onscroll = ()=>{
     <ProjectHeading 
         subCol={themer.menu}
         subHead={'Testing + Bug Fixes'}/>
-    
+    <ProjectHero src='/caseStudies/buzzy/buzzTest.png'/>
     <ProjectHeading 
         subCol={themer.menu}
         subHead={'Presentation & Launch'}/>

@@ -21,7 +21,6 @@ object-fit:cover;
 width:${props=>props.width};
 border-radius:10px;
 @media (max-width: 500px) {
-    // height:60vh;
     width:100%;
 
 }

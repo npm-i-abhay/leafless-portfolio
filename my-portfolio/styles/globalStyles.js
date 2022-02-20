@@ -3,20 +3,21 @@ import { motion } from "framer-motion"
 export const Container = styled.div`
   flex-grow: 1;
   // margin: 0 auto;
+  // border:3px solid red;
   left:0;
   padding: 0 12px;
   position: relative;
-  width: auto;
+  width: 100%;
   height: 100%;
-  @media (min-width: 1024px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1216px) {
-    max-width: 1152px;
-  }
-  @media (min-width: 1408px) {
-    max-width: 1244px;
-  }
+  // @media (min-width: 1024px) {
+  //   max-width: 100vw;
+  // }
+  // @media (min-width: 1216px) {
+  //   max-width: 1100vw;
+  // }
+  // @media (min-width: 1408px) {
+  //   max-width: 1244px;
+  // }
   ${props =>
     props.fluid &&
     css`
@@ -30,6 +31,8 @@ export const Container = styled.div`
 export const Flex = styled.div`
   position: relative;
   display: flex;
+  border:3px solid red;
+
   align-items: center;
   ${props =>
     props.spaceBetween &&
@@ -110,7 +113,8 @@ export const MainCont = styled(motion.div)`
 `
 
 export const NavHeader = styled.div`
-  top: 72px;
+  // top: 72px;
+  // border:3px solid red;
   position: relative;
   h2 {
     color: ${props => props.theme.background};
@@ -140,6 +144,7 @@ export const NavList = styled.div`
   display: flex;
   align-items: center;
   left:0;
+  border:2px solid green;
   // background:yellow;
   ul {
     padding: 0;
@@ -161,11 +166,6 @@ export const NavList = styled.div`
           margin-right: 8px;
         }
       }
-      svg {
-        width: 100px;
-        path {
-          fill: ${props => props.theme.background};
-        }
       }
     }
   }
@@ -188,11 +188,12 @@ export const NavVideos = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 28%;
+  left: 30%;
   z-index: -1;
   height: 100%;
   width: 100%;
   background: #000;
+  // border:2px solid green;
   .reveal {
     width: 50%;
     background: ${props=>props.bgReveal};
