@@ -2,18 +2,29 @@ import React from 'react';
 import { useTheme } from '@/utils/provider';
 import { comp_theme } from '@/utils/variables';
 // styled components imports
-import { ButtonCont } from './styles';
+import { ButtonCont, CtaButton } from './styles';
 
 
-const Button = ({txt = "default"}) => {
+export const MyButton = ({
+  txt = "default",
+  width= "200px",
+  onButtClick=()=>{}
+
+}) => {
   const {theme,setTheme} = useTheme()
 
-  return (
-      <ButtonCont btnTxt={comp_theme[theme].mainTxt}> 
+  return (<ButtonCont>
+            <CtaButton 
+              width={width}
+              btnTxt={comp_theme[theme].mainTxt} 
+              onClick={onButtClick}
+              > 
           {txt}
-      </ButtonCont>
+      </CtaButton>
+  </ButtonCont>
+
   
   )
 };
 
-export default Button;
+

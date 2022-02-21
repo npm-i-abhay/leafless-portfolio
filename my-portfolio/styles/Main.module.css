@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+.font{
+    font-family:'Roboto Mono';
+}
+
+.tags{
+    font-family: 'Nanum Pen Script';
+}
