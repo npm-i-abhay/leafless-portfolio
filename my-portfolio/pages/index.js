@@ -30,8 +30,6 @@ import {
 
 
 // other imports
-import { info, MenuReferences } from '@/props/props';
-import { MenuReferences2 } from '@/props/props';
 import SmoothScroll from '@/components/SmoothScroll'
 
 // Component imports
@@ -81,13 +79,7 @@ const techStackTwo=
   '/tech/story.png',
 ]
 
-  const [menu,setMenu] = useState(true)
-  var references = MenuReferences
   
-  if (menu === false) {
-    references = MenuReferences2
-  }
-
   const [toggle,setToggle] = useState(false)
   const [hammer, setHammer]= useState(false)
 

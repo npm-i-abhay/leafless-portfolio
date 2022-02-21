@@ -7,7 +7,7 @@ import { ImageCont, Image } from './styles';
 
 export const ImageContainer = ({imgUrl="http://placekitten.com/300/400"}) => {
   return <ImageCont>
-      <Image src={imgUrl}/>
+      <Image src={imgUrl} alt='' />
     </ImageCont>;
 };
 

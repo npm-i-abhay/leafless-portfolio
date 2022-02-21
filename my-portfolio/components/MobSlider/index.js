@@ -42,7 +42,7 @@ function Slider({ slides }) {
               damping: 20,
             }}
           >
-            <Image src={url}></Image>
+            <Image src={url} alt='' ></Image>
           </motion.Container>
         ))}
       </Row>

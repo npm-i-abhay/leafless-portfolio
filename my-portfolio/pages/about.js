@@ -15,8 +15,6 @@ import { Wrapper, HeroContainer, AboutContent, CarouselCont } from '@/styles/abo
 const aboutMe = 'My name is Abhay Bakshi (ub-hey). I’m a full stack developer and designer specializing in streamlined interactive development. I have a keen interest in building engaging solutions that helps communities across the globe. I’m a consistent learner and I aspire to augument digital experiences '
 
 // other imports
-import { MenuReferences } from '@/props/props';
-import { MenuReferences2 } from '@/props/props';
 
 
 // Component imports
@@ -43,15 +41,6 @@ justify-content:flex-end;
 
 export default function About() {
 
-  var references = MenuReferences
-
-  
-  const [menu,setMenu] = useState(true)
-  var references = MenuReferences
-  
-  if (menu === false) {
-    references = MenuReferences2
-  }
 const imgData = 
 [
   "/about/sa1.jpeg",
@@ -138,14 +127,14 @@ const variants = {
                   <AboutMe txt={aboutMe}/>
                   <AboutMe txt={aboutMe}/>
               </AboutContent>
-          <ScrollImage img={imgData.map((o,i)=>(<ProjectHero src={o} />))} />
-          <ScrollImageTwo img={<Animation path='/animation/lead.json' />} />
-          <ScrollImage img={imgData2.map((o,i)=>(<ProjectHero src={o} />))} />
+          <ScrollImage img={imgData.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
+          <ScrollImageTwo img={<Animation key={i} path='/animation/lead.json' />} />
+          <ScrollImage img={imgData2.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
           <HeroContainer>
             <RockControl/>
             <ProjectHero src='/about/music3.jpeg'/>
           </HeroContainer>
-          <ScrollImage img={imgData3.map((o,i)=>(<ProjectHero src={o} />))} />
+          <ScrollImage img={imgData3.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
         {/* <Slider  /> */}
 
     </>

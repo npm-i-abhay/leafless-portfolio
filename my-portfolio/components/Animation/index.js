@@ -24,7 +24,7 @@ export const Animation = ({path}) => {
 
       return () => animation.destroy();
     }
-  }, [lottie]);
+  }, [lottie,path]);
 
   return (
     <div ref={ref} />
