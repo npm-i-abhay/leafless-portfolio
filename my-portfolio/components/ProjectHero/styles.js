@@ -22,6 +22,6 @@ width:${props=>props.width};
 border-radius:10px;
 @media (max-width: 500px) {
     width:100%;
-
+    
 }
 `

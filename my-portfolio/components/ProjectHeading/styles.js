@@ -24,5 +24,13 @@ z-index:-1;
 export const SubHead = styled.span`
 font-size:50px;
 text-align:center;
+width:100%;
 color:${props=>props.txtCol};
+padding:5px;
+// background-color:red;
+@media (max-width: 500px) {
+    // // height:60vh;
+    // width:80vw;
+font-size:40px;
+}
 `

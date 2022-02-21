@@ -116,8 +116,8 @@ const variants = {
               
 
 
-      <WelcomeHeading lineOne='Hello there! Nice To Meet You'/>
       <HeroContainer>
+        <WelcomeHeading lineOne='Hello there! Nice To Meet You'/>
       </HeroContainer>
       { sWidth >=650 ? 
         // checking if the screen width is
@@ -138,23 +138,28 @@ const variants = {
         {/* <Slider  /> */}
 
     </>
-          
     :
     <>
-        <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
-              <AboutContent>
-                  <AboutMe txt={aboutMe}/>
-              </AboutContent>
-
-        <ScrollImage direction='column' img={ <ImageContainer/> } />
-        <ScrollImage img={<Animation path='/animation/lead.json' />} />
-        <ScrollImage direction='column' img={ <ImageContainer/> } />
         <HeroContainer>
-            <RockControl width='100vh'/>
+          <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
+        </HeroContainer>
+
+        <AboutContent>
+            <AboutMe txt={aboutMe}/>
+        </AboutContent>
+
+        <ScrollImage direction='column' img={ <ImageContainer imgUrl="/about/sa1.jpeg"/> } />
+        <ScrollImage img={<Animation path='/animation/lead.json' />} />
+        <ScrollImage direction='column' img={ <ImageContainer imgUrl="/about/sa2.jpeg" /> } />
+        <HeroContainer>
             <ProjectHero src='/about/music3.jpeg'/>
         </HeroContainer>
+        <HeroContainer>
+            <RockControl/>
+        </HeroContainer>
+
         {/* <Slider  /> */}
-        <MobImageCarousel dim={50} />
+        <MobImageCarousel dim={40} />
 
 
     </> 

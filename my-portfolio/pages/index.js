@@ -49,10 +49,14 @@ export default function Home() {
 const router = useRouter()
 
 // state to keep track of current screen size
-const [sWidth, setSwidth] = useState(0)
+const [sWidth, setSwidth] = useState()
+
+
 useEffect(()=>{
   setSwidth(window.innerWidth)
-window.onresize=()=>{setSwidth(window.innerWidth)}
+  window.onresize=()=>{setSwidth(window.innerWidth)}
+  window.onload=()=>{setSwidth(window.innerWidth)}
+
 // detecting when the screen resizes
 },[sWidth])
 
@@ -176,7 +180,7 @@ const imgVariants = {
         variants={imgVariants}> 
         <Animation path='/animation/react.json' />
       </AnimationCont> */}
-        
+      
     {sWidth >=500? 
     <>
       <Tags txt='<Img src="../'/>
@@ -197,7 +201,9 @@ const imgVariants = {
 
           />
       <Tags txt='/>'/> </>
-    :<MobCarousel dim={40} /> }
+    :
+    
+    <MobCarousel dim={40} /> }
           
 
 

@@ -12,15 +12,10 @@ import Router, { useRouter } from 'next/router'
 import { ProjectData,ProjectData2 } from '@/props/props'
 
 // styled components 
-const Wrapper = styled.div`
-display:flex;
-flex-direction:column;
-// height:100%;
-// width:100%;
-// background-color:white;
-`
+
 
 import { 
+    Wrapper,
     Container, 
     Title, 
     HeroContainer, 
@@ -96,6 +91,7 @@ useEffect(()=>{
     setSwidth(window.innerWidth)
     window.onresize=()=>{setSwidth(window.innerWidth)}
     console.log(sWidth)
+    window.onload=()=>{setSwidth(window.innerWidth)}
       // detecting when the screen resizes
 
 window.onscroll = ()=>{
@@ -119,7 +115,9 @@ return (
 
     <>
     {data.map((o,i)=>(
-        <Wrapper key={i} >
+        <Wrapper 
+            bgCol={o.projectCol}
+            key={i} >
 
         <HeaderHam 
             onHamClick={()=>{ 
@@ -142,20 +140,26 @@ return (
         ham={hammer}
         />
         
-        <AnimCont
-            top={animTop}
-            left={animLeft}>
-            <Animation path='/animation/bee.json'/>
-        </AnimCont>
+        {project==='buzz'&&
+            // animation disabled if project is not BuzzyBee
+            <AnimCont
+                top={animTop}
+                left={animLeft}>
+                <Animation path='/animation/bee.json'/>
+            </AnimCont>
+        }
     
         <ProjectHeading
-            headCol={themer.mainTxt}
-            subCol={themer.mainTxt}
-            mainHead={o.projectTitle}
+            headCol={ o.titleCol}
+            subCol={o.subHeadCol}
+            mainHead={ o.projectTitle}
             subHead={o.subHead}
             />
-        <ProjectDescrip 
-            mainHead={o.description}/>
+        <ProjectDescrip
+            txtCol={o.descriptionCol} 
+            mainHead={o.description}
+            
+            />
         
         <HeroContainer>
             <ProjectHero 
@@ -171,19 +175,19 @@ return (
     
         {/* sections */}
         <ProjectHeading 
-            subCol={themer.menu}
+            subCol={o.subHeadCol}
             subHead={'Research + Analysis'}/>
         {/* This is where I would add the videos */}
             <ProjectHero width='50vw' src={o.researchImage}/>
     
     
         <ProjectHeading 
-            subCol={themer.menu}
+            subCol={o.subHeadCol}
             subHead={'Problem Identification'}/>
         
         {/* personas===================================== */}
         <ProjectHeading 
-            subCol={themer.menu}
+            subCol={o.subHeadCol}
             subHead={'Personas'}/>
         <HeroContainer>
             <ProjectHero src={o.persona1}/>
@@ -192,22 +196,23 @@ return (
     
         {/* solution design======================================== */}
         <ProjectHeading 
-            subCol={themer.menu}
+            subCol={o.subHeadCol}
             subHead={'Solution Design'}/>
-        <ProjectDescrip 
+        <ProjectDescrip
+            txtCol={o.descriptionCol} 
             mainHead={o.solutionDesign}/>
                 
                 {/* task models  */}
         <HeroContainer>
-            <ProjectHero src='/caseStudies/buzzy/buzzyModOne.png'/>
+            <ProjectHero src={o.solutionProcess1}/>
             <ProjectHero
-                src='/caseStudies/buzzy/buzzyModTwo.png'/>
+                src={o.solutionProcess2}/>
         </HeroContainer>
     
     
                 
                 {/* prototypes */}
-        <div style={{color:'white'}}> PROTOTYPE </div>
+
         {/* <Carousel 
             imgData={buzzDesign}
             dim={40}/> */}
@@ -216,11 +221,11 @@ return (
     
     
         <ProjectHeading 
-            subCol={themer.menu}
+            subCol={o.subHeadCol}
             subHead={'Development Process'}/>
     
             {/* Mind Maps and props etc  */}
-            {sWidth >= 550 ?
+            {sWidth >= 550 &&
             <>
             <ProjectImageGrid
                 imageSet1={<MiniCarousel dim={40} imgData={imageData1}/>}/>
@@ -229,13 +234,19 @@ return (
             <ProjectImageGrid
                 imageSet1={<ProjectHero src='/caseStudies/buzzy/buzzReact.png' />}/>
             </>
-                : <MobImageCarousel dim={40} imgData={imageData1} /> }
+                }
+                {project==='buzz' &&  <MobImageCarousel dim={40} imgData={imageData1} /> }
+                {project=== 'eco' && <> <HeroContainer>
+                {/* <ProjectHero src='/caseStudies/ecohow/ecoDev1.png'/>
+                <ProjectHero src='/caseStudies/ecohow/ecoDev2.png'/> */}
+                    </HeroContainer>  </> }
         <ProjectHeading 
-            subCol={themer.menu}
+            subCol={o.subHeadCol}
             subHead={'Testing + Bug Fixes'}/>
         <ProjectHero src='/caseStudies/buzzy/buzzTest.png'/>
+
         <ProjectHeading 
-            subCol={themer.menu}
+            subCol={o.subHeadCol}
             subHead={'Presentation & Launch'}/>
     
         <Footer/>
