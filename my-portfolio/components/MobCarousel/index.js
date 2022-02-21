@@ -1,53 +1,80 @@
 import React, {useState, useEffect} from 'react';
 import { Swipeable} from "react-swipeable";
 import {motion} from 'framer-motion'
-import {BiRightArrow, BiLeftArrow} from 'react-icons/bi'
+import { useTheme } from '@/utils/provider';
+import { comp_theme } from '@/utils/variables';
+
 import { 
   Cont, 
   CardCont,
   CardWrapper, 
   Card,
   ProjectCard,
-  ProjectButton
+  ProjectButton,
+  StackCont,
+  TechStack,
+  Description,
+  MainHead,
+  InfoContainer,
+  ProjectTitle
 
 } from './styles';
 
 
 const default_data = [
-  "https://placekitten.com/500/500",
-  "https://placekitten.com/1000/1000",
-  "https://placekitten.com/800/800",
-  "https://placekitten.com/600/600",
+  {
+    title:'Buzzy Bee',
+    link:"https://placekitten.com/500/500", 
+    techStack:[
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500",
+    ],
+    description : 'this is a project card for mobile size ',
+
+  
+  },
+  {
+    title:'Buzzy Bee',
+    link:"https://placekitten.com/500/500", 
+    techStack:[
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500",
+    ],
+    description : 'this is a project card for mobile size ',
+    
+  
+  },
+  {
+    title:'Buzzy Bee',
+    link:"https://placekitten.com/500/500", 
+    techStack:[
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500",
+      "https://placekitten.com/500/500",
+    ],
+    description : 'this is a project card for mobile size ',
+
+  },
+  
 ]
 
 export const MobCarousel = ({
   imgData = default_data,
-  dim = 100
+  dim = 100,
 }) => {
 
+  
   // when index is 0 left=0, when index is 1, left = -100, index is 2 left is -200 and so on........ 
   const [index, setIndex] = useState(0)
   const [left, setLeft] = useState(0)
   const [screenWidth, setScreenWidth] = useState(0)
-  const [margin, setMargin] = useState(5)
+  const {theme,setTheme} = useTheme()
 
-  useEffect(()=>
-  {
-    setScreenWidth(window.innerWidth)
-
-    if(screenWidth < 600)
-    {
-      setMargin(1.5)
-      console.log(true)
-    }
-    
-      else setMargin(5)
-    
-    console.log(screenWidth)
-
-  },[screenWidth])
-  // const [op, setOp] = useState(0);
-
+  // constant to refer to provider variables when adding configs
+  const themer = comp_theme[theme]
+  // swipe handler function to increase or decrease the index on swipe
   const handleSwipe = ({dir})=>
   {
     if (dir === "Right") 
@@ -85,47 +112,68 @@ return <Cont>
 
         
           <CardCont dim={dim + 10}>
-          <CardWrapper left={index * (dim -98)}>
+          <CardWrapper left={index * (dim -102)}>
               {imgData.map ((o,i)=>
               <Swipeable onSwiped={handleSwipe}>
-                <ProjectCard
-                // initial={{width:0,height:0}}
-                  animate={{
-                    width:i===index ?'80vw':'60vw', 
-                    height:i===index ?'80vh':'60vh', 
-                    originX:0, 
-                    opacity:i===index?1:.25,
-                    scale:1
-                  }}
-                    transition={{
-                      // delay:.5,
-                      type:'spring',
-                      duration:2, 
-                      staggerChildren:0.4,
-                      mass:1,
-                      damping:10,
-                      stiffness:100
+                  <ProjectCard
+                  bgCol={themer.footer}
+                  borderCol={themer.menu}
+                    animate={{
+                      width:i===index ?'80vw':'60vw', 
+                      height:i===index ?'80vh':'60vh', 
+                      originX:0, 
+                      originY:0, 
+                      opacity:i===index?1:.5,
+                      scale:1
                     }}
-                    >
-              <Card
-                // framer motion animation on swipe
-                initial={{width:0,height:0}}
-                animate={{
-                  width:i===index ?'100%':100, 
-                  height:i===index ?'50%':100, 
-                  originX:0, 
-                  originY:0,
-                  opacity:i===index?1:1}}
-                  transition={{
-                    mass:1,
-                    damping:4,
-                  }  }
-                onClick={()=> setIndex(i)}
-                z={i===index? imgData.length+1 : imgData - 1}
-                src={o} 
-                key={i}/>
-                <ProjectButton/>
-                </ProjectCard>
+                      transition={{
+                        // delay:.5,
+                        type:'spring',
+                        duration:2, 
+                        staggerChildren:0.4,
+                        mass:1,
+                        damping:10,
+                        stiffness:100
+                      }}
+                      >
+                <Card
+                  // framer motion animation on swipe
+                  initial={{width:0,height:0}}
+                  animate={{
+                    width:i===index ?'100%':100, 
+                    height:i===index ?'50%':100, 
+                    originX:0, 
+                    originY:0,
+                    }}
+                    transition={{
+                      mass:1,
+                      damping:4,
+                    }  }
+                  z={i===index? imgData.length+1 : imgData - 1}
+                  src={o.link} 
+                  key={i}/>
+                  <InfoContainer>
+
+                      <ProjectTitle txtCol={themer.mainTxt}>
+                        {o.title}
+                      </ProjectTitle>
+
+                      <Description txtCol={themer.mainTxt}>
+                        {o.description}
+                      </Description>
+
+                      <StackCont>
+                        {o.techStack.map((el)=>(<TechStack src={el} />))}
+                      </StackCont>
+
+                      <ProjectButton 
+                        bgCol={themer.menu}
+                        txtCol={themer.mainTxt}> 
+                          View 
+                      </ProjectButton>
+                      
+                  </InfoContainer>
+                  </ProjectCard>
                 </Swipeable>
                 )}
                 

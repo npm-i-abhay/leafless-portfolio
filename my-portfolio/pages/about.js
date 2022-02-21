@@ -35,7 +35,7 @@ import { LottieControl } from '@/components/ScrollAnimation'
 import { RockControl } from '@/components/RockScrollAnimation'
 import  Slider  from '@/components/MobSlider'
 import { MiniCarousel } from '@/components/MiniCarousel'
-import { MobCarousel } from '@/components/MobCarousel'
+import { MobImageCarousel } from '@/components/MobImageCarousel'
 const Header = styled.div`
 display:flex;
 justify-content:flex-end;
@@ -165,8 +165,8 @@ const variants = {
             <ProjectHero src='/about/music3.jpeg'/>
         </HeroContainer>
         {/* <Slider  /> */}
-        <MobCarousel dim={50} />
-        <MobCarousel dim={50} />
+        <MobImageCarousel dim={50} />
+
 
     </> 
     }

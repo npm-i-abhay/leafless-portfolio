@@ -89,9 +89,9 @@ const newData_two = [
 ]
 const [toggle,setToggle] = useState(false)
 const [hammer, setHammer]= useState(false)
-const [source, setSource] = useState("")
+const [source, setSource] = useState()
 const [index, setIndex] = useState(0)
-const [data, setData] = useState("")
+const [data, setData] = useState(null)
 
 const [category,setCategory] = useState('dev')
 

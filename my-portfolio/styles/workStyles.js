@@ -27,7 +27,7 @@ transform:rotate(90deg)
 export const BaseContainer = styled.div`
   flex-grow: 1;
   // margin: 0 auto;
-//   border:3px solid red;
+  // border:3px solid red;
   left:0;
   padding: 0 12px;
   position: relative;
@@ -114,7 +114,7 @@ export const RevealContainer = styled.div`
   height: 100%;
   width: 70%;
   background: #000;
-//   border:2px solid green;
+  // border:2px solid green;
   display:flex;
 justify-content:center;
   .reveal {

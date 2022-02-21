@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Main.module.css'
 import styled from 'styled-components'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { LottieControl } from '@/components/ScrollAnimation'
 import { Router, useRouter } from 'next/router'
@@ -36,24 +36,28 @@ import SmoothScroll from '@/components/SmoothScroll'
 
 // Component imports
 import {MyButton} from '@/components/Button'
-import {Hamburger} from '@/components/Hamburger'
-import { MyChart } from '@/components/Chart'
-import { Carousel } from '@/components/Caraousel'
 import { Footer } from '@/components/Footer'
-import { Menu } from '@/components/Menu'
 import { WelcomeHeading } from '@/components/HomeHeading'
-import { ImageContainer } from '@/components/ImageCard'
 import { Tags } from '@/components/Tags'
 import { ProjectInfo } from '@/components/ProjectInfo'
-import { Element } from '@/components/Element'
 import {HeaderHam} from '@/components/HeaderHam'
 import {Navigation} from '@/components/Navigation'
 import { Animation } from '@/components/Animation'
 import { AnimationCont } from '@/styles/homeStyles'
+import { MobCarousel } from '@/components/MobCarousel'
 
 export default function Home() {
 
-  const router = useRouter()
+const router = useRouter()
+
+// state to keep track of current screen size
+const [sWidth, setSwidth] = useState(0)
+useEffect(()=>{
+  setSwidth(window.innerWidth)
+window.onresize=()=>{setSwidth(window.innerWidth)}
+// detecting when the screen resizes
+},[sWidth])
+
 
 const techStackOne= 
 [  
@@ -96,8 +100,6 @@ const mainVariants = {
     transition:{ 
       type:'spring', 
       duration:1,
-      // mass:.4,
-      // damping:12
       when:"beforeChildren",
       staggerChildren:1
     } 
@@ -125,29 +127,7 @@ const imgVariants = {
   }
 }
 
-const svg={
-  hidden:{
-    opacity:0
-  },
-  visible:{
-    opacity:1,
-    transition:{duration:1, type:'spring', delay:2 }
-  }
-}
-const draw = {
-  hidden: { pathLength: 0, opacity: 0 },
-  visible: (i) => {
-    const delay = 1 + i * 0.5;
-    return {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-        opacity: { delay:3, duration: 0.01 }
-      }
-    };
-  }
-};
+
   return (
     <Wrapper 
       variants={mainVariants}
@@ -200,16 +180,13 @@ const draw = {
         {/* <MyChart/> */}
       </ChartCont>
               
-      <AnimationCont
-        variants={imgVariants}
-        // whileHover={
-        //   {
-        //     skewY:20,
-        //   }}
-      > 
+      {/* <AnimationCont
+        variants={imgVariants}> 
         <Animation path='/animation/react.json' />
-      </AnimationCont>
-    
+      </AnimationCont> */}
+        
+    {sWidth >=500? 
+    <>
       <Tags txt='<Img src="../'/>
         <ProjectInfo
           stackData={techStackOne}
@@ -227,8 +204,8 @@ const draw = {
           img='/test/ss3.jpeg'
           description={info.buzzyBee}
           />
-      <Tags txt='/>'/>
-          
+      <Tags txt='/>'/> </>
+    :<MobCarousel dim={40} /> }
           
 
 
