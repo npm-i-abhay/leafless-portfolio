@@ -183,7 +183,7 @@ const imgVariants = {
         <ProjectInfo
           stackData={techStackOne}
           img='/test/ss1.jpeg'
-          description={info.buzzyBee}
+
           onButtClick={()=>{router.push('/project')}}
 
           />
@@ -194,7 +194,7 @@ const imgVariants = {
           stackData={techStackTwo}
           order={-1}
           img='/test/ss3.jpeg'
-          description={info.buzzyBee}
+
           />
       <Tags txt='/>'/> </>
     :<MobCarousel dim={40} /> }
