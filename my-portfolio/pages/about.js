@@ -128,7 +128,7 @@ const variants = {
                   <AboutMe txt={aboutMe}/>
               </AboutContent>
           <ScrollImage img={imgData.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
-          <ScrollImageTwo img={<Animation key={i} path='/animation/lead.json' />} />
+          <ScrollImageTwo img={<Animation path='/animation/lead.json' />} />
           <ScrollImage img={imgData2.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
           <HeroContainer>
             <RockControl/>

@@ -64,18 +64,18 @@ const techStackOne=
   '/tech/php.png',
   '/tech/expo.png',
   '/tech/styled.png',
-  '/tech/next.png',
-  '/tech/node.png',
-  '/tech/npm.png',
+  '/tech/Next.png',
+  '/tech/Node.png',
+  '/tech/Npm.png',
 ]
 const techStackTwo= 
 [  
   '/tech/react.png',
   '/tech/javascript.png',
   '/tech/styled.png',
-  '/tech/next.png',
-  '/tech/node.png',
-  '/tech/npm.png',
+  '/tech/Next.png',
+  '/tech/Node.png',
+  '/tech/Npm.png',
   '/tech/story.png',
 ]
 
