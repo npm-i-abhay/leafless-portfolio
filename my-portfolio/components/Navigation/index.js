@@ -42,8 +42,6 @@ export const Navigation = (
     
     ) => {
     const r =useRouter()
-
-    console.log(r)
     const [reveal,setReveal] = useState({
         show:false,
         video:"",

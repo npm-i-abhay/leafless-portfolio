@@ -1,10 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 
-const Image = ({source}) => {
+const MyImage = styled.img``
+
+const Image = ({source,alt}) => {
   return (
     <picture>
       
-      <img src={source}  />
+      <MyImage src={source} alt={alt} />
     </picture>
   );
 };

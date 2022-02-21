@@ -79,7 +79,7 @@ return <Cont>
         <CardCont dim={dim + 10}>
           <CardWrapper left={index * (dim -62)}>
             {imgData.map ((o,i)=>
-            <Swipeable onSwiped={handleSwipe}>
+            <Swipeable key={i} onSwiped={handleSwipe}>
             <Card
                 // framer motion animation on swipe
                 animate={{

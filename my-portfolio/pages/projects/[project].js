@@ -82,6 +82,10 @@ useEffect(()=>{
 {
     setData (ProjectData2)
 }
+else if (project == 'buzz')
+{
+    setData(ProjectData)
+}
 
 },[project])
 // use effect to monitor the query made by the visitor.

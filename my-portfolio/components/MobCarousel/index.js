@@ -114,7 +114,7 @@ return <Cont>
           <CardCont dim={dim + 10}>
           <CardWrapper left={index * (dim -102)}>
               {imgData.map ((o,i)=>
-              <Swipeable onSwiped={handleSwipe}>
+              <Swipeable key={i} onSwiped={handleSwipe}>
                   <ProjectCard
                   bgCol={themer.footer}
                   borderCol={themer.menu}
@@ -163,7 +163,7 @@ return <Cont>
                       </Description>
 
                       <StackCont>
-                        {o.techStack.map((el)=>(<TechStack src={el} />))}
+                        {o.techStack.map((el)=>(<TechStack key={i} src={el} />))}
                       </StackCont>
 
                       <ProjectButton 

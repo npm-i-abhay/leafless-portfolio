@@ -12,6 +12,7 @@ export const ProjectHero = (
     <ImageCont>
         <Image 
           src={src}
+          alt=''
           width={width}
           />
     </ImageCont>

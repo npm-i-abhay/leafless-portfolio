@@ -82,6 +82,7 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
       }}
     >
       <Image
+        alt =''
         source='http://placekitten.com/200/300'/>
     </motion.div>
   );
