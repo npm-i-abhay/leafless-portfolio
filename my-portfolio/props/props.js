@@ -41,6 +41,7 @@ export const WorkCarouselData =
 
         ],
         description : 'Buzzy Bee is an organizer cross platform application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
+        route:'/projects/buzz'
     },
 
     {
@@ -54,6 +55,8 @@ export const WorkCarouselData =
             '/tech/Npm.png',
         ],
         description : 'EcoHow is an interactive web app built using ReactJs that teaches users on proper ways of recycling & composting in an interactive & gamified manner',
+        route:'/projects/eco'
+
     },
 
     {

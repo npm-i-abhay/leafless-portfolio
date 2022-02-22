@@ -242,32 +242,30 @@ return <>
 : 
 
 <> 
-       
-       <NavHeader>
-           <Header>
-               <HeaderHam 
-                   onHamClick={()=>{ 
-                   setHammer(!hammer)
-                   setToggle(!toggle)}}
-                   ham={hammer} 
-                   />
-           </Header>
 
-           <Navigation toggleMenu={toggle}  
-               setToggleMenu={setToggle}
-               myHam = {hammer}
-               hamClick={()=>
-                       {
-                       setHammer(!hammer)
-                       setToggle(!toggle)
-                       }}/>
-       </NavHeader>
+    <NavHeader>
+        <Header>
+            <HeaderHam 
+                onHamClick={()=>{ 
+                setHammer(!hammer)
+                setToggle(!toggle)}}
+                ham={hammer} 
+                />
+        </Header>
 
-       <MobCarousel imgData={WorkCarouselData} dim={40}/>
-       <MobImageCarousel 
-       imgData={workDesignCarouselOne} dim={35}/>
-       <MobImageCarousel 
-       imgData={workDesignCarouselOne} dim={35}/>
+        <Navigation toggleMenu={toggle}  
+            setToggleMenu={setToggle}
+            myHam = {hammer}
+            hamClick={()=>
+                    {
+                    setHammer(!hammer)
+                    setToggle(!toggle)
+                    }}/>
+    </NavHeader>
+
+    <MobCarousel imgData={WorkCarouselData} dim={40}/>
+    <MobImageCarousel 
+    imgData={workDesignCarouselOne} dim={35}/>
 
 </>}
   

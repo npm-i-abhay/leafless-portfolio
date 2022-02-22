@@ -3,7 +3,7 @@ import { Swipeable} from "react-swipeable";
 import {motion} from 'framer-motion'
 import { useTheme } from '@/utils/provider';
 import { comp_theme } from '@/utils/variables';
-
+import Router, { useRouter } from 'next/router';
 import { 
   Cont, 
   CardCont,
@@ -31,6 +31,7 @@ const default_data = [
       "https://placekitten.com/500/500",
     ],
     description : 'this is a project card for mobile size ',
+    route: '/work'
 
   
   },
@@ -43,7 +44,7 @@ const default_data = [
       "https://placekitten.com/500/500",
     ],
     description : 'this is a project card for mobile size ',
-    
+    route:'/'
   
   },
   {
@@ -55,7 +56,7 @@ const default_data = [
       "https://placekitten.com/500/500",
     ],
     description : 'this is a project card for mobile size ',
-
+    route:'/'
   },
   
 ]
@@ -63,9 +64,10 @@ const default_data = [
 export const MobCarousel = ({
   imgData = default_data,
   dim = 100,
+  onClick=()=>{}
 }) => {
 
-  
+  const r = useRouter()
   // when index is 0 left=0, when index is 1, left = -100, index is 2 left is -200 and so on........ 
   const [index, setIndex] = useState(0)
   const [left, setLeft] = useState(0)
@@ -167,6 +169,7 @@ return <Cont>
                       </StackCont>
 
                       <ProjectButton 
+                        onClick={()=>{r.push(`${o.route}`)}}
                         bgCol={themer.menu}
                         txtCol={themer.mainTxt}> 
                           View 
