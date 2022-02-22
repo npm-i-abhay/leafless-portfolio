@@ -265,7 +265,7 @@ return <>
 
     <MobCarousel imgData={WorkCarouselData} dim={40}/>
     <MobImageCarousel 
-    imgData={workDesignCarouselOne} dim={35}/>
+    imgData={workDesignCarouselOne} dim={40}/>
 
 </>}
   

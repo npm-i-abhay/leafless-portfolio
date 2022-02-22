@@ -50,7 +50,7 @@ justify-content:space-around;
 width:50vw;
 height:50vh;
 @media (max-width: 500px) {
-  border:2px solid red;
+
     width:100%;
     height:60vh;
    

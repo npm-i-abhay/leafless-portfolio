@@ -241,7 +241,8 @@ return (
                 imageSet1={<ProjectHero src='/caseStudies/buzzy/buzzReact.png' />}/>
             </>
                 }
-                {project==='buzz' &&  <MobImageCarousel dim={40} imgData={imageData1} /> }
+                { sWidth<=500 && project==='buzz' &&  <MobImageCarousel dim={40} imgData={imageData1} /> } 
+                {/* checking if the screen width is 500 or less and the project is buzz */}
                 {project=== 'eco' && <> <HeroContainer>
                 
                     </HeroContainer>  </> }
