@@ -10,6 +10,9 @@ import { useTheme } from '@/utils/provider';
 const Cont = styled.div`
 display:inline-flex;
 flex-direction:column;
+// border:20px solid yellow;
+align-items:center;
+justify-content:center;
 `
 
 const CardCont = styled.div`
@@ -24,6 +27,7 @@ overflow:hidden;
 // border:5px solid yellow;
 // padding:5px;
 transition:all 1s;
+//  border:2px solid blue;
 
 `
 
@@ -35,7 +39,7 @@ top:${props => props.topOne}px;
 transition:all .5s;
 position:relative;
 align-items:center;
-// border:2px solid blue;
+// border:20px solid blue;
 `
 
 const Card = styled.img`
@@ -46,10 +50,13 @@ position:absolute;
 transform: translateY(${props => props.top}px);
 z-index:${props => props.z};
 opacity:${props => props.op};
-margin-top:1.5em;
+margin:1.5em;
 justify-content:space-between;
 transition: all .5s;
-box-shadow:${props=>props.shadow};
+border:.2px solid red;
+top:20px;
+
+// box-shadow:${props=>props.shadow};
 
 `
 
@@ -119,10 +126,9 @@ export const CarouselVerticle = ({
    >
       <CardWrapper
       
-       top={index * -50}>
+       top={index * -80}>
           {imgData.map ((o,i)=>
-// (      <div style={{backgroundColor:'red',height:'100%',display:'flex',flexDirection:'column'}}>    
-        // <CtrlButton/>
+
         <Card
           onMouseOver={()=> {
             setIndex(i)
@@ -136,7 +142,7 @@ export const CarouselVerticle = ({
           z={i===index? imgData.length+1 : imgData - 1}
           // topOne={i*(dim +50)}
           top={i*(dim -100)-300}
-          src={o} 
+          src={o.thumb} 
           key={i}
           shadow={i===index?`-0px -5px 50px ${comp_theme[theme].accentTxt}`:null}
           />

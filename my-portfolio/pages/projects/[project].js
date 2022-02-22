@@ -44,7 +44,8 @@ import { ImageContainer } from '@/components/ImageCard'
 import { MiniCarousel } from '@/components/MiniCarousel'
 import { Animation } from '@/components/Animation'
 import { MobImageCarousel } from '@/components/MobImageCarousel'
-
+import { GifContainer } from '@/components/GifContainer'
+import { LottieControl } from '@/components/ScrollAnimation'
 export default function Project() {
  
 
@@ -149,6 +150,8 @@ return (
             </AnimCont>
         }
     
+        
+        
         <ProjectHeading
             headCol={ o.titleCol}
             subCol={o.subHeadCol}
@@ -225,13 +228,16 @@ return (
             subHead={'Development Process'}/>
     
             {/* Mind Maps and props etc  */}
+            {/* checking if the screen size is mobile or desktop and displaying components accordingly */}
             {sWidth >= 550 &&
             <>
+            {project==='eco' && <LottieControl/> }
             <ProjectImageGrid
                 imageSet1={<MiniCarousel dim={40} imgData={imageData1}/>}/>
     
             {/* Development stuff  */}
             <ProjectImageGrid
+                Default={<><GifContainer gif1={o.gif1} gif2={o.gif2} /></>}
                 imageSet1={<ProjectHero src='/caseStudies/buzzy/buzzReact.png' />}/>
             </>
                 }

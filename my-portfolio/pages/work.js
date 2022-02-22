@@ -7,13 +7,9 @@ import { comp_theme, global_theme } from '@/utils/variables';
 
 import { HeaderHam } from '@/components/HeaderHam';
 import { Navigation } from '@/components/Navigation';
-// styled components
-import { 
-    
 
-MainCont } from '@/styles/globalStyles';
-import { CarouselVerticle } from '@/components/CarouselVerticle';
-import { MyButton } from '@/components/Button';
+// styled components
+import { MainCont } from '@/styles/globalStyles';
 import { 
     CatButts, 
     CatCont, 
@@ -25,26 +21,27 @@ import {
     RevealContainer
 
 } from '@/styles/workStyles';
+
+// component imports
+import { CarouselVerticle } from '@/components/CarouselVerticle';
 import { MobCarousel } from '@/components/MobCarousel';
 
 
+// data imports
+import { WorkCarouselData,devData, designData } from '@/props/props';
 
 
 
-export default function Work  (
-    {
 
+export default function Work  ({
     toggleMenu,
-    setToggleMenu,
-    hamClick=()=>{}},
-    ham
     
-    )  {
+})  {
     const {theme,setTheme}= useTheme()
-    const r =useRouter()
+    const r = useRouter()
     const [reveal,setReveal] = useState({
         show:false,
-        video:"",
+        video:"/caseStudies/ecohow/ecoDev1.png",
         key:0
     })
     const [sWidth, setSwidth] = useState(null)
@@ -73,25 +70,17 @@ const variants ={
 
 
 
-const newData = [
-  "/test/Col1.jpeg",
-  "/test/Col2.jpeg",
-  "/test/ss1.jpeg",
-  "/test/ss1.jpeg",
-]
-const newData_two = [
-    "/test/ss3.jpeg",
-    "/test/ss1.jpeg",
-    "/test/Col2.jpeg",
-    "/test/ss3.jpeg",
-    "/test/ss1.jpeg",
-    "/test/Col1.jpeg",
-]
+
+
 const [toggle,setToggle] = useState(false)
 const [hammer, setHammer]= useState(false)
-const [source, setSource] = useState()
+const [source, setSource] = useState( 'helloo')
 const [index, setIndex] = useState(0)
-const [data, setData] = useState(null)
+const [data, setData] = useState( {
+    thumb:'/caseStudies/buzzy/buzzMock.png', 
+    vid:null,
+    path:'/'
+})
 
 const [category,setCategory] = useState('dev')
 
@@ -173,9 +162,10 @@ return <>
             show: false,
             })}
         >
-            <CarouselVerticle 
+            <CarouselVerticle
+                onClick={()=>{r.push(data.path)}}
                 dim={250} 
-                imgData={category == 'dev'? newData:newData_two } 
+                imgData={category == 'dev'? devData:designData } 
                 index={index} 
                 setIndex={setIndex}
                 data={data}
@@ -206,7 +196,7 @@ return <>
                     
                 }} 
                     key={index}
-                    src={source}
+                    src={source.vid}
                     initial={{opacity:0}}
                     exit={{opacity:0}}
                     animate={{opacity:1}}
@@ -243,7 +233,7 @@ return <>
                             }}/>
             </NavHeader>
 
-            <MobCarousel dim={40}/>
+            <MobCarousel imgData={WorkCarouselData} dim={40}/>
 
 </>}
   </MainCont> 

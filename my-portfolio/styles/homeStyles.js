@@ -18,8 +18,6 @@ import styled, { keyframes } from "styled-components";
 // `
 
 const rotate = keyframes`
-
-
     0% { top:-200px;}
     30% { top:0px;}
     40% { top:-100px;}
@@ -32,12 +30,24 @@ const rotate = keyframes`
 
 // Here we create a component that will rotate everything we pass in over two seconds
 export const AnimationCont = styled(motion.div)`
-  display: inline-block;
+  display:flex;
+  // flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
   position:relative;
-//   animation: ${rotate} 2s linear 2;
-//   padding: 2rem 1rem;
-//   font-size: 1.2rem;
   height:150px;
   width:150px;
   // border:2px solid red;
+  position:relative;
+ 
 `;
+export const AllAnimsCont = styled(motion.div)`
+// border:2px solid red;
+display: flex;
+flex-direction:column;
+flex-wrap:wrap;
+justify-content:space-around;
+width:50vw;
+height:50vh;
+
+`

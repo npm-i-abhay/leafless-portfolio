@@ -35,6 +35,6 @@ justify-content:space-around;
 height:100%;
 `
 
-export const Text = styled.span`
+export const Info = styled.div`
 color:${props=>props.txtCol};
 `

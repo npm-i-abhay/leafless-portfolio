@@ -4,12 +4,12 @@ import { comp_theme } from '@/utils/variables'
 // component imports
 import { ImageContainer } from '../ImageCard'
 import{MiniCarousel}  from '../MiniCarousel' // styled component imports
-import { GridCont, Row, Description, ImageSlider, Text } from './styles'
+import { GridCont, Row, Description, ImageSlider, Text, Info } from './styles'
 
 export const ProjectImageGrid = ({
     imageSet1, 
     imageSet2,
-    Default = "whatever",
+    Default,
     order
 }) => {
 
@@ -36,7 +36,7 @@ return (
             >
             <Description
             order={order}>
-                <Text txtCol={themer.buzzTxt}> {Default} </Text>
+                <Info txtCol={themer.buzzTxt}> {Default} </Info>
             </Description>
             {/* <ImageSlider>
                 {imageSet1}

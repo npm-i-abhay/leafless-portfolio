@@ -1,9 +1,12 @@
 import styled from "styled-components";
-
-export const InfoContainer = styled.div`
+import { motion } from "framer-motion";
+export const InfoContainer = styled(motion.div)`
 display:flex;
 justify-content:space-around;
+align-items:center;
 flex-wrap:wrap;
+// border:2px solid green;
+height:70vh;
 @media (max-width: 500px) {
     flex-direction:column;
     align-items:center;
@@ -18,7 +21,7 @@ color:${props => props.txtCol};
 
 `
 
-export const StackCont = styled.div`
+export const StackCont = styled(motion.div)`
 display:flex;
 flex-wrap:wrap;
 // background:red;
@@ -26,15 +29,16 @@ width:100%;
 justify-content:space-between;
 `
 
-export const TechStack = styled.img`
+export const TechStack = styled(motion.img)`
 height:70px;
 width:70px;
 border-radius:${props => props.radius};
 `
 
 export const ContentCont = styled.div`
-
+// border:2px solid blue;
 width:60%;
+height:100%;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -50,7 +54,11 @@ order:${props=>props.order};
     height:500px;
     margin-top:50px;
 }
+`
 
+export const ProjectTitle = styled.p`
+font-size:70px;
+color:${props=>props.txtCol};
 `
 // export const Explore = styled.button`
 // color:${props => props.txtCol};

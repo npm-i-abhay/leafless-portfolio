@@ -37,8 +37,18 @@ export const LottieControl = ({animData}) => {
       document.removeEventListener("scroll", onScroll);
     };
   }, []);
+const styles ={ 
+  position: "fixed" , 
+  width:'130%',
+  zIndex:-1,
+  top:'10%', 
+  left:'3%',
+  transform: 'rotate(270.5deg)',
+  // height:'100%' , 
+  opacity:.5}
 
-  return <div style={{ position: "fixed" , zIndex:-1, width:'100vw'}} ref={lottieRef}></div>;
+
+  return <div style={styles} ref={lottieRef}></div>;
 };
 
 
