@@ -105,6 +105,7 @@ useEffect(()=>{setSource(data)},[data])
 
 return <>
 
+{sWidth >= 800?
     <MainCont
         bgCol={global_theme[theme].body}
         initial={{x:"-100%"}}
@@ -112,7 +113,6 @@ return <>
         animate={{x:toggleMenu?0:0}}
         transition={{duration:.8,ease:[.6,.05,-.01,.9]}}
         >
-        {sWidth >= 800?
     <BaseContainer>
         
 
@@ -185,7 +185,8 @@ return <>
             </motion.div>
             
             <div className='video'> 
-        {category ==='dev'?<>
+        {category ==='dev'? //checking if the selected category is design ir dev 
+        <>
         
             <AnimatePresence 
                 initial={false}
@@ -208,7 +209,8 @@ return <>
                     transition={{duration:.2, ease:'easeInOut'}}
                     />
             </AnimatePresence>
-        </>: <AnimatePresence 
+        </>: //checking if the selected category is design ir dev
+            <AnimatePresence 
                 initial={false}
                 exitBeforeEnter>
 
@@ -236,33 +238,38 @@ return <>
             </div>
         </RevealContainer>
     </BaseContainer>
-: <>   
-            <NavHeader>
-                <Header>
-                    <HeaderHam 
-                        onHamClick={()=>{ 
-                        setHammer(!hammer)
-                        setToggle(!toggle)}}
-                        ham={hammer} 
-                        />
-                </Header>
+</MainCont> 
+: 
 
-                <Navigation toggleMenu={toggle}  
-                    setToggleMenu={setToggle}
-                    myHam = {hammer}
-                    hamClick={()=>
-                            {
-                            setHammer(!hammer)
-                            setToggle(!toggle)
-                            }}/>
-            </NavHeader>
+<> 
+       
+       <NavHeader>
+           <Header>
+               <HeaderHam 
+                   onHamClick={()=>{ 
+                   setHammer(!hammer)
+                   setToggle(!toggle)}}
+                   ham={hammer} 
+                   />
+           </Header>
 
-            <MobCarousel imgData={WorkCarouselData} dim={40}/>
-            <MobImageCarousel 
-            imgData={workDesignCarouselOne} dim={35}/>
+           <Navigation toggleMenu={toggle}  
+               setToggleMenu={setToggle}
+               myHam = {hammer}
+               hamClick={()=>
+                       {
+                       setHammer(!hammer)
+                       setToggle(!toggle)
+                       }}/>
+       </NavHeader>
+
+       <MobCarousel imgData={WorkCarouselData} dim={40}/>
+       <MobImageCarousel 
+       imgData={workDesignCarouselOne} dim={35}/>
+       <MobImageCarousel 
+       imgData={workDesignCarouselOne} dim={35}/>
 
 </>}
-  </MainCont> 
   
   </>
 };
