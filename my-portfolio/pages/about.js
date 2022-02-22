@@ -79,7 +79,12 @@ const variants = {
     }
   }
 }
-const welcome=[`H`,'e','l','l','O',' ','T','h','e','r','e',]
+const welcome=[`H`,'e','l','l','o',' -','T','h','e','r','e' ,'!']
+const welcome2 =[]
+const welcome4 =['N','i','c','e','-' ,'To']
+const welcome3=[]
+// const welcome4 =['T','h','e','r','e',]
+const welcome5 =['M','e','e','t','Y','o','u']
 // varients allows us to
 // 1) organize the code a bit better
 // 2) pass the name of the parent motion container's initial=''hidden and animate='visible' down to each and every motion children within that container so we don't have to specify those 2 lines again as long as the children's variant's key's are the same 
@@ -117,7 +122,13 @@ const welcome=[`H`,'e','l','l','O',' ','T','h','e','r','e',]
 
 
       <HeroContainer>
-        <WelcomeHeading lineOne={welcome}/>
+        <WelcomeHeading 
+          lineOne={welcome}
+          lineTwo={welcome2}
+          lineThree={welcome3}
+          lineFour={welcome4}
+          lineFive={welcome5}
+          />
       </HeroContainer>
       { sWidth >=650 ? 
         // checking if the screen width is

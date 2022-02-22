@@ -40,32 +40,32 @@ export const WorkCarouselData =
             '/tech/Node.png',
 
         ],
-        description : 'this is a project card for mobile size ',
+        description : 'Buzzy Bee is an organizer cross platform application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
     },
 
     {
         title:'EcoHow',
-        link:'/caseStudies/ecoHow/ecohowHero.png',
+        link:'/caseStudies/ecoHow/ecoHowHero.png',
         techStack:[
             '/tech/react.png',
             '/tech/javascript.png',
             '/tech/styled.png',
             '/tech/Next.png',
-            '/tech/Node.png',
             '/tech/Npm.png',
         ],
-        description : 'this is a project card for mobile size ',
+        description : 'EcoHow is an interactive web app built using ReactJs that teaches users on proper ways of recycling & composting in an interactive & gamified manner',
     },
 
     {
-        title:'Buzzy Bee',
-        link:"https://placekitten.com/500/500", 
+        title:'Mix Elixir',
+        link:"/caseStudies/mixElix/mixElixir.png", 
         techStack:[
-        "https://placekitten.com/500/500",
-        "https://placekitten.com/500/500",
-        "https://placekitten.com/500/500",
+            '/tech/react.png',
+            '/tech/Node.png',
+            '/tech/mongo.png',
+            '/tech/Npm.png',
         ],
-        description : 'this is a project card for mobile size ',
+        description :'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences.',
     },
 
 ];
@@ -76,12 +76,12 @@ export const WorkCarouselData =
     export const devData = [
         {
             thumb:'/caseStudies/buzzy/buzzMock.png', 
-            vid:'/caseStudies/ecohow/ecoDev1.png',
+            vid:'/videos/buzz/meeting.mp4',
             path:'/projects/buzz'
         },
         {
             thumb:'/caseStudies/ecohow/ecohowHero.png',
-            vid:'/caseStudies/buzzy/buzzMock.png',
+            vid:'/videos/eco/ecoGame.mp4',
             path:'/projects/eco'
         },
         {
@@ -92,25 +92,25 @@ export const WorkCarouselData =
 
     export const designData = [
         {
-            thumb:'/caseStudies/buzzy/buzzMock.png', 
-            vid:'/caseStudies/ecohow/ecohowDev1.png'
+            thumb:'/design/moog.png',
+            vid:'/design/moog.png'
         },
         {
-            thumb:'/caseStudies/ecohow/ecohowHero.png',
-            vid:'/caseStudies/buzzy/buzzMock.png'
+            thumb:'/design/photoshop1.png',
+            vid:'/design/photoshop1.png'
         },
         {
-            thumb:'/caseStudies/mixElix/mixElixir.png',
-            vid:'/caseStudies/ecohow/ecohowHero.png',},
+            thumb:'/design/landscape.png',
+            vid:'/design/landscape.png',},
         {
-            thumb:'/caseStudies/mixElix/mixElixir.png',
-            vid:'/caseStudies/ecohow/ecohowHero.png',},
+            thumb:'/design/logos1.png',
+            vid:'/design/logos1.png',},
         {
-            thumb:'/caseStudies/mixElix/mixElixir.png',
-            vid:'/caseStudies/ecohow/ecohowHero.png',},
+            thumb:'/design/proms1.png',
+            vid:'/design/proms1.png'},
         {
-            thumb:'/caseStudies/mixElix/mixElixir.png',
-            vid:'/caseStudies/ecohow/ecohowHero.png',},
+            thumb:'design/illustration.png',
+            vid:'design/illustration.png'}
     
     ]
 

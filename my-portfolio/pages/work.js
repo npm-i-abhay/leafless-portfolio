@@ -184,7 +184,30 @@ return <>
             </motion.div>
             
             <div className='video'> 
+        {category ==='dev'?<>
+        
             <AnimatePresence 
+                initial={false}
+                exitBeforeEnter>
+
+                <motion.video
+                loop={'true'}
+                autoPlay={'true'}
+                style={{
+                    objectFit:'contain', 
+                    width:'100vw',
+                    height:'100%',
+                    
+                }} 
+                    key={index}
+                    src={source.vid}
+                    initial={{opacity:0}}
+                    exit={{opacity:0}}
+                    animate={{opacity:1}}
+                    transition={{duration:.2, ease:'easeInOut'}}
+                    />
+            </AnimatePresence>
+        </>: <AnimatePresence 
                 initial={false}
                 exitBeforeEnter>
 
@@ -202,7 +225,7 @@ return <>
                     animate={{opacity:1}}
                     transition={{duration:.2, ease:'easeInOut'}}
                     />
-            </AnimatePresence>
+            </AnimatePresence>}
                 {/* you can add animate presence that is a built in function in framer motion to detect when a component unmounts to make it smooth when switiching between links */}
 
                 {/* <video src={require('../../public/videoOne.mp4')}

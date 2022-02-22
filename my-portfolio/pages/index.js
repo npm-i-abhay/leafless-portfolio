@@ -33,6 +33,9 @@ import {
 // other imports
 import SmoothScroll from '@/components/SmoothScroll'
 
+// data imports
+import { WorkCarouselData,devData, designData } from '@/props/props';
+
 // Component imports
 import {MyButton} from '@/components/Button'
 import { Footer } from '@/components/Footer'
@@ -45,6 +48,7 @@ import { Animation } from '@/components/Animation'
 import { AllAnimsCont, AnimationCont } from '@/styles/homeStyles'
 import { MobCarousel } from '@/components/MobCarousel'
 import { ScrollImage } from '@/components/ScrollImage'
+import { DesignGrid } from '@/components/DesignGrid'
 
 export default function Home() {
 
@@ -175,7 +179,6 @@ hover:{
     {/* <LottieControl/> */}
       <Tags  txt='<h1>'/>
           <WelcomeHeading
-
             />
         
       <Tags txt='</h1>'/>
@@ -222,7 +225,7 @@ hover:{
             heading='Buzzy Bee'
             stackData={techStackOne}
             img='/caseStudies/buzzy/buzzMock.png'
-            onButtClick={()=>{router.push('/project')}}
+            onButtClick={()=>{router.push('/projects/buzz')}}
           />
       <Tags txt='/>'/>    
       
@@ -233,6 +236,7 @@ hover:{
     
       <Tags txt='<Img src="../'/>
         <ProjectInfo
+          onButtClick={()=>{router.push('/projects/eco')}}
           txtCol={themer.ecoHead}
           heading='EcoHow'
           stackData={techStackTwo}
@@ -254,12 +258,18 @@ hover:{
       />
 
       <Tags txt='/>'/>
-    </>} />
+
       
+    </>} />
+    <DesignGrid/>
       </>
     :
     
-    <MobCarousel dim={40} /> }
+      <>
+        <MobCarousel imgData={WorkCarouselData}  dim={40} />  
+        <DesignGrid/>
+      </>}
+    
           
 
 

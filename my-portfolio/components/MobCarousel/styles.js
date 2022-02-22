@@ -102,7 +102,7 @@ width:50px;
 `
 export const Description = styled.div`
 color:${props => props.txtCol};
-width:90%;
+width:100%;
 // height:150px;
 font-size:18px;
 text-align:center;

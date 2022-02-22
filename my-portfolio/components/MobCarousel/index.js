@@ -120,7 +120,7 @@ return <Cont>
                   borderCol={themer.menu}
                     animate={{
                       width:i===index ?'80vw':'60vw', 
-                      height:i===index ?'80vh':'60vh', 
+                      height:i===index ?'90vh':'90vh', 
                       originX:0, 
                       originY:0, 
                       opacity:i===index?1:.5,

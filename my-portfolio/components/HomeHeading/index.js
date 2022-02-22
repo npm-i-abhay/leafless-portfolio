@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { useTheme } from '@/utils/provider';
 import { comp_theme } from '@/utils/variables';
 // styled components imports 
@@ -19,8 +19,14 @@ export const WelcomeHeading = (
 ) => {
 const {theme,setTheme} = useTheme()
 const [myClass, setMyClass] = useState()
+const [sWidth, setSwidth] = useState(null)
 
 
+useEffect(()=>{
+    setSwidth(window.innerWidth)
+ window.onresize=()=>{setSwidth(window.innerWidth)}
+ console.log(sWidth)
+},[sWidth])
 
 
   return( 
@@ -68,7 +74,7 @@ const [myClass, setMyClass] = useState()
             {o}
           </Heading>
         ))}
-        {lineFive.map((o,i)=>(
+        { sWidth >= 500 && lineFive.map((o,i)=>(
           <SubHeading 
             key={i}
             subHeadCol={comp_theme[theme].menu}
@@ -78,7 +84,17 @@ const [myClass, setMyClass] = useState()
           </SubHeading>
         ))}
       </div>
-    
+      <div style={{display:'flex', marginLeft:-10}}> 
+        { sWidth <= 500 && lineFive.map((o,i)=>(
+          <SubHeading 
+            key={i}
+            subHeadCol={comp_theme[theme].menu}
+            className='heading'
+            headCol={comp_theme[theme].mainTxt}>
+            {o}
+          </SubHeading>
+        ))}
+      </div>
   </HeadingCont>)
 };
 
