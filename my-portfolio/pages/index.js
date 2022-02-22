@@ -194,6 +194,7 @@ hover:{
       >
         {animPaths.map((o,i)=>(
           <AnimationCont
+          key={i}
           drag
           dragConstraints={{
             top: -100,

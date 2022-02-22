@@ -29,6 +29,7 @@ const [myClass, setMyClass] = useState()
 
         {lineOne.map((o,i)=>(
           <Heading
+            key={i}
             className={'heading'}
             headCol={comp_theme[theme].mainTxt}>
             {o}
@@ -39,6 +40,7 @@ const [myClass, setMyClass] = useState()
 
         {lineTwo.map((o,i)=>(
           <Heading
+            key={i}
             className={'heading'}
             headCol={comp_theme[theme].mainTxt}>
             {o}
@@ -46,7 +48,8 @@ const [myClass, setMyClass] = useState()
         ))}
 
         {lineThree.map((o,i)=>(
-          <SubHeading 
+          <SubHeading
+            key={i}
             subHeadCol={comp_theme[theme].menu}
             className='heading'
             headCol={comp_theme[theme].mainTxt}>
@@ -59,6 +62,7 @@ const [myClass, setMyClass] = useState()
         
       {lineFour.map((o,i)=>(
           <Heading
+            key={i}
             className={'heading'}
             headCol={comp_theme[theme].mainTxt}>
             {o}
@@ -66,6 +70,7 @@ const [myClass, setMyClass] = useState()
         ))}
         {lineFive.map((o,i)=>(
           <SubHeading 
+            key={i}
             subHeadCol={comp_theme[theme].menu}
             className='heading'
             headCol={comp_theme[theme].mainTxt}>
