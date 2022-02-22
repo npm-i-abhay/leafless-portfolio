@@ -28,7 +28,8 @@ import { MobCarousel } from '@/components/MobCarousel';
 
 
 // data imports
-import { WorkCarouselData,devData, designData } from '@/props/props';
+import { WorkCarouselData,devData, designData, workDesignCarouselOne } from '@/props/props';
+import { MobImageCarousel } from '@/components/MobImageCarousel';
 
 
 
@@ -257,6 +258,8 @@ return <>
             </NavHeader>
 
             <MobCarousel imgData={WorkCarouselData} dim={40}/>
+            <MobImageCarousel 
+            imgData={workDesignCarouselOne} dim={35}/>
 
 </>}
   </MainCont> 

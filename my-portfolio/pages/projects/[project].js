@@ -243,8 +243,7 @@ return (
                 }
                 {project==='buzz' &&  <MobImageCarousel dim={40} imgData={imageData1} /> }
                 {project=== 'eco' && <> <HeroContainer>
-                {/* <ProjectHero src='/caseStudies/ecohow/ecoDev1.png'/>
-                <ProjectHero src='/caseStudies/ecohow/ecoDev2.png'/> */}
+                
                     </HeroContainer>  </> }
         <ProjectHeading 
             subCol={o.subHeadCol}

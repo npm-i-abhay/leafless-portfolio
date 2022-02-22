@@ -113,7 +113,14 @@ export const WorkCarouselData =
             vid:'design/illustration.png'}
     
     ]
-
+export const workDesignCarouselOne=[
+'/design/moog.png',
+'/design/photoshop1.png',
+'/design/landscape.png',
+'/design/logos1.png',
+'/design/proms1.png',
+'/design/illustration.png',
+]
 // ==============buzzyBee
 export const ProjectData =[
     {

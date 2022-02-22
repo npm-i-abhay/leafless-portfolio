@@ -53,7 +53,7 @@ opacity:${props => props.op};
 margin:1.5em;
 justify-content:space-between;
 transition: all .5s;
-border:.2px solid red;
+// border:.2px solid red;
 top:20px;
 
 // box-shadow:${props=>props.shadow};
