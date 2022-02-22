@@ -237,7 +237,7 @@ hover:{
           heading='EcoHow'
           stackData={techStackTwo}
           order={-1}
-          img='/caseStudies/ecohow/ecohowHero.png'
+          img='/caseStudies/ecohow/ecoHowHero.png'
       />
 
       <Tags txt='/>'/>

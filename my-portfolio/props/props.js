@@ -45,7 +45,7 @@ export const WorkCarouselData =
 
     {
         title:'EcoHow',
-        link:'/caseStudies/ecohow/ecohowHero.png',
+        link:'/caseStudies/ecoHow/ecohowHero.png',
         techStack:[
             '/tech/react.png',
             '/tech/javascript.png',
