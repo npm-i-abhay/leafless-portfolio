@@ -225,7 +225,7 @@ hover:{
             onButtClick={()=>{router.push('/project')}}
           />
       <Tags txt='/>'/>    
-
+      
       </>}/>
 
       
