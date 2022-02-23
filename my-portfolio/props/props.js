@@ -40,7 +40,7 @@ export const WorkCarouselData =
             '/tech/Node.png',
 
         ],
-        description : 'Buzzy Bee is an organizer cross platform application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
+        description : 'Buzzy Bee is a cross platform organizer application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
         route:'/projects/buzz'
     },
 
@@ -132,18 +132,21 @@ export const ProjectData =[
         titleCol:'#94BDD4',
         subHead:'Helping You Find Time To Do What You Love',
         subHeadCol:'#63B0BC',
-        description:`Buzzy Bee is a native organizer application that fetches data from the school’s portal (mocked) and automatically adds the student’s course schedule to the built in calendar.
+        description:`Buzzy Bee is a cross platform organizer application primarily built with React native, php & mySQL. The app uses a smart sorting algorithm to provide availability for times when each and all members within a group are available to meet
         The user can:
-        create groups and the app will compare members’ schedules and provide the user with times when everyone is available.create tasks ( Personal, Academic, Group) and add them to the built-in calendar. `,
+        create groups and the app will compare members’ schedules and provide the user with times when everyone is available. Create tasks ( Personal, Academic, Group) and add them to the built-in calendar. Message your group members within an application that's your One-Stop-Shop-Solution For Your Productivity needs `,
         descriptionCol:"#94BDD4",
-        mockSource:'/caseStudies/buzzy/buzzMock.png',
+        mockSource:'/caseStudies/buzzy/buzzMockup.png',
         processImage:'/caseStudies/buzzy/buzzyProcess.png',
-        researchImage:'/caseStudies/buzzy/buzzyUserResearch.png',
+        researchImage:'/caseStudies/buzzy/buzzUserResearch.png',
         persona1:'/caseStudies/buzzy/buzzyPerson1.png',
         persona2:'/caseStudies/buzzy/buzzyPerson2.png',
-        solutionDesign:`Buzzy Bee is a native organizer application that fetches data from the school’s portal (mocked) and automatically adds the student’s course schedule to the built in calendar. The user can: create groups and the app will compare members’ schedules and provide the user with times when everyone is available.create tasks ( Personal, Academic, Group) and add them to the built-in calendar.`,
+        problemIdentification:`From our research, it was clear that in this day and age, we're trying to get more done by doing less. We spend a lot of time sorting the logistics for any particular task and more often than not, a lot of time is lost in that transition. This resulted in overwhelm, burnout and reduced productivity. There had to be a better way. `,
+        solutionDesign:`After Extensive research on the need analysis, our team critically drafted scenarios using task models and steps our target audience would go through while exploring our solutions. We built several mind maps & prototypes from Lo Fidelity to Hi-Fidelity based off of our data gathered in research. We then tested our prototypes using a rule based written scripts and gathered essential data. Finally we made changes to our prototype based on the feedback and results from our user testing. `,
         solutionProcess1:'/caseStudies/buzzy/buzzyModOne.png',
         solutionProcess2:'/caseStudies/buzzy/buzzyModTwo.png',
+        devProcess:'We divided the application into components and pages. We dissected each component into extensive detail and laid down all the potential "props", "handler functions", "States" etc. Consecutively, we built several mind maps for each and every possible flow/user journey in our application considering functionality and how the user would progress after each step.',
+        devProcess2:'Before even touching the code, our team made sure the aforementioned processes were robust. As a lead developer, I discussed guidelines, naming conventions, commit messages, and other rules to encourage optimized development within our development team',
         gif1:'/caseStudies/ecohow/ecoDev1.png',
         gif2:'/caseStudies/ecohow/ecoDev2.png'
 
@@ -157,16 +160,18 @@ export const ProjectData2 =[
         titleCol:'',
         subHead:'One Step Closer to Sustainability',
         subHeadCol:'#63B0BC',
-        description:`EcoHow is a intuitive web applicaton education users on proper ways of recycyling and composting`,
-        mockSource:'/caseStudies/ecohow/ecoHero.png',
+        description:`EcoHow is a intuitive web application education users on proper ways of recycling and composting`,
+        mockSource:'/caseStudies/ecohow/ecoHowHero.png',
         descriptionCol:"#A5C955",
         processImage:'/caseStudies/ecohow/ecoProcess.png',
-        researchImage:'/caseStudies/buzzy/buzzyUserResearch.png',
+        researchImage:'/caseStudies/ecohow/ecoUserResearch.png',
         persona1:'/caseStudies/ecohow/ecoPerson1.png',
         persona2:'/caseStudies/ecohow/ecoPerson2.png',
-        solutionDesign:`Buzzy Bee is a native organizer application that fetches data from the school’s portal (mocked) and automatically adds the student’s course schedule to the built in calendar. The user can: create groups and the app will compare members’ schedules and provide the user with times when everyone is available.create tasks ( Personal, Academic, Group) and add them to the built-in calendar.`,
+        problemIdentification:'',
+        solutionDesign:`Our team critically researched the learning curve for our target demographic and identified what enhances the learning experience. We designed an intuitive application where the user goes through a journey where they get a chance to learn and reflect on their habits. Finally to incentivize and enhance the value of our application, we added a sorting game that asked the users to sort the waste in the correct bins. This encouraged engagement and enhanced the learning experience. `,
         solutionProcess1:'/caseStudies/ecohow/ecoLofi.png',
         solutionProcess2:'/caseStudies/ecohow/ecoHifi.png',
+        devProcess:'',
         gif1:'/caseStudies/ecohow/ecoDev1.png',
         gif2:'/caseStudies/ecohow/ecoDev2.png'
 

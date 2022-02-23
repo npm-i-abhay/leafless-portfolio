@@ -181,7 +181,7 @@ return (
             subCol={o.subHeadCol}
             subHead={'Research + Analysis'}/>
         {/* This is where I would add the videos */}
-            <ProjectHero width='50vw' src={o.researchImage}/>
+            <ProjectHero width='80vw' src={o.researchImage}/>
     
     
         <ProjectHeading 
