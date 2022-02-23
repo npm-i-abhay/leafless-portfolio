@@ -13,4 +13,5 @@ border-radius:4px;
 `
 export const ButtonCont = styled.div`
 padding:10px;
+cursor:pointer;
 `

@@ -117,7 +117,7 @@ return (
     <>
     {data.map((o,i)=>(
         <Wrapper 
-            bgCol={o.projectCol}
+            // bgCol={o.projectCol}
             key={i} >
 
         <HeaderHam 

@@ -8,6 +8,8 @@ import { LottieControl } from '@/components/ScrollAnimation'
 import { Router, useRouter } from 'next/router'
 import { useTheme } from '@/utils/provider'
 import { comp_theme } from '@/utils/variables'
+
+
 // styled components 
 const Wrapper = styled(motion.div)`
 height:100%;
@@ -24,7 +26,6 @@ justify-content:flex-end;
 `
 
 import { 
-  ChartCont,
   IntroHeading
 
 } from '@/styles/globalStyles'
@@ -34,7 +35,14 @@ import {
 import SmoothScroll from '@/components/SmoothScroll'
 
 // data imports
-import { WorkCarouselData,devData, designData } from '@/props/props';
+import { 
+  WorkCarouselData,
+  devData, 
+  designData,
+  ProjectData,
+  ProjectData2,
+  AboutData
+} from '@/props/props';
 
 // Component imports
 import {MyButton} from '@/components/Button'
@@ -49,6 +57,8 @@ import { AllAnimsCont, AnimationCont } from '@/styles/homeStyles'
 import { MobCarousel } from '@/components/MobCarousel'
 import { ScrollImage } from '@/components/ScrollImage'
 import { DesignGrid } from '@/components/DesignGrid'
+import { HeroContainer } from '@/styles/aboutStyles'
+import { AboutMe } from '@/components/AboutMe'
 
 export default function Home() {
 
@@ -131,9 +141,8 @@ const imgVariants = {
     transition:{
       duration:2.5, 
       type:'spring', 
-      // stiffness:50,
       damping:10
-      // yoyo:10
+
     }
   }
   ,
@@ -188,31 +197,22 @@ hover:{
       <Tags txt='</button>'/>
       
       </IntroHeading>
-      
-      <ChartCont>
-        {/* <MyChart/> */}
-      </ChartCont>
+  
+    <ScrollImage img={<>
+      <AboutMe txt={AboutData.homeIntro} />
+        <AllAnimsCont>
+          {animPaths.map((o,i)=>(
+            <AnimationCont
+              key={i}
+              variants={imgVariants}> 
+              <Animation path={o} />
+            </AnimationCont>
+          ))}
 
-      <AllAnimsCont 
-      >
-        {animPaths.map((o,i)=>(
-          <AnimationCont
-          key={i}
-          // drag
-          // dragConstraints={{
-          //   top: -100,
-          //   left: -100,
-          //   right: 100,
-          //   bottom: 100,
-          // }}
+        </AllAnimsCont>      
+    
+    </>} />
 
-            variants={imgVariants}
-> 
-            <Animation path={o} />
-          </AnimationCont>
-        ))}
-
-      </AllAnimsCont>      
         
       
       
@@ -224,6 +224,7 @@ hover:{
             txtCol={themer.buzzTxt}
             heading='Buzzy Bee'
             stackData={techStackOne}
+            description={ProjectData[0].description}
             img='/caseStudies/buzzy/buzzMockup.png'
             onButtClick={()=>{router.push('/projects/buzz')}}
           />
@@ -240,6 +241,7 @@ hover:{
           txtCol={themer.ecoHead}
           heading='EcoHow'
           stackData={techStackTwo}
+          description={ProjectData2[0].description}
           order={-1}
           img='/caseStudies/ecohow/ecoHowHero.png'
       />

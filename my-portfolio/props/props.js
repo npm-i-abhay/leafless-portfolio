@@ -26,6 +26,9 @@ export const buzzDesign =[
 
 
 export const AboutData = {
+    homeIntro:`A visionary using front-end development to augment the way communities consume virtual experiences and create innovative and cross-platform solutions for complex and technical problems. 
+    I'm a well versed developer with a robust understanding of developing cross-platform full-stack solutions within a team environment with the ability to lead and delegate tasks effectively. 
+    I'm also professionally trained in user interface and user experience design that compliments my technical skills during solution design.`,
     heroImage:'/about/PPortrait.jpeg',
     intro: `My name is Abhay Bakshi (ub-hey). I’m a full stack developer and designer specializing in streamlined interactive development. I have a keen interest in building engaging solutions that helps communities across the globe. I’m a consistent learner and I aspire to augment digital experiences `,
     saImg1:[],
