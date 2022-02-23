@@ -25,6 +25,22 @@ export const buzzDesign =[
 ]
 
 
+export const AboutData = {
+    heroImage:'/about/PPortrait.jpeg',
+    intro: `My name is Abhay Bakshi (ub-hey). I’m a full stack developer and designer specializing in streamlined interactive development. I have a keen interest in building engaging solutions that helps communities across the globe. I’m a consistent learner and I aspire to augment digital experiences `,
+    saImg1:[],
+    saText:`Outside of my core academia, I serve as a Vice President External for the BCITSA promoting positive relationship with external stake holders, and all levels of governments. I advocate for student concerns and bring them forward to our country's leaders to bring awareness and encourage actions around them `,
+    saText2:`The BCIT Student Association closed 2021 with a very successful lobby week in Ottawa, where we met with MPs, Senators, and government staffers. As the VP External, I presented our policy priorities to elected officials from all parties, accompanied by the SA’s talented Government Relations Strategist Stewart McGillivray.
+    The Association’s main goals related to student financial assistance, including eliminating student loans interest. The chief objective of the lobbying was the government’s temporary three-year expansion of Canada Student Grants. `,
+    animPathOne:'/animation/lead.json',
+    saImg2:["/about/ot4.jpg","/about/ot2.jpg","/about/ot5.jpg","/about/ot1.png","/about/ot6.jpg","/about/ot3.jpg" ],
+    musicImg1:'',
+    musicIntro:`I have an immense passion for music and I have spent years playing music professionally. I'm formally trained in string instruments and music production. These days, I play music as a hobby and I still get inspired form my musical side. It's a gift and time that I cherish when I'm not coding. `,
+    musicImg2:"/about/music2.jpeg",
+    mobMusicImg:['/about/music3.jpeg',"/about/music2.jpeg", "/about/music.jpeg", "/about/synth.png"]
+}
+
+
 
 // mobile work page carousel data
 export const WorkCarouselData =
@@ -177,3 +193,4 @@ export const ProjectData2 =[
 
     }
 ]
+

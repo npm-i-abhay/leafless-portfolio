@@ -6,10 +6,15 @@ import { comp_theme } from '@/utils/variables';
 
 const Container = styled.div`
 color:${props=>props.txtCol};
-width:50%;
+width:40%;
+font-size:20px;
 margin:10px;
+// border:2px solid red;
 @media (max-width: 600px) {
   width:90%;
+  text-align:center;
+  // border:2px solid red; 
+
 }
 `
 

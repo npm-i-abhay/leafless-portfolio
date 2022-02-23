@@ -17,16 +17,16 @@ export const ScrollImage = ({src, img, children, direction='row'}) => {
     }} >
         <div
             style={{
-                width:'90%',
+                width:'100%',
                 transition:'all .75s',
                 position:'relative',
-                margin:'20px',
+                // margin:'20px',
                 display:'flex',
                 flexDirection:{direction},
                 // border:'2px solid red',
                 opacity: visibility ? 1 : 0.25,
                 left:visibility? 0 :-300,
-                justifyContent:'center',
+                justifyContent:'space-around',
                 alignItems:'center'
         }} >
         

@@ -4,18 +4,15 @@ import styles from '../styles/Main.module.css'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 import animationData from "@/public/animation/rock.json";
-// styled components 
-// const Wrapper = styled.div`
-// display:flex;
-// flex-direction:column;
-// `
+
+
 
 import { Wrapper, HeroContainer, AboutContent, CarouselCont } from '@/styles/aboutStyles'
 
 const aboutMe = 'My name is Abhay Bakshi (ub-hey). I’m a full stack developer and designer specializing in streamlined interactive development. I have a keen interest in building engaging solutions that helps communities across the globe. I’m a consistent learner and I aspire to augument digital experiences '
 
-// other imports
-
+// data  and other imports
+import { AboutData } from '@/props/props'
 
 // Component imports
 import { Footer } from '@/components/Footer'
@@ -34,6 +31,8 @@ import { RockControl } from '@/components/RockScrollAnimation'
 import  Slider  from '@/components/MobSlider'
 import { MiniCarousel } from '@/components/MiniCarousel'
 import { MobImageCarousel } from '@/components/MobImageCarousel'
+import { Carousel } from '@/components/Caraousel'
+import { RockControlMob } from '@/components/RockScrollMob'
 const Header = styled.div`
 display:flex;
 justify-content:flex-end;
@@ -133,19 +132,40 @@ const welcome5 =['M','e','e','t','Y','o','u']
       { sWidth >=650 ? 
         // checking if the screen width is
     <>
-              <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
-              <AboutContent>
-                  <AboutMe txt={aboutMe}/>
-                  <AboutMe txt={aboutMe}/>
-              </AboutContent>
+
+    <HeroContainer>
+              <ImageContainer  width ='50%' imgUrl={AboutData.heroImage}/>
+            
+                  <AboutMe txt={AboutData.intro}/>
+              
+    </HeroContainer>
+    
           <ScrollImage img={imgData.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
-          <ScrollImageTwo img={<Animation path='/animation/lead.json' />} />
+
+          <ScrollImage img={
+          <>
+            <AboutMe txt={AboutData.saText}  />
+            <Animation path={AboutData.animPathOne} />
+          </> } />
+
           <ScrollImage img={imgData2.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
+
+          <ScrollImage img={ 
+          <> 
+            <AboutMe txt={AboutData.saText2} />  
+            <MiniCarousel imgData={AboutData.saImg2} dim={40} /> 
+          </> } />
+
           <HeroContainer>
             <RockControl/>
             <ProjectHero src='/about/music3.jpeg'/>
           </HeroContainer>
-          <ScrollImage img={imgData3.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
+          <ScrollImage img={
+            <> 
+            <ProjectHero src={AboutData.musicImg2} />  
+            <AboutMe txt={AboutData.musicIntro} />  
+            </>
+          } />
         {/* <Slider  /> */}
 
     </>
@@ -155,22 +175,34 @@ const welcome5 =['M','e','e','t','Y','o','u']
           <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
         </HeroContainer>
 
-        <AboutContent>
+
             <AboutMe txt={aboutMe}/>
-        </AboutContent>
+
 
         <ScrollImage direction='column' img={ <ImageContainer imgUrl="/about/sa1.jpeg"/> } />
-        <ScrollImage img={<Animation path='/animation/lead.json' />} />
-        <ScrollImage direction='column' img={ <ImageContainer imgUrl="/about/sa2.jpeg" /> } />
+        
+        <ScrollImage direction='column' img={
+            <AboutMe txt={AboutData.saText}/>} />
+        <Animation path={AboutData.animPathOne} />
+
+        <ScrollImage direction='column' img={<> 
+        <MobImageCarousel imgData={AboutData.saImg2} />
+        </> } /> 
+        <AboutMe txt={AboutData.saText2}/>
+
         <HeroContainer>
-            <ProjectHero src='/about/music3.jpeg'/>
-        </HeroContainer>
-        <HeroContainer>
-            <RockControl/>
+            <RockControlMob/>
         </HeroContainer>
 
+        <ScrollImage direction='column' img={ <AboutMe txt={AboutData.musicIntro} />}/> 
+
+        <HeroContainer>
+          <MobImageCarousel imgData={AboutData.mobMusicImg} dim={40} />
+        </HeroContainer>
+
+
+
         {/* <Slider  /> */}
-        <MobImageCarousel dim={40} />
 
 
     </> 

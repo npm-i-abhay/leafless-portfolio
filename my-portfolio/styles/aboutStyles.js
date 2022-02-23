@@ -8,7 +8,9 @@ height:100%;
 
 export const HeroContainer = styled.div`
 display:flex;
-justify-content:space-evenly;
+// border:2px solid red;
+justify-content:space-around;
+
 flex:1;
 // // @media (max-width: 600px) {
 //     flex-direction:column;
@@ -18,9 +20,7 @@ flex:1;
 
 export const AboutContent = styled.div`
 display:flex;
-justify-content:space-evenly;
-flex:.5;
-// width:30%;
+width:50%;
 // background-color:blue;
 
 `
