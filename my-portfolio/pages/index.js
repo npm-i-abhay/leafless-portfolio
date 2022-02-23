@@ -198,13 +198,13 @@ hover:{
         {animPaths.map((o,i)=>(
           <AnimationCont
           key={i}
-          drag
-          dragConstraints={{
-            top: -100,
-            left: -100,
-            right: 100,
-            bottom: 100,
-          }}
+          // drag
+          // dragConstraints={{
+          //   top: -100,
+          //   left: -100,
+          //   right: 100,
+          //   bottom: 100,
+          // }}
 
             variants={imgVariants}
 > 
