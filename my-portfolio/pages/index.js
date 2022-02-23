@@ -198,8 +198,13 @@ hover:{
       
       </IntroHeading>
   
+      {sWidth <= 550 && 
+      <AboutMe txt={AboutData.homeIntroMob} />
+      }
     <ScrollImage img={<>
+      {sWidth >=550 && 
       <AboutMe txt={AboutData.homeIntro} />
+      }
         <AllAnimsCont>
           {animPaths.map((o,i)=>(
             <AnimationCont
