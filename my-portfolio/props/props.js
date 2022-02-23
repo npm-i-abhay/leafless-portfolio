@@ -31,7 +31,7 @@ export const WorkCarouselData =
 [
     {
         title:'Buzzy Bee',
-        link:'/caseStudies/buzzy/buzzMock.png',
+        link:'/caseStudies/buzzy/buzzMockup.png',
         techStack:[
             '/tech/react.png',
             '/tech/javascript.png',
