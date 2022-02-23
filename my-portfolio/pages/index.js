@@ -224,7 +224,7 @@ hover:{
             txtCol={themer.buzzTxt}
             heading='Buzzy Bee'
             stackData={techStackOne}
-            img='/caseStudies/buzzy/buzzMock.png'
+            img='/caseStudies/buzzy/buzzMockup.png'
             onButtClick={()=>{router.push('/projects/buzz')}}
           />
       <Tags txt='/>'/>    
