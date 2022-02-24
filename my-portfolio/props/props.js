@@ -99,12 +99,12 @@ export const WorkCarouselData =
     // dev
     export const devData = [
         {
-            thumb:'/caseStudies/buzzy/buzzMock.png', 
+            thumb:'/caseStudies/buzzy/buzzMockup.png', 
             vid:'/videos/buzz/meeting.mp4',
             path:'/projects/buzz'
         },
         {
-            thumb:'/caseStudies/ecohow/ecohowHero.png',
+            thumb:'/caseStudies/ecohow/ecoHowHero.png',
             vid:'/videos/eco/ecoGame.mp4',
             path:'/projects/eco'
         },

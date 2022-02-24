@@ -69,7 +69,6 @@ export const ProjectInfo = ({
                                             animate={{y:[0,-40,0]}}
                                             transition={{duration:.5}}
                                             
-                                            whileHover={{y:-50 , transition:{type:'spring',duration:.5, mass:0.4, damping:10}}} 
                                             key={i} radius={radius} src={o}/>))}
                 </StackCont>
                 <MyButton 
