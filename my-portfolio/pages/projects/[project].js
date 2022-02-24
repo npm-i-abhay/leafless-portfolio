@@ -46,6 +46,8 @@ import { Animation } from '@/components/Animation'
 import { MobImageCarousel } from '@/components/MobImageCarousel'
 import { GifContainer } from '@/components/GifContainer'
 import { LottieControl } from '@/components/ScrollAnimation'
+import { VideoContainer } from '@/components/VideoComp'
+
 export default function Project() {
  
 
@@ -158,11 +160,21 @@ return (
             mainHead={ o.projectTitle}
             subHead={o.subHead}
             />
+        
+        <HeroContainer>
         <ProjectDescrip
+            width='90%'
             txtCol={o.descriptionCol} 
             mainHead={o.description}
-            
             />
+        <ProjectDescrip
+            width='90%'
+            txtCol={o.descriptionCol} 
+            mainHead={o.description}
+            />
+
+        </HeroContainer>
+            
         
         <HeroContainer>
             <ProjectHero 
@@ -187,7 +199,20 @@ return (
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Problem Identification'}/>
+        <HeroContainer>
+        <ProjectDescrip 
+            width='90%'
+            mainHead={o.problemIdentification}
+            txtCol={o.descriptionCol}  />
+            <VideoContainer 
+                // height='700px' 
+                margin='5%'
+                width='30%' 
+                src={'/videos/buzz/meeting.mp4'} />
         
+        </HeroContainer>
+
+
         {/* personas===================================== */}
         <ProjectHeading 
             subCol={o.subHeadCol}
@@ -201,9 +226,18 @@ return (
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Solution Design'}/>
-        <ProjectDescrip
-            txtCol={o.descriptionCol} 
-            mainHead={o.solutionDesign}/>
+        
+        <HeroContainer>
+            <VideoContainer 
+            width='30%'
+            margin='5%'
+            src='/videos/buzz/chat.mp4' />
+            <ProjectDescrip
+            width='90%'
+                txtCol={o.descriptionCol} 
+                mainHead={o.solutionDesign}/>
+        </HeroContainer>
+
                 
                 {/* task models  */}
         <HeroContainer>
@@ -211,16 +245,6 @@ return (
             <ProjectHero
                 src={o.solutionProcess2}/>
         </HeroContainer>
-    
-    
-                
-                {/* prototypes */}
-
-        {/* <Carousel 
-            imgData={buzzDesign}
-            dim={40}/> */}
-    
-    
     
     
         <ProjectHeading 
@@ -233,12 +257,17 @@ return (
             <>
             {project==='eco' && <LottieControl/> }
             <ProjectImageGrid
+                Default={<ProjectDescrip  font='18px' width='90%' mainHead={o.devProcess} /> }
                 imageSet1={<MiniCarousel dim={40} imgData={imageData1}/>}/>
     
             {/* Development stuff  */}
             <ProjectImageGrid
-                Default={<><GifContainer gif1={o.gif1} gif2={o.gif2} /></>}
-                imageSet1={<ProjectHero src='/caseStudies/buzzy/buzzReact.png' />}/>
+                imageSet1={<>  
+                            { project ==='buzz'? <VideoContainer width='60%' src='/videos/buzz/buzzDevProcess.mp4' />   
+                        
+                            : <GifContainer gif1={o.gif1} gif2={o.gif2} /> }  </>}
+
+                Default={<ProjectDescrip width='90%' font='18px' mainHead={o.devProcess2} />}/>
             </>
                 }
                 { sWidth<=500 && project==='buzz' &&  <MobImageCarousel dim={40} imgData={imageData1} /> } 
@@ -257,10 +286,7 @@ return (
     
         <Footer/>
         
-        {/* <Loader/> */}
-        {/* <Canvas>
-            <HTMLContent/>
-        </Canvas> */}
+    
     
         </Wrapper>
     ))}

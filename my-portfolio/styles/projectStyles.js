@@ -37,6 +37,7 @@ export const HeroContainer= styled.div`
 display:flex;
 // border:2px solid green;
 justify-content:space-around;
+align-items:center;
 @media (max-width: 500px) {
   flex-direction:column;
   align-items:center;

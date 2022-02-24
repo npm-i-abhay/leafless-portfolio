@@ -11,6 +11,7 @@ align-items:center;
 export const Row = styled.div` 
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px;
 // border:2px solid #94BDD450;
 border-radius:5px;

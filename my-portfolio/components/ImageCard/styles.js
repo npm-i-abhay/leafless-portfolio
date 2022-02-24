@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 export const ImageCont = styled(motion.div)`
 width:${props=>props.width};
-max-height:45%;
+max-height:${props=>props.maxHeight};
 // border:2px solid red;
 display:flex;
 justify-content:center;

@@ -9,9 +9,11 @@ export const ImageContainer = ({
   imgUrl="http://placekitten.com/300/400" ,
   animate, 
   inView,
-  width='30%'
+  width='30%',
+  maxHeight="45%"
 }) => {
-  return <ImageCont 
+  return <ImageCont
+            maxHeight={maxHeight}
             width={width}
             initial={{opacity:1}} 
             whileHover={animate} 

@@ -8,9 +8,9 @@ align-items:center;
 `
 export const MainHead = styled.span`
 color:${props=>props.txtCol};
-font-size:28px;
-text-align:center;
-width:60%;
+font-size:${props=>props.font};
+text-align:left;
+width:${props=>props.width};
 @media (max-width: 500px) {
     font-size:18px;
     width:90%;

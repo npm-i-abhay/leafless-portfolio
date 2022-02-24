@@ -17,6 +17,20 @@ import styled, { keyframes } from "styled-components";
 //     100% { height: 100px; width: 100px; opacity: 0.6; }
 // `
 
+export const Wrapper = styled(motion.div)`
+height:100%;
+display:flex;
+flex-direction:column;
+// align-items:center;
+justify-content:space-between;
+overflow:hidden;
+`
+export const Header = styled.div`
+// border:2px solid blue;
+display:flex;
+justify-content:flex-end;
+`
+
 const rotate = keyframes`
     0% { top:-200px;}
     30% { top:0px;}

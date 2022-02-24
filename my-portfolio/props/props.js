@@ -167,7 +167,7 @@ export const ProjectData =[
         solutionProcess1:'/caseStudies/buzzy/buzzyModOne.png',
         solutionProcess2:'/caseStudies/buzzy/buzzyModTwo.png',
         devProcess:'We divided the application into components and pages. We dissected each component into extensive detail and laid down all the potential "props", "handler functions", "States" etc. Consecutively, we built several mind maps for each and every possible flow/user journey in our application considering functionality and how the user would progress after each step.',
-        devProcess2:'Before even touching the code, our team made sure the aforementioned processes were robust. As a lead developer, I discussed guidelines, naming conventions, commit messages, and other rules to encourage optimized development within our development team',
+        devProcess2:'Before even touching the code, our team made sure the aforementioned processes were robust. As a lead developer, I discussed guidelines, naming conventions, commit messages, and other rules to encourage optimized development within our development team. Everyday we would hit a wall that seemed impossible to get over in the moment. Good leadership and unity within our team helped us achieve breakthroughs and go beyond what seemed unreachable  ',
         gif1:'/caseStudies/ecohow/ecoDev1.png',
         gif2:'/caseStudies/ecohow/ecoDev2.png'
 
@@ -190,7 +190,7 @@ export const ProjectData2 =[
         persona2:'/caseStudies/ecohow/ecoPerson2.png',
         problemIdentification:'',
         solutionDesign:`Our team critically researched the learning curve for our target demographic and identified what enhances the learning experience. We designed an intuitive application where the user goes through a journey where they get a chance to learn and reflect on their habits. Finally to incentivize and enhance the value of our application, we added a sorting game that asked the users to sort the waste in the correct bins. This encouraged engagement and enhanced the learning experience. `,
-        solutionProcess1:'/caseStudies/ecohow/ecoLofi.png',
+        solutionProcess1:'/caseStudies/ecohow/ecoMod1.png',
         solutionProcess2:'/caseStudies/ecohow/ecoHifi.png',
         devProcess:'',
         gif1:'/caseStudies/ecohow/ecoDev1.png',

@@ -11,19 +11,7 @@ import { comp_theme } from '@/utils/variables'
 
 
 // styled components 
-const Wrapper = styled(motion.div)`
-height:100%;
-display:flex;
-flex-direction:column;
-// align-items:center;
-justify-content:space-between;
-overflow:hidden;
-`
-const Header = styled.div`
-// border:2px solid blue;
-display:flex;
-justify-content:flex-end;
-`
+import { Wrapper, Header } from '@/styles/homeStyles'
 
 import { 
   IntroHeading
@@ -59,6 +47,7 @@ import { ScrollImage } from '@/components/ScrollImage'
 import { DesignGrid } from '@/components/DesignGrid'
 import { HeroContainer } from '@/styles/aboutStyles'
 import { AboutMe } from '@/components/AboutMe'
+import { CircleIndicator, SectionHeader } from '@/components/SectionHeaders'
 
 export default function Home() {
 
@@ -201,6 +190,8 @@ hover:{
       {sWidth <= 550 && 
       <AboutMe txt={AboutData.homeIntroMob} />
       }
+
+
     <ScrollImage img={<>
       {sWidth >=550 && 
       <AboutMe txt={AboutData.homeIntro} />
@@ -223,6 +214,7 @@ hover:{
       
     {sWidth >=500? 
     <>
+    <SectionHeader/>
     <ScrollImage img={<>
       <Tags txt='<Img src="../'/>
           <ProjectInfo
@@ -268,6 +260,7 @@ hover:{
 
       
     </>} />
+    <SectionHeader/>
     <DesignGrid/>
       </>
     :
