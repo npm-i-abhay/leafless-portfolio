@@ -33,6 +33,7 @@ import { MiniCarousel } from '@/components/MiniCarousel'
 import { MobImageCarousel } from '@/components/MobImageCarousel'
 import { Carousel } from '@/components/Caraousel'
 import { RockControlMob } from '@/components/RockScrollMob'
+import { ScrollButton } from '@/components/ScrollTopButton'
 const Header = styled.div`
 display:flex;
 justify-content:flex-end;
@@ -94,7 +95,7 @@ const welcome5 =['M','e','e','t','Y','o','u']
     initial='hidden'
     animate='visible'>
       <Header>
-
+      <ScrollButton/>
         <HeaderHam 
             onHamClick={()=>{ 
             setHammer(!hammer)

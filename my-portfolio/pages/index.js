@@ -48,6 +48,7 @@ import { DesignGrid } from '@/components/DesignGrid'
 import { HeroContainer } from '@/styles/aboutStyles'
 import { AboutMe } from '@/components/AboutMe'
 import { CircleIndicator, SectionHeader } from '@/components/SectionHeaders'
+import { ScrollButton } from '@/components/ScrollTopButton'
 
 export default function Home() {
 
@@ -148,6 +149,7 @@ hover:{
       initial='hidden'
       animate='visible'
     >
+      <ScrollButton/>
       <Header>
           <HeaderHam 
             onHamClick={()=>{ 

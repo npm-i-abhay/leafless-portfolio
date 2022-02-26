@@ -47,6 +47,7 @@ import { MobImageCarousel } from '@/components/MobImageCarousel'
 import { GifContainer } from '@/components/GifContainer'
 import { LottieControl } from '@/components/ScrollAnimation'
 import { VideoContainer } from '@/components/VideoComp'
+import { ScrollButton } from '@/components/ScrollTopButton'
 
 export default function Project() {
  
@@ -123,7 +124,7 @@ return (
             // bgCol={o.projectCol}
             key={i} >
         <Header>
-
+        <ScrollButton/>
         <HeaderHam 
             onHamClick={()=>{ 
             setHammer(!hammer)
