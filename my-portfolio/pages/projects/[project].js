@@ -313,7 +313,7 @@ return (
             subHead={'Testing + Bug Fixes'}/>
 
         <HeroContainer>
-            {o.test.map((el,i)=>(<ProjectHero src={el} />))}
+            {o.test.map((el,i)=>(<ProjectHero key={i} src={el} />))}
         </HeroContainer>
 
 
