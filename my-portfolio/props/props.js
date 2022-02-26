@@ -158,6 +158,11 @@ export const ProjectData =[
         create groups and the app will compare members’ schedules and provide the user with times when everyone is available. Create tasks ( Personal, Academic, Group) and add them to the built-in calendar. Message your group members within an application that's your One-Stop-Shop-Solution For Your Productivity needs `,
         descriptionCol:"#94BDD4",
         mockSource:'/caseStudies/buzzy/buzzMockup.png',
+        heroVideo:'/videos/buzz/task.mp4',
+        solVideo1:'/videos/buzz/task.mp4',
+        solVideo2:'/videos/buzz/meeting.mp4',
+        solVideo3:'/videos/buzz/chat.mp4',
+        devVideo:'/videos/buzz/buzzDevProcess.mp4',
         processImage:'/caseStudies/buzzy/buzzyProcess.png',
         researchImage:'/caseStudies/buzzy/buzzUserResearch.png',
         persona1:'/caseStudies/buzzy/buzzyPerson1.png',
@@ -167,22 +172,33 @@ export const ProjectData =[
         solutionProcess1:'/caseStudies/buzzy/buzzyModOne.png',
         solutionProcess2:'/caseStudies/buzzy/buzzyModTwo.png',
         devProcess:'We divided the application into components and pages. We dissected each component into extensive detail and laid down all the potential "props", "handler functions", "States" etc. Consecutively, we built several mind maps for each and every possible flow/user journey in our application considering functionality and how the user would progress after each step.',
-        devProcess2:'Before even touching the code, our team made sure the aforementioned processes were robust. As a lead developer, I discussed guidelines, naming conventions, commit messages, and other rules to encourage optimized development within our development team. Everyday we would hit a wall that seemed impossible to get over in the moment. Good leadership and unity within our team helped us achieve breakthroughs and go beyond what seemed unreachable  ',
+        devProcess2:'Before even touching the code, our team made sure the aforementioned processes were robust. As a lead developer, I discussed guidelines, naming conventions, commit messages, and other rules to encourage optimized development within our development team. Everyday we would hit a wall that seemed impossible to get over in the moment. We ran into issues such as differences in opinion, preferences; however, good leadership, unity, and a focus on common goal within our team helped us achieve breakthroughs and go beyond what seemed unreachable.',
+        devProArray:[
+            '/caseStudies/buzzy/buzzPro1.png',
+            '/caseStudies/buzzy/buzzPro2.png',
+            '/caseStudies/buzzy/buzzPro3.png',
+            '/caseStudies/buzzy/buzzPro4.png',
+        ],
         gif1:'/caseStudies/ecohow/ecoDev1.png',
-        gif2:'/caseStudies/ecohow/ecoDev2.png'
-
+        gif2:'/caseStudies/ecohow/ecoDev2.png',
+        test:['/caseStudies/buzzy/buzzTest.png']
         
     }
 ]
 export const ProjectData2 =[
     {   
         projectCol:"",
-        projectTitle:<ProjectHero src="/caseStudies/ecohow/logo.png"/>,
+        projectTitle:<ProjectHero width='50vw' src="/caseStudies/ecohow/logo.png"/>,
         titleCol:'',
         subHead:'One Step Closer to Sustainability',
         subHeadCol:'#63B0BC',
         description:`EcoHow is a intuitive web application education users on proper ways of recycling and composting`,
         mockSource:'/caseStudies/ecohow/ecoHowHero.png',
+        heroVideo:'/videos/eco/ecoHero.mp4',
+        solVideo1:'/videos/eco/ecoSubcat.mp4',
+        solVideo2:'/videos/eco/ecoQuiz.mp4',
+        solVideo3:'/videos/eco/ecoPark.mp4',
+        devVideo:'',
         descriptionCol:"#A5C955",
         processImage:'/caseStudies/ecohow/ecoProcess.png',
         researchImage:'/caseStudies/ecohow/ecoUserResearch.png',
@@ -192,10 +208,16 @@ export const ProjectData2 =[
         solutionDesign:`Our team critically researched the learning curve for our target demographic and identified what enhances the learning experience. We designed an intuitive application where the user goes through a journey where they get a chance to learn and reflect on their habits. Finally to incentivize and enhance the value of our application, we added a sorting game that asked the users to sort the waste in the correct bins. This encouraged engagement and enhanced the learning experience. `,
         solutionProcess1:'/caseStudies/ecohow/ecoMod1.png',
         solutionProcess2:'/caseStudies/ecohow/ecoHifi.png',
-        devProcess:'',
-        gif1:'/caseStudies/ecohow/ecoDev1.png',
-        gif2:'/caseStudies/ecohow/ecoDev2.png'
-
+        devProcess:'We started off by identifying the Most Valuable components and functions and delegated work to each team members based on their strengths and challenges they wanted to take on. At every milestone, we tested our code through every possible scenario and made sure the functions work seamlessly. Every time our team would encounter a challenge, we took it as an opportunity to learn and persevered to eventually solve it. By the end we had built a robust web app that encourages engagement and enhances the overall learning experience in order to help communities live a sustainable life.',
+        devProArray:[
+            '/caseStudies/ecohow/ecoPro1.png',
+            '/caseStudies/ecohow/ecoPro2.png',
+            '/caseStudies/ecohow/ecoPro3.png',
+            '/caseStudies/ecohow/ecoPro4.png',
+        ],
+        gif1:'',
+        gif2:'',
+        test:['/caseStudies/ecohow/ecoTest1.png','/caseStudies/ecohow/ecoTest2.png']
     }
 ]
 

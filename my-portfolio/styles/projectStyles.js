@@ -6,6 +6,7 @@ flex-direction:column;
 // height:100%;
 // width:100%;
 background-color:${props=>props.bgCol};
+// margin-top:10px;
 `
 
 export const Container = styled.div`

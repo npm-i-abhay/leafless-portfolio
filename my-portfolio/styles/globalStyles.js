@@ -234,3 +234,12 @@ flex-direction:column;
 padding-left:30px;
 padding-bottom:20px;
 `
+export const Header = styled.div`
+// border:2px solid blue;
+display:flex;
+justify-content:flex-end;
+width:100%;
+position:fixed;
+// backdrop-filter:blur(2px);
+// margin-bottom:10px;
+`

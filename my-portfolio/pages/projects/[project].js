@@ -5,14 +5,14 @@ import { useState,useEffect } from 'react'
 import { useTheme } from '@/utils/provider'
 import { comp_theme } from '@/utils/variables'
 import Router, { useRouter } from 'next/router'
-
+import ReactPlayer from 'react-player/lazy'
 
 
 // data imports 
 import { ProjectData,ProjectData2 } from '@/props/props'
 
 // styled components 
-
+import { Header } from '@/styles/globalStyles'
 
 import { 
     Wrapper,
@@ -122,6 +122,7 @@ return (
         <Wrapper 
             // bgCol={o.projectCol}
             key={i} >
+        <Header>
 
         <HeaderHam 
             onHamClick={()=>{ 
@@ -131,6 +132,7 @@ return (
         
             ham={hammer} 
             setHam={setHammer} />
+        </Header>
     
     
         <Navigation 
@@ -178,9 +180,14 @@ return (
             
         
         <HeroContainer>
-            <ProjectHero 
+            {/* <ProjectHero 
             src={o.mockSource}
-            width='100%'/>
+            width='100%'/> */}
+            <VideoContainer 
+                // height='700px' 
+                margin='5%'
+                width={ sWidth>=500? '20%':'60%'} 
+                src={o.heroVideo} />
             <ProjectHero 
             width='80%'
             src={o.processImage}/>
@@ -194,22 +201,28 @@ return (
             subCol={o.subHeadCol}
             subHead={'Research + Analysis'}/>
         {/* This is where I would add the videos */}
-            <ProjectHero width='80vw' src={o.researchImage}/>
-    
+        <ProjectHero width='80vw' src={o.researchImage}/>
     
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Problem Identification'}/>
-        <HeroContainer>
         <ProjectDescrip 
             width='90%'
             mainHead={o.problemIdentification}
             txtCol={o.descriptionCol}  />
+    
+        <HeroContainer>
+        <VideoContainer 
+                // height='700px' 
+                margin='5%'
+                width={sWidth>=500? '30%':'60%' }
+                src={o.solVideo1} />
             <VideoContainer 
                 // height='700px' 
                 margin='5%'
-                width='30%' 
-                src={'/videos/buzz/meeting.mp4'} />
+                width={sWidth>=500? '30%':'60%' }
+                src={o.solVideo2} />
+            
         
         </HeroContainer>
 
@@ -227,16 +240,16 @@ return (
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Solution Design'}/>
-        
-        <HeroContainer>
-            <VideoContainer 
-            width='30%'
-            margin='5%'
-            src='/videos/buzz/chat.mp4' />
-            <ProjectDescrip
+        <ProjectDescrip
             width='90%'
                 txtCol={o.descriptionCol} 
                 mainHead={o.solutionDesign}/>
+        <HeroContainer>
+            <VideoContainer 
+            width={ sWidth>=500? '30%':'60%'} 
+            margin='5%'
+            src={o.solVideo3} />
+            
         </HeroContainer>
 
                 
@@ -259,32 +272,62 @@ return (
             {project==='eco' && <LottieControl/> }
             <ProjectImageGrid
                 Default={<ProjectDescrip  font='18px' width='90%' mainHead={o.devProcess} /> }
-                imageSet1={<MiniCarousel dim={40} imgData={imageData1}/>}/>
+                imageSet1={<MiniCarousel dim={40} imgData={o.devProArray}/>}/>
     
             {/* Development stuff  */}
-            <ProjectImageGrid
-                imageSet1={<>  
-                            { project ==='buzz'? <VideoContainer width='60%' src='/videos/buzz/buzzDevProcess.mp4' />   
-                        
-                            : <GifContainer gif1={o.gif1} gif2={o.gif2} /> }  </>}
+            { project === 'buzz'&& <ProjectImageGrid
+                imageSet1={<VideoContainer width='60%' src={o.devVideo} /> }
+                Default= {<ProjectDescrip width='90%' font='18px' mainHead={o.devProcess2}/>}/>}
 
-                Default={<ProjectDescrip width='90%' font='18px' mainHead={o.devProcess2} />}/>
             </>
                 }
-                { sWidth<=500 && project==='buzz' &&  <MobImageCarousel dim={40} imgData={imageData1} /> } 
+            { sWidth<=500 && project==='buzz' &&  
+                    <>
+                    <HeroContainer>
+                        <MobImageCarousel dim={40} imgData={imageData1} /> 
+                        <ProjectDescrip  
+                            txtCol={o.descriptionCol}
+                            font='18px' 
+                            width='90%' 
+                            mainHead={o.devProcess} />
+                        <VideoContainer width='100%' src={o.devVideo} />
+                        <ProjectDescrip  
+                            txtCol={o.descriptionCol}
+                            font='18px' 
+                            width='100%' 
+                            mainHead={o.devProcess2} />
+                    </HeroContainer>
+
+                    </>
+            } 
+
                 {/* checking if the screen width is 500 or less and the project is buzz */}
-                {project=== 'eco' && <> <HeroContainer>
+            {project=== 'eco' && <> 
+                <HeroContainer>
                 
-                    </HeroContainer>  </> }
+                </HeroContainer>  </> 
+            }
+
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Testing + Bug Fixes'}/>
-        <ProjectHero src='/caseStudies/buzzy/buzzTest.png'/>
+
+        <HeroContainer>
+            {o.test.map((el,i)=>(<ProjectHero src={el} />))}
+        </HeroContainer>
+
 
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Presentation & Launch'}/>
-    
+        {project==='buzz'&&
+            
+        <HeroContainer>
+            <ReactPlayer  
+            width={'100%'} url={'https://www.youtube.com/watch?v=xEDjZYRlzXk&ab_channel=AbhayBakshi'}/>
+        </HeroContainer>
+
+        }
         <Footer/>
         
     

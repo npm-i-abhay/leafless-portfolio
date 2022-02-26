@@ -5,6 +5,7 @@ height:100%;
 display:flex;
 flex-direction:column;
 align-items:center;
+padding:10px;
 `
 export const MainHead = styled.span`
 color:${props=>props.txtCol};

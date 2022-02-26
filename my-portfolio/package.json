@@ -23,6 +23,7 @@
     "react-icons": "^4.3.1",
     "react-image-magnify": "^2.7.4",
     "react-lottie": "^1.2.3",
+    "react-player": "^2.9.0",
     "react-spring": "^9.4.2",
     "react-swipeable": "^5.5.1",
     "react-visibility-sensor": "^5.1.1",
