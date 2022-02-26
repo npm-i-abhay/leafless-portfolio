@@ -7,10 +7,10 @@ import { Button } from './styles';
 // import { Content,Heading, Button } from './Styles';
 
 export const ScrollButton = () =>{
-const scrollHeight = document.body.scrollHeight
 const [visible, setVisible] = useState(false)
 const [scrolled, setScrolled] = useState(0)
 useEffect(()=>{
+    const scrollHeight = document.body.scrollHeight
 
     window.onscroll=()=>{
         // console.log(window.scrollY) 
