@@ -185,7 +185,9 @@ return (
             {/* <ProjectHero 
             src={o.mockSource}
             width='100%'/> */}
-            <VideoContainer 
+            {
+                sWidth>= 500 && <>
+                <VideoContainer 
                 // height='700px' 
                 margin='5%'
                 width={ sWidth>=500? '20%':'60%'} 
@@ -193,6 +195,9 @@ return (
             <ProjectHero 
             width='80%'
             src={o.processImage}/>
+                </>
+            }
+            
         </HeroContainer>
     
     {/* add a blur filter behind the hero image that depicts the project color */}
@@ -212,7 +217,9 @@ return (
             txtCol={o.descriptionCol}  />
     
         <HeroContainer>
-        <VideoContainer 
+            {sWidth >= 500 &&
+            <>
+                <VideoContainer 
                 // height='700px' 
                 margin='5%'
                 width={sWidth>=500? '30%':'60%' }
@@ -222,7 +229,11 @@ return (
                 margin='5%'
                 width={sWidth>=500? '30%':'60%' }
                 src={o.solVideo2} />
+            </>
             
+        
+        }
+
         
         </HeroContainer>
 
@@ -243,10 +254,13 @@ return (
                 txtCol={o.descriptionCol} 
                 mainHead={o.solutionDesign}/>
         <HeroContainer>
+        {sWidth >= 500 &&
+        
             <VideoContainer 
             width={ sWidth>=500? '30%':'60%'} 
             margin='5%'
             src={o.solVideo3} />
+        }
             
         </HeroContainer>
 
@@ -287,7 +301,7 @@ return (
                             font='18px' 
                             width='90%' 
                             mainHead={o.devProcess} />
-                        <VideoContainer width='100%' src={o.devVideo} />
+                        {/* <VideoContainer width='100%' src={o.devVideo} /> */}
                         <ProjectDescrip  
                             txtCol={o.descriptionCol}
                             font='18px' 
