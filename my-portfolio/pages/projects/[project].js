@@ -100,6 +100,7 @@ useEffect(()=>{
 window.onscroll = ()=>{
 
     setScrollTop(window.scrollY)
+    
     setAnimTop(window.scrollY)
     setTimeout(()=>{
 
@@ -146,7 +147,7 @@ return (
         {project==='buzz'&&
             // animation disabled if project is not BuzzyBee
             <AnimCont
-                top={animTop}
+                top={animTop < 300? animTop : 100 }
                 left={animLeft}>
                 <Animation path='/animation/bee.json'/>
             </AnimCont>

@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 
-export const ScrollImage = ({src, img, children, direction='row'}) => {
+export const ScrollImage = ({src, img, children, direction='row', bg}) => {
 
     // const [left,setLeft] = useState 
     const [visibility, setVisibility] = useState(false)
@@ -27,7 +27,8 @@ export const ScrollImage = ({src, img, children, direction='row'}) => {
                 opacity: visibility ? 1 : 0.25,
                 left:visibility? 0 :-300,
                 justifyContent:'space-around',
-                alignItems:'center'
+                alignItems:'center',
+                backgroundColor:bg
         }} >
         
             {img}

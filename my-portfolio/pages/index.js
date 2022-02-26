@@ -192,7 +192,8 @@ hover:{
       }
 
 
-    <ScrollImage img={<>
+    <ScrollImage 
+    img={<>
       {sWidth >=550 && 
       <AboutMe txt={AboutData.homeIntro} />
       }
@@ -214,11 +215,14 @@ hover:{
       
     {sWidth >=500? 
     <>
-    <SectionHeader/>
-    <ScrollImage img={<>
+    <SectionHeader
+      txtCol={themer.menu}
+      />
+    <ScrollImage 
+    img={<>
       <Tags txt='<Img src="../'/>
           <ProjectInfo
-            txtCol={themer.buzzTxt}
+            txtCol={themer.menu}
             heading='Buzzy Bee'
             stackData={techStackOne}
             description={ProjectData[0].description}
@@ -235,7 +239,7 @@ hover:{
       <Tags txt='<Img src="../'/>
         <ProjectInfo
           onButtClick={()=>{router.push('/projects/eco')}}
-          txtCol={themer.ecoHead}
+          txtCol={themer.menu}
           heading='EcoHow'
           stackData={techStackTwo}
           description={ProjectData2[0].description}
@@ -250,7 +254,7 @@ hover:{
     
       <Tags txt='<Img src="../'/>
         <ProjectInfo
-          txtCol={themer.accentTxt}
+          txtCol={themer.menu}
           heading='Mix Elixir'
           stackData={techStackTwo}
           img='/caseStudies/mixElix/mixElixir.png'

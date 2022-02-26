@@ -22,3 +22,7 @@ border-radius:50px;
 background: rgb(111,41,198);
 background: linear-gradient(93deg, rgba(111,41,198,1) 40%, rgba(115,17,115,1) 100%);
 `
+export const ProjectTitle = styled.p`
+font-size:70px;
+color:${props=>props.txtCol};
+`

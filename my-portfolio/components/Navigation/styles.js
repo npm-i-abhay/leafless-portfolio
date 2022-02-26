@@ -7,14 +7,14 @@ export const Nav = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: block;
   background: ${props=>props.listBG};
   color: #000;
   z-index: 100;
   overflow: hidden;
-  // border:10px solid yellow;
+  // border:10px solid yellow; 
 `
 
 export const NavHeader = styled.div`
@@ -45,7 +45,7 @@ export const NavList = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-items:space-around;
+  justify-items:center;
   // border:5px solid blue;
   
   ul {
@@ -64,6 +64,7 @@ export const NavList = styled.div`
       font-weight: 900;
       // border:2px solid yellow;
       height: 96px;
+      width:900px;
       line-height: 96px;
       overflow: hidden;
       .link {

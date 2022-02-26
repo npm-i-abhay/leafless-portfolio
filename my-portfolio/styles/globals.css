@@ -49,6 +49,11 @@ a {
   animation: rubberBand 1s linear 1;
 }
 
+.heading{
+  font-family: Roboto Mono;
+}
+
+
 @keyframes rubberBand {
   from {
     transform: scale3d(1, 1, 1);

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CtaButton = styled.div`
-border:1.5px solid #3E92CC;
+border:1.5px solid #8B3AF3;
 color:${props => props.btnTxt};
 width:${props=>props.width};
 height:35px;

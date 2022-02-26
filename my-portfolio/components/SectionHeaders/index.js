@@ -5,10 +5,11 @@ import { motion, useViewportScroll } from "framer-motion"
 import { 
     SectionWrapper,
     Line,
-    Circle
+    Circle,
+    ProjectTitle
 } from './styles'
 
-export const SectionHeader = () => {
+export const SectionHeader = ({txtCol, heading}) => {
     const ref = useRef()
     const { scrollYProgress } = useViewportScroll()
     const [scrollTop, setScrollTop] = useState()
@@ -21,10 +22,11 @@ return (
     <SectionWrapper 
     viewport={{ once: true }} 
     initial={{height:0}}
-    whileInView={{height:200, transition:{delay:.5,duration:1.5,type:'spring', staggerChildren:2}}}>
+    whileInView={{height:400, transition:{delay:.5,duration:1.5,type:'spring', staggerChildren:2}}}>
         <Line>
         </Line>
         <Circle initial={{opacity:0, width:0,height:0 }} animate={{opacity:1,width:60,height:60, originX:0, originY:0  }} transition={{delay:2, duration:1.5, type:'spring'}} ></Circle>
+        <ProjectTitle txtCol={txtCol}> {heading} </ProjectTitle>
     </SectionWrapper>
   )
 }

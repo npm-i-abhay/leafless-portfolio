@@ -30,7 +30,7 @@ export const Navigation = (
         },
         {
             id:2,
-            title:"Work",
+            title:"Showcase",
             link:'/work'
         },
         {
@@ -72,12 +72,12 @@ export const Navigation = (
                                         >
                     <motion.div 
                         className='link'
-                        initial={{x:-108}}
-                        whileHover={{x:-40}}
-                        
+                        initial={{x:0}}
+                        whileHover={{x:40}}
+
                         >
                     <div onClick={()=>r.push(o.link)}>
-                        <span className='arrow'>
+                        {/* <span className='arrow'>
                         {
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ export const Navigation = (
                                 ></path>
                                 </svg>
                         }
-                        </span>
+                        </span> */}
                         {o.title}
                     </div>
                     </motion.div>
