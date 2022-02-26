@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {FaArrowCircleUp} from 'react-icons/fa';
-import { Button } from './Styles';
+import { Button } from './styles';
 
 
 
