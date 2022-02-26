@@ -22,14 +22,17 @@ return (
     <SectionWrapper 
     viewport={{ once: true }} 
     initial={{height:0}}
-    whileInView={{height:550, transition:{delay:.5,duration:1.5,type:'spring', staggerChildren:2}}}>
-        <Line>
-        </Line>
-        <Circle 
-        initial={{opacity:0, width:0,height:0 }} 
-        animate={{opacity:1,width:60,height:60, originX:0, originY:0  }} 
-        transition={{delay:2, duration:1.5, type:'spring'}} >
-        </Circle>
+    whileInView={{height:'100%', transition:{delay:.5,duration:1,type:'spring', staggerChildren:2}}}>
+        <div style={{ display:'flex', flexDirection:'column', alignItems:'center' }} >
+            <Line>
+            </Line>
+            <Circle 
+            initial={{opacity:0, width:0,height:0 }} 
+            animate={{opacity:1,width:60,height:60, originX:0, originY:0  }} 
+            transition={{delay:1.5, duration:1.5, type:'spring'}} >
+            </Circle>
+
+        </div>
         <ProjectTitle  
         initial={{opacity:0, }} 
         animate={{opacity:1, originX:0, originY:0  }} 

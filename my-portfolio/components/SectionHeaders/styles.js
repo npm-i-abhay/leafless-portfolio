@@ -5,6 +5,9 @@ export const SectionWrapper=styled(motion.div)`
 display:flex;
 flex-direction:column;
 align-items:center;
+justify-content:space-between;
+// border:2px solid blue;
+width:100%;
 `
 export const Line =styled(motion.div)`
 // border:2px solid blue;
@@ -27,4 +30,14 @@ font-size:70px;
 background: -webkit-linear-gradient(360deg, rgba(111,41,198,1) 40%, rgba(115,17,115,1) 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+width:100%;
+// border:2px solid red;
+display:flex;
+justify-content:center;
+@media (max-width: 500px) {
+    font-size:28px;
+    width:90%;
+    text-align:center;
+
+}
 `

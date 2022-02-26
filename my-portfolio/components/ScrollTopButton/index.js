@@ -10,19 +10,21 @@ export const ScrollButton = () =>{
 const [visible, setVisible] = useState(false)
 const [scrolled, setScrolled] = useState(0)
 useEffect(()=>{
+    
     const scrollHeight = document.body.scrollHeight
 
     window.onscroll=()=>{
-        // console.log(window.scrollY) 
+        console.log(scrollHeight) 
+        console.log(scrolled) 
         setScrolled (window.scrollY)
     }
 
   
 
-        if (scrolled > scrollHeight/3){
+        if (scrolled > scrollHeight/4){
         setVisible(true)
         }
-        else if (scrolled <= scrollHeight/3){
+        else if (scrolled <= scrollHeight/4){
         setVisible(false)
         }
     

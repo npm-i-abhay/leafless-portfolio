@@ -15,6 +15,10 @@ export const Nav = styled(motion.div)`
   z-index: 100;
   overflow: hidden;
   // border:10px solid yellow; 
+  @media (max-width: 500px) {
+    width:100%
+
+}
 `
 
 export const NavHeader = styled.div`

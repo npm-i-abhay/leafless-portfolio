@@ -48,6 +48,7 @@ import { GifContainer } from '@/components/GifContainer'
 import { LottieControl } from '@/components/ScrollAnimation'
 import { VideoContainer } from '@/components/VideoComp'
 import { ScrollButton } from '@/components/ScrollTopButton'
+import { SectionHeader } from '@/components/SectionHeaders'
 
 export default function Project() {
  
@@ -174,7 +175,7 @@ return (
         <ProjectDescrip
             width='90%'
             txtCol={o.descriptionCol} 
-            mainHead={o.description}
+            mainHead={o.description2}
             />
 
         </HeroContainer>
@@ -198,15 +199,13 @@ return (
         
     
         {/* sections */}
-        <ProjectHeading 
-            subCol={o.subHeadCol}
-            subHead={'Research + Analysis'}/>
+        <SectionHeader heading='Research + Analysis'/>
+
         {/* This is where I would add the videos */}
         <ProjectHero width='80vw' src={o.researchImage}/>
     
-        <ProjectHeading 
-            subCol={o.subHeadCol}
-            subHead={'Problem Identification'}/>
+        <SectionHeader heading='Problem Identification'/>
+        
         <ProjectDescrip 
             width='90%'
             mainHead={o.problemIdentification}
@@ -229,18 +228,16 @@ return (
 
 
         {/* personas===================================== */}
-        <ProjectHeading 
-            subCol={o.subHeadCol}
-            subHead={'Personas'}/>
+        <SectionHeader heading='Personas'/>
+
         <HeroContainer>
             <ProjectHero src={o.persona1}/>
             <ProjectHero src={o.persona2}/>
         </HeroContainer>
     
         {/* solution design======================================== */}
-        <ProjectHeading 
-            subCol={o.subHeadCol}
-            subHead={'Solution Design'}/>
+        <SectionHeader heading='Solution Design'/>
+
         <ProjectDescrip
             width='90%'
                 txtCol={o.descriptionCol} 
@@ -262,9 +259,8 @@ return (
         </HeroContainer>
     
     
-        <ProjectHeading 
-            subCol={o.subHeadCol}
-            subHead={'Development Process'}/>
+        <SectionHeader heading='Development Process'/>
+
     
             {/* Mind Maps and props etc  */}
             {/* checking if the screen size is mobile or desktop and displaying components accordingly */}
@@ -272,7 +268,7 @@ return (
             <>
             {project==='eco' && <LottieControl/> }
             <ProjectImageGrid
-                Default={<ProjectDescrip  font='18px' width='90%' mainHead={o.devProcess} /> }
+                Default={<ProjectDescrip  txtCol={o.descriptionCol} font='18px' width='90%' mainHead={o.devProcess} /> }
                 imageSet1={<MiniCarousel dim={40} imgData={o.devProArray}/>}/>
     
             {/* Development stuff  */}
@@ -309,18 +305,16 @@ return (
                 </HeroContainer>  </> 
             }
 
-        <ProjectHeading 
-            subCol={o.subHeadCol}
-            subHead={'Testing + Bug Fixes'}/>
+        <SectionHeader heading='Testing + BugFixes'/>
+
 
         <HeroContainer>
             {o.test.map((el,i)=>(<ProjectHero key={i} src={el} />))}
         </HeroContainer>
 
 
-        <ProjectHeading 
-            subCol={o.subHeadCol}
-            subHead={'Presentation & Launch'}/>
+        <SectionHeader heading='Presentation & Launch'/>
+
         {project==='buzz'&&
             
         <HeroContainer>

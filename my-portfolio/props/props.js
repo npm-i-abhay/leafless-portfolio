@@ -154,7 +154,8 @@ export const ProjectData =[
         subHead:'Helping You Find Time To Do What You Love',
         subHeadCol:'#63B0BC',
         description:`Buzzy Bee is a cross platform organizer application primarily built with React native, php & mySQL. The app uses a smart sorting algorithm to provide availability for times when each and all members within a group are available to meet
-        The user can:
+        `,
+        description2:`The user can:
         create groups and the app will compare members’ schedules and provide the user with times when everyone is available. Create tasks ( Personal, Academic, Group) and add them to the built-in calendar. Message your group members within an application that's your One-Stop-Shop-Solution For Your Productivity needs `,
         descriptionCol:"#94BDD4",
         mockSource:'/caseStudies/buzzy/buzzMockup.png',
