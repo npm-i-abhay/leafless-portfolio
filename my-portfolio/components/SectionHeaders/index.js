@@ -9,7 +9,7 @@ import {
     ProjectTitle
 } from './styles'
 
-export const SectionHeader = ({txtCol, heading}) => {
+export const SectionHeader = ({ heading}) => {
     const ref = useRef()
     const { scrollYProgress } = useViewportScroll()
     const [scrollTop, setScrollTop] = useState()
@@ -22,11 +22,19 @@ return (
     <SectionWrapper 
     viewport={{ once: true }} 
     initial={{height:0}}
-    whileInView={{height:400, transition:{delay:.5,duration:1.5,type:'spring', staggerChildren:2}}}>
+    whileInView={{height:550, transition:{delay:.5,duration:1.5,type:'spring', staggerChildren:2}}}>
         <Line>
         </Line>
-        <Circle initial={{opacity:0, width:0,height:0 }} animate={{opacity:1,width:60,height:60, originX:0, originY:0  }} transition={{delay:2, duration:1.5, type:'spring'}} ></Circle>
-        <ProjectTitle txtCol={txtCol}> {heading} </ProjectTitle>
+        <Circle 
+        initial={{opacity:0, width:0,height:0 }} 
+        animate={{opacity:1,width:60,height:60, originX:0, originY:0  }} 
+        transition={{delay:2, duration:1.5, type:'spring'}} >
+        </Circle>
+        <ProjectTitle  
+        initial={{opacity:0, }} 
+        animate={{opacity:1, originX:0, originY:0  }} 
+        transition={{delay:2.5, duration:1.5, type:'spring'}} > {heading} </ProjectTitle>
+
     </SectionWrapper>
   )
 }

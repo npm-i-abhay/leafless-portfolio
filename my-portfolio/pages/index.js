@@ -216,7 +216,7 @@ hover:{
     {sWidth >=500? 
     <>
     <SectionHeader
-      txtCol={themer.menu}
+      heading="Development Projects"
       />
     <ScrollImage 
     img={<>
@@ -227,6 +227,7 @@ hover:{
             stackData={techStackOne}
             description={ProjectData[0].description}
             img='/caseStudies/buzzy/buzzMockup.png'
+            txt='View Case Study'
             onButtClick={()=>{router.push('/projects/buzz')}}
           />
       <Tags txt='/>'/>    
@@ -245,6 +246,7 @@ hover:{
           description={ProjectData2[0].description}
           order={-1}
           img='/caseStudies/ecohow/ecoHowHero.png'
+          txt='View Case Study'
       />
 
       <Tags txt='/>'/>
@@ -264,7 +266,10 @@ hover:{
 
       
     </>} />
-    <SectionHeader/>
+    <SectionHeader
+      heading="Design Projects"
+
+    />
     <DesignGrid/>
       </>
     :

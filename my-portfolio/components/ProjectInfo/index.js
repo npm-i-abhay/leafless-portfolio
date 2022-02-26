@@ -35,7 +35,8 @@ export const ProjectInfo = ({
     initial,
     whileInView,
     txtCol,
-    heading
+    heading,
+    txt
 
 }) => {
     
@@ -53,7 +54,7 @@ export const ProjectInfo = ({
             
             <ContentCont order={order}>
                 <ProjectTitle
-                    className='heading'
+                    className='projectHeadings'
                     txtCol={txtCol} > 
                     {heading} 
                 </ProjectTitle>
@@ -72,7 +73,7 @@ export const ProjectInfo = ({
                                             key={i} radius={radius} src={o}/>))}
                 </StackCont>
                 <MyButton 
-                    txt='Explore'
+                    txt={txt}
                     onButtClick={onButtClick}
                     />
                 

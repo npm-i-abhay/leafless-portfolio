@@ -178,9 +178,14 @@ return (
             
         
         <HeroContainer>
-            <ProjectHero 
+            {/* <ProjectHero 
             src={o.mockSource}
-            width='100%'/>
+            width='100%'/> */}
+            <VideoContainer 
+                // height='700px' 
+                margin='5%'
+                width='20%' 
+                src={o.heroVideo} />
             <ProjectHero 
             width='80%'
             src={o.processImage}/>
@@ -194,22 +199,28 @@ return (
             subCol={o.subHeadCol}
             subHead={'Research + Analysis'}/>
         {/* This is where I would add the videos */}
-            <ProjectHero width='80vw' src={o.researchImage}/>
-    
+        <ProjectHero width='80vw' src={o.researchImage}/>
     
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Problem Identification'}/>
-        <HeroContainer>
         <ProjectDescrip 
             width='90%'
             mainHead={o.problemIdentification}
             txtCol={o.descriptionCol}  />
+    
+        <HeroContainer>
+        <VideoContainer 
+                // height='700px' 
+                margin='5%'
+                width='30%' 
+                src={o.solVideo1} />
             <VideoContainer 
                 // height='700px' 
                 margin='5%'
                 width='30%' 
-                src={'/videos/buzz/meeting.mp4'} />
+                src={o.solVideo2} />
+            
         
         </HeroContainer>
 
@@ -227,16 +238,16 @@ return (
         <ProjectHeading 
             subCol={o.subHeadCol}
             subHead={'Solution Design'}/>
-        
+        <ProjectDescrip
+            width='90%'
+                txtCol={o.descriptionCol} 
+                mainHead={o.solutionDesign}/>
         <HeroContainer>
             <VideoContainer 
             width='30%'
             margin='5%'
-            src='/videos/buzz/chat.mp4' />
-            <ProjectDescrip
-            width='90%'
-                txtCol={o.descriptionCol} 
-                mainHead={o.solutionDesign}/>
+            src={o.solVideo3} />
+            
         </HeroContainer>
 
                 
@@ -264,7 +275,7 @@ return (
             {/* Development stuff  */}
             <ProjectImageGrid
                 imageSet1={<>  
-                            { project ==='buzz'? <VideoContainer width='60%' src='/videos/buzz/buzzDevProcess.mp4' />   
+                            { project ==='buzz'? <VideoContainer width='60%' src={o.devVideo} />   
                         
                             : <GifContainer gif1={o.gif1} gif2={o.gif2} /> }  </>}
 

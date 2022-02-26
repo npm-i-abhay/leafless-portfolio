@@ -21,6 +21,11 @@ a {
   font-family: 'Marck Script';
 }
 
+.projectHeadings{
+  /* font-family: Roboto Mono; */
+
+}
+
 .SwipeContainer {
   width: 100vw;
   height: 50vh;
