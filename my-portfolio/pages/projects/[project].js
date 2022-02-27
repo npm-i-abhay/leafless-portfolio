@@ -49,6 +49,7 @@ import { LottieControl } from '@/components/ScrollAnimation'
 import { VideoContainer } from '@/components/VideoComp'
 import { ScrollButton } from '@/components/ScrollTopButton'
 import { SectionHeader } from '@/components/SectionHeaders'
+import { ProjectTitle } from '@/components/MobCarousel/styles'
 
 export default function Project() {
  
@@ -207,7 +208,7 @@ return (
         
     
         {/* sections */}
-        <SectionHeader heading='Research + Analysis'/>
+        <SectionHeader heading={ sWidth>=500 ? 'Research + Analysis' : <ProjectHeading  subHead='Research'/> }/>
 
         {/* This is where I would add the videos */}
         <ProjectHero width='80vw' src={o.researchImage}/>
