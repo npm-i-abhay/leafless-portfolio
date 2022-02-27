@@ -37,8 +37,8 @@ justify-content:center;
 @media (max-width: 500px) {
     font-size:28px;
     background: -webkit-linear-gradient(360deg, rgba(111,41,198,1) 40%, rgba(115,17,115,1) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+// -webkit-background-clip: text;
+// -webkit-text-fill-color: transparent;
 width:100%;
     text-align:center;
     border:2px solid red;
