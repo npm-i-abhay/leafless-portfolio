@@ -207,13 +207,12 @@ return (
         
     
         {/* sections */}
-        <SectionHeader heading={sWidth>=500? 'Research + Analysis' :<ProjectHeading subHead='Research + Analysis'  /> }/> 
+        {sWidth>=500? <SectionHeader heading={'Research + Analysis'}/> : <ProjectHeading subHead='Research + Analysis'  /> }
 
         {/* This is where I would add the videos */}
         <ProjectHero width='80vw' src={o.researchImage}/>
     
-        <SectionHeader heading='Problem Identification'/>
-        
+        {sWidth>=500? <SectionHeader heading={'Problem Identification'}/> : <ProjectHeading subHead='Problem Identification'  /> }
         <ProjectDescrip 
             width='90%'
             mainHead={o.problemIdentification}
@@ -243,15 +242,17 @@ return (
 
 
         {/* personas===================================== */}
-        <SectionHeader heading='Personas'/>
+        {sWidth>=500? <SectionHeader heading={'Personas'}/> : <ProjectHeading subHead='Personas'/> }
 
+        
         <HeroContainer>
             <ProjectHero src={o.persona1}/>
             <ProjectHero src={o.persona2}/>
         </HeroContainer>
     
         {/* solution design======================================== */}
-        <SectionHeader heading='Solution Design'/>
+        {sWidth>=500? <SectionHeader heading={'Solution Design'}/> : <ProjectHeading subHead='Solution Design'/> }
+
 
         <ProjectDescrip
             width='90%'
@@ -277,7 +278,8 @@ return (
         </HeroContainer>
     
     
-        <SectionHeader heading='Development Process'/>
+
+        {sWidth>=500? <SectionHeader heading={'Development Process'}/> : <ProjectHeading subHead='Development Process'/> }
 
     
             {/* Mind Maps and props etc  */}
@@ -323,15 +325,14 @@ return (
                 </HeroContainer>  </> 
             }
 
-        <SectionHeader heading='Testing + BugFixes'/>
-
+        {sWidth>=500? <SectionHeader heading={'Testing + BugFixes'}/> : <ProjectHeading subHead='Testing + BugFixes'/> }
 
         <HeroContainer>
             {o.test.map((el,i)=>(<ProjectHero key={i} src={el} />))}
         </HeroContainer>
 
 
-        <SectionHeader heading='Presentation & Launch'/>
+        {sWidth>=500? <SectionHeader heading={'Presentation & Launch'}/> : <ProjectHeading subHead='Presentation & Launch'/> }
 
         {project==='buzz'&&
             
