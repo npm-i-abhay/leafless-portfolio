@@ -34,9 +34,10 @@ return (
 
         </div>
         <ProjectTitle  
-        initial={{opacity:0, }} 
-        animate={{opacity:1, originX:0, originY:0  }} 
-        transition={{delay:2.5, duration:1.5, type:'spring'}} > {heading} </ProjectTitle>
+        // initial={{opacity:0, }} 
+        // animate={{opacity:1, originX:0, originY:0  }} 
+        // transition={{delay:2.5, duration:1.5, type:'spring'}}
+        > {heading} </ProjectTitle>
 
     </SectionWrapper>
   )
