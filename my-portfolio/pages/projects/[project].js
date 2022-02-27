@@ -126,6 +126,7 @@ return (
             key={i} >
         <Header>
         <ScrollButton/>
+        
         <HeaderHam 
             onHamClick={()=>{ 
             setHammer(!hammer)
@@ -186,17 +187,19 @@ return (
             src={o.mockSource}
             width='100%'/> */}
             {
-                sWidth>= 500 && <>
+                sWidth>= 500 ? 
                 <VideoContainer 
                 // height='700px' 
                 margin='5%'
                 width={ sWidth>=500? '20%':'60%'} 
                 src={o.heroVideo} />
+                :
+                <ProjectHero src={o.mockSource}/>
+                
+            }
             <ProjectHero 
             width='80%'
             src={o.processImage}/>
-                </>
-            }
             
         </HeroContainer>
     
@@ -217,7 +220,7 @@ return (
             txtCol={o.descriptionCol}  />
     
         <HeroContainer>
-            {sWidth >= 500 &&
+            {sWidth >= 500 ?
             <>
                 <VideoContainer 
                 // height='700px' 
@@ -230,7 +233,8 @@ return (
                 width={sWidth>=500? '30%':'60%' }
                 src={o.solVideo2} />
             </>
-            
+            :
+            <ProjectHero src={o.problemImage} />
         
         }
 
@@ -295,12 +299,12 @@ return (
             { sWidth<=500 && project==='buzz' &&  
                     <>
                     <HeroContainer>
-                        <MobImageCarousel dim={40} imgData={imageData1} /> 
                         <ProjectDescrip  
                             txtCol={o.descriptionCol}
                             font='18px' 
                             width='90%' 
                             mainHead={o.devProcess} />
+                        <MobImageCarousel dim={40} imgData={imageData1} /> 
                         {/* <VideoContainer width='100%' src={o.devVideo} /> */}
                         <ProjectDescrip  
                             txtCol={o.descriptionCol}
