@@ -207,7 +207,7 @@ return (
         
     
         {/* sections */}
-        {sWidth>=500? <SectionHeader heading='Research + Analysis'/> : <ProjectHeading subHead='Research + Analysis'  /> }
+        <SectionHeader heading={sWidth>=500? 'Research + Analysis' :<ProjectHeading subHead='Research + Analysis'  /> }/> 
 
         {/* This is where I would add the videos */}
         <ProjectHero width='80vw' src={o.researchImage}/>
