@@ -49,6 +49,7 @@ import { HeroContainer } from '@/styles/aboutStyles'
 import { AboutMe } from '@/components/AboutMe'
 import { CircleIndicator, SectionHeader } from '@/components/SectionHeaders'
 import { ScrollButton } from '@/components/ScrollTopButton'
+import { ProjectHeading } from '@/components/ProjectHeading'
 
 export default function Home() {
 
@@ -277,7 +278,9 @@ hover:{
     :
     
       <>
+        <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} /> 
         <MobCarousel imgData={WorkCarouselData}  dim={40} />  
+        <ProjectHeading headCol='#8B3AF3' mainHead={'Design Projects'} /> 
         <DesignGrid/>
       </>}
     

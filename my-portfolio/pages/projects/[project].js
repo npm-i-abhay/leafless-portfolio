@@ -49,7 +49,7 @@ import { LottieControl } from '@/components/ScrollAnimation'
 import { VideoContainer } from '@/components/VideoComp'
 import { ScrollButton } from '@/components/ScrollTopButton'
 import { SectionHeader } from '@/components/SectionHeaders'
-
+import { NextProject } from '@/components/NextProject'
 export default function Project() {
  
 
@@ -207,12 +207,12 @@ return (
         
     
         {/* sections */}
-        {sWidth>=500? <SectionHeader heading={'Research + Analysis'}/> : <ProjectHeading subHead='Research + Analysis'  /> }
+        {sWidth>=500? <SectionHeader heading={'Research + Analysis'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Research + Analysis'  /> }
 
         {/* This is where I would add the videos */}
         <ProjectHero width='80vw' src={o.researchImage}/>
     
-        {sWidth>=500? <SectionHeader heading={'Problem Identification'}/> : <ProjectHeading subHead='Problem Identification'  /> }
+        {sWidth>=500? <SectionHeader heading={'Problem Identification'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Problem Identification'  /> }
         <ProjectDescrip 
             width='90%'
             mainHead={o.problemIdentification}
@@ -242,7 +242,7 @@ return (
 
 
         {/* personas===================================== */}
-        {sWidth>=500? <SectionHeader heading={'Personas'}/> : <ProjectHeading subHead='Personas'/> }
+        {sWidth>=500? <SectionHeader heading={'Personas'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Personas'/> }
 
         
         <HeroContainer>
@@ -251,7 +251,7 @@ return (
         </HeroContainer>
     
         {/* solution design======================================== */}
-        {sWidth>=500? <SectionHeader heading={'Solution Design'}/> : <ProjectHeading subHead='Solution Design'/> }
+        {sWidth>=500? <SectionHeader heading={'Solution Design'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Solution Design'/> }
 
 
         <ProjectDescrip
@@ -279,7 +279,7 @@ return (
     
     
 
-        {sWidth>=500? <SectionHeader heading={'Development Process'}/> : <ProjectHeading subHead='Development Process'/> }
+        {sWidth>=500? <SectionHeader heading={'Development Process'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Development Process'/> }
 
     
             {/* Mind Maps and props etc  */}
@@ -298,7 +298,7 @@ return (
 
             </>
                 }
-            { sWidth<=500 && project==='buzz' &&  
+            { sWidth<=500 && 
                     <>
                     <HeroContainer>
                         <ProjectDescrip  
@@ -306,7 +306,7 @@ return (
                             font='18px' 
                             width='90%' 
                             mainHead={o.devProcess} />
-                        <MobImageCarousel dim={40} imgData={imageData1} /> 
+                        <MobImageCarousel dim={40} imgData={o.devProArray} /> 
                         {/* <VideoContainer width='100%' src={o.devVideo} /> */}
                         <ProjectDescrip  
                             txtCol={o.descriptionCol}
@@ -325,14 +325,14 @@ return (
                 </HeroContainer>  </> 
             }
 
-        {sWidth>=500? <SectionHeader heading={'Testing + BugFixes'}/> : <ProjectHeading subHead='Testing + BugFixes'/> }
+        {sWidth>=500? <SectionHeader heading={'Testing + BugFixes'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Testing + BugFixes'/> }
 
         <HeroContainer>
             {o.test.map((el,i)=>(<ProjectHero key={i} src={el} />))}
         </HeroContainer>
 
 
-        {sWidth>=500? <SectionHeader heading={'Presentation & Launch'}/> : <ProjectHeading subHead='Presentation & Launch'/> }
+        {sWidth>=500? <SectionHeader heading={'Presentation & Launch'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Presentation & Launch'/> }
 
         {project==='buzz'&&
             
@@ -342,6 +342,10 @@ return (
         </HeroContainer>
 
         }
+        <NextProject
+            handleClick={()=>{ project==='eco'? router.push('/projects/buzz') :router.push('/projects/eco') }}
+            headCol={themer.menu}  
+            mainHead={'NEXT PROJECT'} /> 
         <Footer/>
         
     

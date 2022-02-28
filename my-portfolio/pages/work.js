@@ -83,7 +83,7 @@ const [data, setData] = useState( {
     path:'/'
 })
 
-const [category,setCategory] = useState('dev')
+const [category,setCategory] = useState('des')
 
 const handleDev=()=>
 {
