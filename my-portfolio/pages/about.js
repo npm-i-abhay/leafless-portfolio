@@ -8,7 +8,7 @@ import animationData from "@/public/animation/rock.json";
 
 
 import { Wrapper, HeroContainer, AboutContent, CarouselCont } from '@/styles/aboutStyles'
-
+import { Header } from '@/styles/globalStyles'
 const aboutMe = 'My name is Abhay Bakshi (ub-hey). I’m a full stack developer and designer specializing in streamlined interactive development. I have a keen interest in building engaging solutions that helps communities across the globe. I’m a consistent learner and I aspire to augument digital experiences '
 
 // data  and other imports
@@ -34,10 +34,10 @@ import { MobImageCarousel } from '@/components/MobImageCarousel'
 import { Carousel } from '@/components/Caraousel'
 import { RockControlMob } from '@/components/RockScrollMob'
 import { ScrollButton } from '@/components/ScrollTopButton'
-const Header = styled.div`
-display:flex;
-justify-content:flex-end;
-`
+// const Header = styled.div`
+// display:flex;
+// justify-content:flex-end;
+// `
 
 export default function About() {
 

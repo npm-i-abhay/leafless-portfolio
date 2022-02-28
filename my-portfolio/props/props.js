@@ -108,9 +108,9 @@ export const WorkCarouselData =
             vid:'/videos/eco/ecoGame.mp4',
             path:'/projects/eco'
         },
-        {
-            thumb:'/caseStudies/mixElix/mixElixir.png',
-            vid:'/caseStudies/ecohow/ecohowHero.png',},
+        // {
+        //     thumb:'/caseStudies/mixElix/mixElixir.png',
+        //     vid:'/caseStudies/ecohow/ecohowHero.png',},
     
     ]
 

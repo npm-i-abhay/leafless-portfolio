@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { LottiePlayer } from 'lottie-web';
 
 
-export const Animation = ({path}) => {
+export const AnimateOnce = ({path}) => {
   const ref = useRef(null);
   const [lottie, setLottie] = useState(null);
 
@@ -15,7 +15,7 @@ export const Animation = ({path}) => {
       const animation = lottie.loadAnimation({
         container: ref.current,
         renderer: 'svg',
-        loop: true,
+        loop: false,
         autoplay: true,
         // path to your animation file, place it inside public folder
         path: path,

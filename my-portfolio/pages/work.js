@@ -142,14 +142,14 @@ return <>
         <CatCont>
             <CatButts
                 onClick={handleDev}
-                bg ={category == 'dev'? comp_theme[theme].footer:null }
+                bg ={category == 'dev'? comp_theme[theme].menu:null }
                 txtCol={comp_theme[theme].mainTxt}>  
                 <CatName> Development </CatName>
             </CatButts>
 
             <CatButts
                 onClick={handleDes}
-                bg ={category == 'des'? comp_theme[theme].footer:null }
+                bg ={category == 'des'? comp_theme[theme].menu:null }
                 txtCol={comp_theme[theme].mainTxt}>
                 <CatName> Design </CatName> 
             </CatButts>

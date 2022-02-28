@@ -11,11 +11,11 @@ import { comp_theme } from '@/utils/variables'
 
 
 // styled components 
-import { Wrapper, Header } from '@/styles/homeStyles'
+import { Wrapper } from '@/styles/homeStyles'
 
 import { 
-  IntroHeading
-
+  IntroHeading,
+  Header
 } from '@/styles/globalStyles'
 
 
@@ -50,7 +50,7 @@ import { AboutMe } from '@/components/AboutMe'
 import { CircleIndicator, SectionHeader } from '@/components/SectionHeaders'
 import { ScrollButton } from '@/components/ScrollTopButton'
 import { ProjectHeading } from '@/components/ProjectHeading'
-
+import { AnimateOnce } from '@/components/AnimateOnce'
 export default function Home() {
 
 const router = useRouter()
@@ -185,7 +185,7 @@ hover:{
       <Tags txt='</h1>'/>
       
       <Tags txt='<button>'/>
-          <MyButton/>
+          <MyButton onButtClick={()=>{window.location = "mailto:abhaybakshi8@gmail.com"}} txt='Hire Me!' />
       <Tags txt='</button>'/>
       
       </IntroHeading>
@@ -205,7 +205,7 @@ hover:{
             <AnimationCont
               key={i}
               variants={imgVariants}> 
-              <Animation path={o} />
+              <AnimateOnce path={o} />
             </AnimationCont>
           ))}
 
@@ -255,7 +255,7 @@ hover:{
       <Tags txt='/>'/>
     </>} />
 
-    <ScrollImage img={<> 
+    {/* <ScrollImage img={<> 
     
       <Tags txt='<Img src="../'/>
         <ProjectInfo
@@ -268,7 +268,7 @@ hover:{
       <Tags txt='/>'/>
 
       
-    </>} />
+    </>} /> */}
     <SectionHeader
       heading="Design Projects"
 

@@ -6,6 +6,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 padding:20px;
+cursor:pointer;
 // border:2px solid red;
 `
 export const MainHead = styled.span`
