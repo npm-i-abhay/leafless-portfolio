@@ -11,6 +11,10 @@ padding:20px;
 export const MainHead = styled.span`
 color:${props=>props.txtCol};
 font-size:70px;
+@media (max-width: 500px) {
+    width:100%;
+font-size:50px;
+text-align:center;
 `
 export const Blur = styled.div`
 width:250px;

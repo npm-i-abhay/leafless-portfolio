@@ -17,28 +17,28 @@ import { AboutMe } from '../AboutMe'
 const designData1=[
     {
         link:"/design/moog.png", 
-        info:'Info about the photos'
+        info:'Hyper-real illustration of a MOOG synthesizer made in Adobe Illustrator '
     },
     {
         link:'/design/photoshop1.png', 
-        info:'Info about the photos' 
+        info:'Concept art poster made in Adobe Photoshop' 
     }]
     
 
 const designData2=[
 
-{ link:'/design/logos1.png', info:"Info about the project" },
-{ link:'/design/proms1.png', info:"Info about the project" },
-{ link:'/design/proms2.png', info:"Info about the project" }
+{ link:'/design/logos1.png', info:"Logo design for a cognitive computing company made in Adobe Illustrator" },
+{ link:'/design/proms1.png', info:"Poster for BBC proms built using principles of typography in InDesign" },
+{ link:'/design/proms2.png', info:"Poster for BBC proms built using principles of typography in InDesign" }
 
 ]
 
 const designData3=[
     {link:'/design/illustration.png', 
-    info:'Info about the photos' },
+    info:'Concept illustration made in Adobe Illustrator ' },
     
     {link:'/design/funkLogo.png', 
-    info:'Info about the photos' }
+    info:'First ever Logo Design for Music Magazine, Funkin Hell' }
 ]
 
 
@@ -55,7 +55,7 @@ return (
         <Row>
             <ProjectContainer>
                 <ImageContainer width='100%' maxHeight='90%' imgUrl='/design/landscape.png'/>
-                <AboutMe txt='info about the photo' />
+                <AboutMe txt='Digital painting made from scratch in Photoshop' />
             </ProjectContainer>
 
         </Row>

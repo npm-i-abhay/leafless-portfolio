@@ -138,12 +138,14 @@ export const WorkCarouselData =
     
     ]
 export const workDesignCarouselOne=[
-'/design/moog.png',
-'/design/photoshop1.png',
-'/design/landscape.png',
 '/design/logos1.png',
 '/design/proms1.png',
 '/design/illustration.png',
+]
+export const workDesignCarouselTwo=[
+'/design/moog.png',
+'/design/photoshop1.png',
+'/design/landscape.png',
 ]
 // ==============buzzyBee
 export const ProjectData =[

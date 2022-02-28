@@ -25,10 +25,10 @@ import {
 // component imports
 import { CarouselVerticle } from '@/components/CarouselVerticle';
 import { MobCarousel } from '@/components/MobCarousel';
-
+import { ProjectHeading } from '@/components/ProjectHeading';
 
 // data imports
-import { WorkCarouselData,devData, designData, workDesignCarouselOne } from '@/props/props';
+import { WorkCarouselData,devData, designData, workDesignCarouselOne,workDesignCarouselTwo } from '@/props/props';
 import { MobImageCarousel } from '@/components/MobImageCarousel';
 
 
@@ -262,10 +262,13 @@ return <>
                     setToggle(!toggle)
                     }}/>
     </NavHeader>
-
+    <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} /> 
     <MobCarousel imgData={WorkCarouselData} dim={40}/>
+    <ProjectHeading headCol='#8B3AF3' mainHead={'Design Projects'} /> 
     <MobImageCarousel 
     imgData={workDesignCarouselOne} dim={40}/>
+    <MobImageCarousel 
+    imgData={workDesignCarouselTwo} dim={40}/>
 
 </>}
   
