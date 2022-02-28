@@ -7,8 +7,17 @@ import {FiLinkedin} from 'react-icons/fi'
 import {AiTwotoneMail} from 'react-icons/ai'
 
 
-import { FooterCont, IconContainer, QuickCont, QuickLinks, SocialCont, SocialLinks, Text } from './styles';
+import { 
+  FooterCont, 
+  IconContainer, 
+  QuickCont, 
+  QuickLinks, 
+  SocialCont, 
+  SocialLinks, 
+  Text } from './styles';
 
+
+import { ProjectHeading } from '../ProjectHeading';
 
 export const Footer = () => {
   const {theme} = useTheme()
@@ -16,9 +25,7 @@ export const Footer = () => {
   return (
   <FooterCont bgCol={comp_theme[theme].footer} >
     <SocialCont>
-      <Text>
-        Get In Touch
-      </Text>
+      <ProjectHeading mainHead='Get in Touch' />
       <SocialLinks>
         
         <IconContainer onClick={()=>{window.location = "https://github.com/npm-i-abhay"}}>
@@ -40,7 +47,7 @@ export const Footer = () => {
     </SocialCont>
     
     <QuickCont>
-      <Text>Quick Links</Text>
+      <ProjectHeading mainHead='Quick Links' />
       <QuickLinks>
         <Text onClick={()=>{router.push('/about')}} >About</Text>
         <Text onClick={()=>{router.push('/work')}} >Showcase</Text>

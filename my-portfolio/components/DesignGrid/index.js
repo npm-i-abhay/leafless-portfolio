@@ -48,14 +48,14 @@ return (
         <Row>
             {designData1.map((o,i)=>(<ProjectContainer key={i} >
                 <ImageContainer width='80%' maxHeight='95%' imgUrl={o.link}/>
-                <AboutMe txt={o.info} />
+                <AboutMe width='100%' txt={o.info} />
             </ProjectContainer>))}
         </Row>
 
         <Row>
             <ProjectContainer>
                 <ImageContainer width='100%' maxHeight='90%' imgUrl='/design/landscape.png'/>
-                <AboutMe txt='Digital painting made from scratch in Photoshop' />
+                <AboutMe width='100%' txt='Digital painting made from scratch in Photoshop' />
             </ProjectContainer>
 
         </Row>
@@ -63,7 +63,7 @@ return (
         <Row>
             {designData2.map((o,i)=>(<ProjectContainer key={i} >
                 <ImageContainer width='95%' maxHeight='90%' imgUrl={o.link}/>
-                <AboutMe txt={o.info} />
+                <AboutMe width='100%' txt={o.info} />
             </ProjectContainer>))}
 
 
@@ -73,7 +73,7 @@ return (
         {designData3.map((o,i)=>(
             <ProjectContainer key={i} >
                 <ImageContainer width='95%' maxHeight='90%' imgUrl={o.link}/>
-                <AboutMe txt={o.info} />
+                <AboutMe width='100%' txt={o.info} />
             </ProjectContainer>))}
         </Row>
             

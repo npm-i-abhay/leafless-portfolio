@@ -240,6 +240,7 @@ display:flex;
 justify-content:flex-end;
 width:100%;
 position:fixed;
+z-index:2;
 // backdrop-filter:blur(2px);
 // margin-bottom:10px;
 `

@@ -24,6 +24,83 @@ export const buzzDesign =[
 "/caseStudies/buzzy/buzzHigh2.png",
 ]
 
+// HOME PAGE DATA
+
+export const animPaths =[
+    '/animation/react.json',
+    '/animation/js.json',
+    '/animation/node.json',
+    '/animation/css3.json',
+    '/animation/figma.json',
+    '/animation/adobe.json',
+    
+    ]
+    export const techStackOne= 
+    [  
+    '/tech/react.png',
+    '/tech/javascript.png',
+    '/tech/php.png',
+    '/tech/expo.png',
+    '/tech/styled.png',
+    '/tech/Next.png',
+    '/tech/Node.png',
+    '/tech/Npm.png',
+    ]
+    export const techStackTwo= 
+    [  
+    '/tech/react.png',
+    '/tech/javascript.png',
+    '/tech/styled.png',
+    '/tech/Next.png',
+    '/tech/Node.png',
+    '/tech/Npm.png',
+    '/tech/story.png',
+    ]
+    
+
+
+// ANIMATION VARIANTS
+export const mainVariants = {
+    hidden:{
+      x:2000
+    },
+    visible:{
+      x:0,
+      transition:{ 
+        type:'spring', 
+        duration:1,
+        when:"beforeChildren",
+        staggerChildren:1
+      } 
+      
+    }
+  }
+  
+export const imgVariants = {
+    hidden:{
+      y:-1000,
+      x:-1500
+    },
+    visible:{
+      y: [0,-300,0,-200,0,-150,0,-100,0,-50,0,-30,0,-20,0,-10,0,-5,0],
+      scale:[.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,],
+      x:0,
+      rotate: [0, 0, 270, 270, 0],
+      transition:{
+        duration:2.5, 
+        type:'spring', 
+        damping:10
+  
+      }
+    }
+    ,
+  hover:{
+    rotate: [0, 0, 270, 270, 0],
+    transition:{duration:1, type:'spring'}
+  }
+  }
+  
+
 
 export const AboutData = {
     homeIntro:`A visionary using front-end development to augment the way communities consume virtual experiences and create innovative and cross-platform solutions for complex and technical problems. 

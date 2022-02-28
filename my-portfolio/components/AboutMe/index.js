@@ -6,10 +6,10 @@ import { comp_theme } from '@/utils/variables';
 
 const Container = styled.div`
 color:${props=>props.txtCol};
-width:40%;
+width:${props=>props.width};
 font-size:20px;
-margin:10px;
-// border:2px solid red;
+// margin:0 20px 0 20px;
+text-align:center;
 @media (max-width: 600px) {
   width:90%;
   text-align:center;
@@ -18,9 +18,9 @@ margin:10px;
 }
 `
 
-export const AboutMe = ({txt=""}) => {
+export const AboutMe = ({txt="", width='40%'}) => {
 
     const {theme, setTheme} = useTheme()
 
-  return <Container txtCol={comp_theme[theme].mainTxt} > {txt} </Container>;
+  return <Container width={width} txtCol={comp_theme[theme].mainTxt} > {txt} </Container>;
 };
