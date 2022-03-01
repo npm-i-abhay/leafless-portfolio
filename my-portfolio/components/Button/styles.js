@@ -12,9 +12,8 @@ justify-content:center;
 align-items:center;
 border-radius:4px;
 display:${props=>props.display};
-
 `
-export const ButtonCont = styled.div`
+export const ButtonCont = styled(motion.div)`
 padding:15px;
 cursor:pointer;
 `
