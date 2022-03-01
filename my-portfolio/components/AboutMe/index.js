@@ -13,7 +13,7 @@ text-align:${props=>props.align};
 @media (max-width: 600px) {
   width:100%;
   text-align:center;
-  border:2px solid red; 
+  // border:2px solid red; 
 
 }
 `

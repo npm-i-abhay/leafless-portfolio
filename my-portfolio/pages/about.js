@@ -150,10 +150,12 @@ const wrapperHam = ()=>
         // checking if the screen width is
     <>
 
-    <HeroContainer>
+    <ScrollImage img={<> 
               <ImageContainer  width ='50%' imgUrl={AboutData.heroImage}/>
               <AboutMe txt={AboutData.intro}/>
-    </HeroContainer>
+    
+    </>} />
+
             
               
     
