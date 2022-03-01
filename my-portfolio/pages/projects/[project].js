@@ -70,7 +70,7 @@ const [hammer, setHammer]= useState(false)
 const {theme,setTheme}= useTheme()
 const themer = comp_theme[theme]
 const [top, setScrollTop]=useState(0)
-const [animTop,setAnimTop] = useState(0)
+const [animTop,setAnimTop] = useState(100)
 const [animLeft,setAnimLeft] = useState(0)
 const [sWidth, setSwidth] = useState(0)
 
@@ -165,7 +165,7 @@ return (
         {project==='buzz'&&
             // animation disabled if project is not BuzzyBee
             <AnimCont
-                top={animTop < 300? animTop : 100 }
+                top={animTop < 400? animTop : 100 }
                 left={animLeft}>
                 <Animation path='/animation/bee.json'/>
             </AnimCont>
@@ -219,12 +219,16 @@ return (
     
     {/* add a blur filter behind the hero image that depicts the project color */}
         
-    
+        
         {/* sections */}
         {sWidth>=500? <SectionHeader heading={'Research + Analysis'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Research + Analysis'  /> }
 
         {/* This is where I would add the videos */}
-        <ProjectHero width='80vw' src={o.researchImage}/>
+        <div style={{marginLeft:sWidth>=500? '10%':null }}>
+            <ProjectHero width='80vw' src={o.researchImage}/>
+        </div>
+
+
     
         {sWidth>=500? <SectionHeader heading={'Problem Identification'}/> : <ProjectHeading subCol={o.subHeadCol} subHead='Problem Identification'  /> }
         <ProjectDescrip 
