@@ -56,50 +56,62 @@ export const animPaths =[
     '/tech/Npm.png',
     '/tech/story.png',
     ]
-    
+    export const techStackThree = [
+        '/tech/react.png',
+        '/tech/Node.png',
+        '/tech/mongo.png',
+        '/tech/Npm.png',
+    ]
 
-
+    export const designStack =[
+        '/designStack/figma.png',
+        '/designStack/illustrator.png',
+        '/designStack/indesign.png',
+        '/designStack/photoshop.png',
+        '/designStack/sketch.png',
+        '/designStack/motion.png',
+    ]
 // ANIMATION VARIANTS
 export const mainVariants = {
     hidden:{
-      x:2000
+    x:2000
     },
     visible:{
-      x:0,
-      transition:{ 
+    x:0,
+    transition:{ 
         type:'spring', 
         duration:1,
         when:"beforeChildren",
         staggerChildren:1
-      } 
-      
+    } 
+    
     }
-  }
-  
+}
+
 export const imgVariants = {
     hidden:{
-      y:-1000,
-      x:-1500
+    y:-1000,
+    x:-1500
     },
     visible:{
-      y: [0,-300,0,-200,0,-150,0,-100,0,-50,0,-30,0,-20,0,-10,0,-5,0],
-      scale:[.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,],
-      x:0,
-      rotate: [0, 0, 270, 270, 0],
-      transition:{
+    y: [0,-300,0,-200,0,-150,0,-100,0,-50,0,-30,0,-20,0,-10,0,-5,0],
+    scale:[.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,.2,1,],
+    x:0,
+    rotate: [0, 0, 270, 270, 0],
+    transition:{
         duration:2.5, 
         type:'spring', 
         damping:10
-  
-      }
+
+    }
     }
     ,
-  hover:{
+hover:{
     rotate: [0, 0, 270, 270, 0],
     transition:{duration:1, type:'spring'}
-  }
-  }
-  
+}
+}
+
 
 
 export const AboutData = {
@@ -138,7 +150,7 @@ export const WorkCarouselData =
             '/tech/Node.png',
 
         ],
-        description : 'Buzzy Bee is a cross platform organizer application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
+        description:'Buzzy Bee is a cross platform organizer application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
         route:'/projects/buzz'
     },
 
@@ -170,6 +182,20 @@ export const WorkCarouselData =
     },
 
 ];
+
+
+// Data for designCategory
+export const designCatData ={
+    designStack :[
+        '/designStack/figma.png',
+        '/designStack/illustrator.png',
+        '/designStack/indesign.png',
+        '/designStack/photoshop.png',
+        '/designStack/sketch.png',
+        '/designStack/motion.png',
+    ],
+        description :`Digital Design & Development program has equipped with a wide array of skills. I'm professionally trained and experienced in designing meaningful solutions using modern tool and technologies. I have a robust understanding of UI/UX as well as graphic design and I'm fluent in industry standard softwares and program to build aesthetically pleasing and seamless solutions.`,
+    }
 
 
 // carousel data for desktop work page 
@@ -302,4 +328,14 @@ export const ProjectData2 =[
         test:['/caseStudies/ecohow/ecoTest1.png','/caseStudies/ecohow/ecoTest2.png']
     }
 ]
+
+export const mixElixir={
+    techStack:[
+    '/tech/react.png',
+    '/tech/Node.png',
+    '/tech/mongo.png',
+    '/tech/Npm.png',
+],
+    description:'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences'
+}
 

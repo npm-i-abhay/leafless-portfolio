@@ -2,17 +2,17 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 export const InfoContainer = styled(motion.div)`
 display:flex;
-justify-content:space-around;
+// justify-content:space-around;
+// flex-direction:column;
 align-items:center;
-flex-wrap:wrap;
-// border:2px solid green;
-height:70vh;
+// flex-wrap:wrap;
+height:100%;
 @media (max-width: 500px) {
     flex-direction:column;
     align-items:center;
-    height:100%;
-    // justify-content:center;
+    justify-content:center;
     // background:green;
+    border:2px solid yellow;
 }
 `
 
@@ -28,7 +28,11 @@ flex-wrap:wrap;
 width:100%;
 justify-content:space-between;
 `
-
+export const AnimContainer  = styled(motion.div)`
+height:100%;
+width:50%;
+// border:2px solid blue;
+`
 export const TechStack = styled(motion.img)`
 height:70px;
 width:70px;
@@ -38,12 +42,13 @@ border-radius:${props => props.radius};
 export const ContentCont = styled.div`
 // border:2px solid blue;
 width:60%;
-height:100%;
+height:400px;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:space-around;
 order:-1;
+
 
 @media (max-width: 500px) {
     order:0;

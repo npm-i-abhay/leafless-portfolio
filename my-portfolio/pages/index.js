@@ -32,11 +32,16 @@ import {
   AboutData,
   animPaths,
   techStackOne,
-  techStackTwo
+  techStackTwo,
+  mainVariants,
+  imgVariants, 
+  designCatData,
+  designStack,
+  mixElixir
 } from '@/props/props';
 
 // Animation variants
-import { mainVariants,imgVariants } from '@/props/props'
+import { } from '@/props/props'
 
 // Component imports
 import {MyButton} from '@/components/Button'
@@ -57,6 +62,7 @@ import { CircleIndicator, SectionHeader } from '@/components/SectionHeaders'
 import { ScrollButton } from '@/components/ScrollTopButton'
 import { ProjectHeading } from '@/components/ProjectHeading'
 import { AnimateOnce } from '@/components/AnimateOnce'
+import { DesignCategory } from '@/components/DesignCategory'
 
 
 
@@ -204,25 +210,35 @@ const wrapperHam = ()=>
       <Tags txt='/>'/>
     </>} />
 
-    {/* <ScrollImage img={<> 
+    <ScrollImage img={<> 
     
       <Tags txt='<Img src="../'/>
         <ProjectInfo
           txtCol={themer.menu}
           heading='Mix Elixir'
-          stackData={techStackTwo}
+          description={mixElixir.description}
+          stackData={mixElixir.techStack}
           img='/caseStudies/mixElix/mixElixir.png'
       />
 
       <Tags txt='/>'/>
 
       
-    </>} /> */}
+    </>} />
     <SectionHeader
       heading="Design Projects"
 
     />
-    <DesignGrid/>
+    {/* <DesignGrid/> */}
+    <ScrollImage img={ <> 
+      <Tags txt='<Img src="../'/>
+      <DesignCategory 
+        txt='Interactive Showcase'
+        description={designCatData.description}
+        stackData={designCatData.designStack }
+      /> 
+      <Tags txt="/>"/>
+    </> } />
       </>
     :
     
@@ -230,7 +246,11 @@ const wrapperHam = ()=>
         <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} /> 
         <MobCarousel imgData={WorkCarouselData}  dim={40} />  
         <ProjectHeading headCol='#8B3AF3' mainHead={'Design Projects'} /> 
-        <DesignGrid/>
+        <DesignCategory  /> 
+        
+            
+
+        {/* <DesignGrid/> */}
       </>}
       {/* <div style={{color:'white'}}>djbdskjadsbdsak</div> */}
       <Footer/> 

@@ -7,7 +7,7 @@ import { ButtonCont, CtaButton } from './styles';
 
 export const MyButton = ({
   txt = "default",
-  width= "200px",
+  width= "250px",
   onButtClick=()=>{}
 
 }) => {

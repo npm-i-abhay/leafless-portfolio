@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { MyButton } from '../Button';
 import { ImageContainer } from '../ImageCard';
 import { WelcomeHeading } from '../HomeHeading';
-
+import { Animation } from '../Animation';
 // styled components imports
 import { 
     InfoContainer, 
@@ -15,12 +15,11 @@ import {
     TechStack,
     Explore,
     ContentCont,
-    
-    
+    AnimContainer
 } from './styles';
 import { ProjectTitle } from './styles';
 
-export const ProjectInfo = ({
+export const DesignCategory = ({
     description="some paragraph",
     stackData=[
         "https://placekitten.com/100/100",
@@ -36,7 +35,8 @@ export const ProjectInfo = ({
     whileInView,
     txtCol,
     heading,
-    txt
+    txt,
+    content
 
 }) => {
     
@@ -48,16 +48,15 @@ export const ProjectInfo = ({
             whileInView={whileInView}
             viewport={{ once: true }} 
             >
-            <ImageContainer 
-                inView={{opacity:1, transition:{duration:.5}, scale:[1.5,1]}}
-                imgUrl={img}/>
+            <AnimContainer >
+                <Animation path='/animation/design.json' />
+            </AnimContainer>
+
+            
+                
             
             <ContentCont >
-                <ProjectTitle
-                    className='projectHeadings'
-                    txtCol={txtCol} > 
-                    {heading} 
-                </ProjectTitle>
+                
                 <Description txtCol={comp_theme[theme].mainTxt}> 
                     {description}
                 </Description>
@@ -72,7 +71,7 @@ export const ProjectInfo = ({
                                             
                                             key={i} radius={radius} src={o}/>))}
                 </StackCont>
-                <MyButton 
+                <MyButton
                     txt={txt}
                     onButtClick={onButtClick}
                     />

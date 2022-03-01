@@ -9,7 +9,7 @@ color:${props=>props.txtCol};
 width:${props=>props.width};
 font-size:20px;
 // margin:0 20px 0 20px;
-text-align:center;
+text-align:${props=>props.align};
 @media (max-width: 600px) {
   width:90%;
   text-align:center;
@@ -18,9 +18,9 @@ text-align:center;
 }
 `
 
-export const AboutMe = ({txt="", width='40%'}) => {
+export const AboutMe = ({txt="", width='40%', align='left'}) => {
 
     const {theme, setTheme} = useTheme()
 
-  return <Container width={width} txtCol={comp_theme[theme].mainTxt} > {txt} </Container>;
+  return <Container align={align} width={width} txtCol={comp_theme[theme].mainTxt} > {txt} </Container>;
 };

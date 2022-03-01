@@ -1,17 +1,18 @@
 import styled from "styled-components";
-
-export const CtaButton = styled.div`
+import { motion } from "framer-motion";
+export const CtaButton = styled(motion.div)`
 border:1.5px solid #8B3AF3;
 color:${props => props.btnTxt};
 width:${props=>props.width};
-height:35px;
+height:45px;
 font-size:20px;
 display:flex;
 justify-content:center;
 align-items:center;
 border-radius:4px;
+
 `
 export const ButtonCont = styled.div`
-padding:10px;
+padding:15px;
 cursor:pointer;
 `
