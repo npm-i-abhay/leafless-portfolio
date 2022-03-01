@@ -4,5 +4,5 @@ export const TechStack = styled(motion.img)`
 height:70%;
 width:70%;
 object-fit:contain;
-
+cursor:pointer;
 `
