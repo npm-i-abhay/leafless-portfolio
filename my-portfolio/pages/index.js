@@ -15,7 +15,8 @@ import { Wrapper } from '@/styles/homeStyles'
 
 import { 
   IntroHeading,
-  Header
+  Header,
+  MarginContainer
 } from '@/styles/globalStyles'
 
 
@@ -132,6 +133,8 @@ const wrapperHam = ()=>
                 setToggle(!toggle)
                 }}
     />
+    <MarginContainer>
+
     <IntroHeading>
     
     {/* <LottieControl/> */}
@@ -146,6 +149,7 @@ const wrapperHam = ()=>
       <Tags txt='</button>'/>
       
       </IntroHeading>
+      </MarginContainer>
   
       {sWidth <= 550 && 
       <AboutMe txt={AboutData.homeIntroMob} />
@@ -266,7 +270,16 @@ const wrapperHam = ()=>
         <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} /> 
         <MobCarousel imgData={WorkCarouselData}  dim={40} />  
         <ProjectHeading headCol='#8B3AF3' mainHead={'Design Projects'} /> 
-        <DesignCategory  /> 
+        <ScrollImage img={ <> 
+      <Tags txt='<Img src="../'/>
+      <DesignCategory 
+        txt='Interactive Showcase'
+        description={designCatData.descriptionMob}
+        stackData={designCatData.designStack }
+        onButtClick={()=>{router.push('/work')}}
+      /> 
+      <Tags txt="/>"/>
+    </> } />
         
             
 

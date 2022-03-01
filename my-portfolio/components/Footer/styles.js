@@ -10,6 +10,7 @@ height:100%;
 background-color:${props => props.bgCol};
 justify-content:space-between;
 border-radius:20px 20px 0px 0px;
+margin-top:20px;
 `
 
 export const SocialCont = styled.div`

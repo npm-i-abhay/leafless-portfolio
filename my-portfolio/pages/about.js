@@ -8,7 +8,7 @@ import animationData from "@/public/animation/rock.json";
 
 
 import { Wrapper, HeroContainer, AboutContent, CarouselCont } from '@/styles/aboutStyles'
-import { Header } from '@/styles/globalStyles'
+import { Header, MarginContainer } from '@/styles/globalStyles'
 const aboutMe = 'My name is Abhay Bakshi (ub-hey). I’m a full stack developer and designer specializing in streamlined interactive development. I have a keen interest in building engaging solutions that helps communities across the globe. I’m a consistent learner and I aspire to augument digital experiences '
 
 // data  and other imports
@@ -135,7 +135,7 @@ const wrapperHam = ()=>
 
               
 
-
+    <MarginContainer>
       <HeroContainer>
         <WelcomeHeading 
           lineOne={welcome}
@@ -145,6 +145,7 @@ const wrapperHam = ()=>
           lineFive={welcome5}
           />
       </HeroContainer>
+    </MarginContainer>
       { sWidth >=650 ? 
         // checking if the screen width is
     <>

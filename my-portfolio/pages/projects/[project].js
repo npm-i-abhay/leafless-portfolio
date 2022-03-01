@@ -12,7 +12,7 @@ import ReactPlayer from 'react-player/lazy'
 import { ProjectData,ProjectData2 } from '@/props/props'
 
 // styled components 
-import { Header } from '@/styles/globalStyles'
+import { Header, MarginContainer } from '@/styles/globalStyles'
 
 import { 
     Wrapper,
@@ -160,7 +160,8 @@ return (
                     }}
         ham={hammer}
         />
-        
+    <MarginContainer>
+
         {project==='buzz'&&
             // animation disabled if project is not BuzzyBee
             <AnimCont
@@ -178,6 +179,7 @@ return (
             mainHead={ o.projectTitle}
             subHead={o.subHead}
             />
+        </MarginContainer>
         
         <HeroContainer>
         <ProjectDescrip

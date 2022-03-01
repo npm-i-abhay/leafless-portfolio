@@ -195,6 +195,7 @@ export const designCatData ={
         '/designStack/motion.png',
     ],
         description :`Digital Design & Development program has equipped with a wide array of skills. I'm professionally trained and experienced in designing meaningful solutions using modern tool and technologies. I have a robust understanding of UI/UX as well as graphic design and I'm fluent in industry standard softwares and program to build aesthetically pleasing and seamless solutions.`,
+        descriptionMob :`I have a robust understanding of UI/UX as well as graphic design and I'm fluent in industry standard softwares and program to build aesthetically pleasing and seamless solutions.`,
     }
 
 

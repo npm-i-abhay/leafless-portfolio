@@ -241,7 +241,10 @@ justify-content:space-between;
 width:100%;
 position:fixed;
 z-index:2;
-margin-bottom:20%;
-// backdrop-filter:blur(2px);
+// margin-bottom:;
+backdrop-filter:blur(3px);
 // margin-bottom:10px;
+`
+export const MarginContainer = styled.div`
+margin-top:100px;
 `

@@ -12,7 +12,7 @@ height:100%;
     align-items:center;
     justify-content:center;
     // background:green;
-    border:2px solid yellow;
+
 }
 `
 
@@ -57,7 +57,8 @@ order:-1;
     align-items:center;
     // background:red;
     height:500px;
-    margin-top:50px;
+    // margin-top:50px;
+    width:100%;
 }
 `
 
