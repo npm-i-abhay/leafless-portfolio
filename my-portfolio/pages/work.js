@@ -5,18 +5,17 @@ import { Router, useRouter } from 'next/router';
 import { useTheme } from '@/utils/provider';
 import { comp_theme, global_theme } from '@/utils/variables';
 
-import { HeaderHam } from '@/components/HeaderHam';
-import { Navigation } from '@/components/Navigation';
+
 
 // styled components
-import { MainCont } from '@/styles/globalStyles';
+import { MainCont,  Header, } from '@/styles/globalStyles';
 import { 
     CatButts, 
     CatCont, 
     CatName,
     BaseContainer,
     NavHeader,
-    Header,
+
     ProjectsContainer,
     RevealContainer
 
@@ -26,7 +25,9 @@ import {
 import { CarouselVerticle } from '@/components/CarouselVerticle';
 import { MobCarousel } from '@/components/MobCarousel';
 import { ProjectHeading } from '@/components/ProjectHeading';
-
+import { HeaderHam } from '@/components/HeaderHam';
+import { Navigation } from '@/components/Navigation';
+import { Logo } from '@/components/Logo';
 // data imports
 import { WorkCarouselData,devData, designData, workDesignCarouselOne,workDesignCarouselTwo } from '@/props/props';
 import { MobImageCarousel } from '@/components/MobImageCarousel';
@@ -102,11 +103,20 @@ const handleDes=()=>{
 }
 
 useEffect(()=>{setSource(data)},[data])
+const wrapperHam = ()=>
+{
+  if(hammer && toggle)
+      {
+            setHammer(!hammer)
+            setToggle(!toggle)
+      }
+}
 
 return <>
 
 {sWidth >= 800?
     <MainCont
+        onClick={sWidth>=500? wrapperHam: null }
         bgCol={global_theme[theme].body}
         initial={{x:"-100%"}}
         exit={{x:"-100%"}}
@@ -118,6 +128,7 @@ return <>
 
         <NavHeader>
                 <Header>
+                    <Logo/>
                     <HeaderHam 
                         onHamClick={()=>{ 
                         setHammer(!hammer)

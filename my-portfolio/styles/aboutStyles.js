@@ -4,16 +4,25 @@ export const Wrapper = styled(motion.div)`
 display:flex;
 flex-direction:column;
 height:100%;
+
+// @media (max-width: 500px) {
+//     // flex-direction:column;
+//     // width:120vw;
+//     // align-items:center;
+//     border:2px solid blue;
+
+}
+
 `
 
 export const HeroContainer = styled.div`
 display:flex;
-// border:2px solid red;
 justify-content:space-around;
 
 flex:1;
-// // @media (max-width: 600px) {
-//     flex-direction:column;
+//  @media (max-width: 500px) {
+//  flex-direction:column;
+// width:100vw;
 //     align-items:center;
 // }
 `

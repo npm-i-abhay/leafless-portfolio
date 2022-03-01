@@ -11,9 +11,9 @@ font-size:20px;
 // margin:0 20px 0 20px;
 text-align:${props=>props.align};
 @media (max-width: 600px) {
-  width:90%;
+  width:100%;
   text-align:center;
-  // border:2px solid red; 
+  border:2px solid red; 
 
 }
 `

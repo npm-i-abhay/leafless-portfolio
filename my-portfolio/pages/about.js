@@ -152,10 +152,10 @@ const wrapperHam = ()=>
 
     <HeroContainer>
               <ImageContainer  width ='50%' imgUrl={AboutData.heroImage}/>
-            
-                  <AboutMe txt={AboutData.intro}/>
-              
+              <AboutMe txt={AboutData.intro}/>
     </HeroContainer>
+            
+              
     
           <ScrollImage img={imgData.map((o,i)=>(<ProjectHero key={i} src={o} />))} />
 

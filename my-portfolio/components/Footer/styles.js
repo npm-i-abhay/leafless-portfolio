@@ -41,6 +41,7 @@ width:70%;
 display:flex;
 justify-content:space-around;
 font-size:20px;
+cursor:pointer;
 @media (max-width: 500px) {
     font-size:20px;
     width:90%;
