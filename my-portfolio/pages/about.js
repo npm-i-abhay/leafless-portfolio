@@ -34,6 +34,7 @@ import { MobImageCarousel } from '@/components/MobImageCarousel'
 import { Carousel } from '@/components/Caraousel'
 import { RockControlMob } from '@/components/RockScrollMob'
 import { ScrollButton } from '@/components/ScrollTopButton'
+import { Logo } from '@/components/Logo'
 // const Header = styled.div`
 // display:flex;
 // justify-content:flex-end;
@@ -89,13 +90,27 @@ const welcome5 =['M','e','e','t','Y','o','u']
 // 1) organize the code a bit better
 // 2) pass the name of the parent motion container's initial=''hidden and animate='visible' down to each and every motion children within that container so we don't have to specify those 2 lines again as long as the children's variant's key's are the same 
 
+
+
+const wrapperHam = ()=>
+{
+  if(hammer && toggle)
+      {
+            setHammer(!hammer)
+            setToggle(!toggle)
+      }
+}
+
   return (
     <Wrapper
+    onClick={sWidth>=500? wrapperHam: null }
     variants={variants}
     initial='hidden'
     animate='visible'>
+
       <Header>
       <ScrollButton/>
+      <Logo/>
         <HeaderHam 
             onHamClick={()=>{ 
             setHammer(!hammer)

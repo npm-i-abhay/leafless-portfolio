@@ -37,7 +37,8 @@ import {
   imgVariants, 
   designCatData,
   designStack,
-  mixElixir
+  mixElixir,
+  moveMe
 } from '@/props/props';
 
 // Animation variants
@@ -63,7 +64,7 @@ import { ScrollButton } from '@/components/ScrollTopButton'
 import { ProjectHeading } from '@/components/ProjectHeading'
 import { AnimateOnce } from '@/components/AnimateOnce'
 import { DesignCategory } from '@/components/DesignCategory'
-
+import { Logo } from '@/components/Logo'
 
 
 export default function Home() {
@@ -107,6 +108,7 @@ const wrapperHam = ()=>
     >
       <ScrollButton/>
       <Header>
+        <Logo/>
           <HeaderHam 
             onHamClick={()=>{ 
             setHammer(!hammer)
@@ -219,6 +221,23 @@ const wrapperHam = ()=>
           description={mixElixir.description}
           stackData={mixElixir.techStack}
           img='/caseStudies/mixElix/mixElixir.png'
+          display='none'
+      />
+
+      <Tags txt='/>'/>
+
+      
+    </>} />
+    <ScrollImage img={<> 
+    
+      <Tags txt='<Img src="../'/>
+        <ProjectInfo
+          txtCol={themer.menu}
+          heading='Move Me'
+          description={moveMe.description}
+          stackData={moveMe.techStack}
+          img='/caseStudies/mixElix/mixElixir.png'
+          display='none'
       />
 
       <Tags txt='/>'/>
@@ -236,6 +255,7 @@ const wrapperHam = ()=>
         txt='Interactive Showcase'
         description={designCatData.description}
         stackData={designCatData.designStack }
+        onButtClick={()=>{router.push('/work')}}
       /> 
       <Tags txt="/>"/>
     </> } />

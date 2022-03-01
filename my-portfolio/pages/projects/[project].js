@@ -50,6 +50,7 @@ import { VideoContainer } from '@/components/VideoComp'
 import { ScrollButton } from '@/components/ScrollTopButton'
 import { SectionHeader } from '@/components/SectionHeaders'
 import { NextProject } from '@/components/NextProject'
+import { Logo } from '@/components/Logo'
 export default function Project() {
  
 
@@ -117,16 +118,27 @@ window.onscroll = ()=>{
 
 console.log(data)
 
+const wrapperHam = ()=>
+{
+  if(hammer && toggle)
+      {
+            setHammer(!hammer)
+            setToggle(!toggle)
+      }
+}
+
+
 return (
 
     <>
     {data.map((o,i)=>(
         <Wrapper 
+        onClick={sWidth>=500? wrapperHam: null }
             // bgCol={o.projectCol}
-            key={i} >
+        key={i} >
         <Header>
         <ScrollButton/>
-        
+        <Logo/>
         <HeaderHam 
             onHamClick={()=>{ 
             setHammer(!hammer)

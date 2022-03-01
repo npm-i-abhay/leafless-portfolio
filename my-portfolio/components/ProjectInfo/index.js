@@ -36,7 +36,8 @@ export const ProjectInfo = ({
     whileInView,
     txtCol,
     heading,
-    txt
+    txt,
+    display
 
 }) => {
     
@@ -73,6 +74,7 @@ export const ProjectInfo = ({
                                             key={i} radius={radius} src={o}/>))}
                 </StackCont>
                 <MyButton 
+                    display={display}
                     txt={txt}
                     onButtClick={onButtClick}
                     />

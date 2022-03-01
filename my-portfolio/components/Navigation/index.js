@@ -28,11 +28,11 @@ export const Navigation = (
             title:"About",
             link:'/about'
         },
-        {
-            id:2,
-            title:"Showcase",
-            link:'/work'
-        },
+        // {
+        //     id:2,
+        //     title:"Showcase",
+        //     link:'/work'
+        // },
         {
             id:4,
             title:"Resume",

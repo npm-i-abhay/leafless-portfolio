@@ -336,6 +336,13 @@ export const mixElixir={
     '/tech/mongo.png',
     '/tech/Npm.png',
 ],
-    description:'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences'
+    description:'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences. The application uses a Dictionary Sorting algorithm to filter out drinks based on Name, Category, and Type of Glass. The user can also add upto 4 ingredients of their choice and the generator will use the functionality to provide suggestions based on user input.'
+}
+export const moveMe={
+    techStack:[
+    '/tech/javascript.png',
+    '/tech/Npm.png',
+],
+    description:'Move Me is a single page application that was built using vanilla Javascript as a part of our web development course LEVEL 2. This game was built to enhance our core understanding of javascript functionalities such as events and basic algorithms and functional programming'
 }
 

@@ -1,7 +1,11 @@
 import React from 'react';
 
-const index = () => {
-  return <div></div>;
+import { TechStack } from './styles';
+
+export const Logo = () => {
+  return <div style={{padding:20
+  }}> 
+    <TechStack src='/design/abLogo.svg' /> </div>;
 };
 
-export default index;
+

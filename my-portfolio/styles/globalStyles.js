@@ -237,10 +237,11 @@ padding-bottom:20px;
 export const Header = styled.div`
 // border:2px solid blue;
 display:flex;
-justify-content:flex-end;
+justify-content:space-between;
 width:100%;
 position:fixed;
 z-index:2;
+margin-bottom:20%;
 // backdrop-filter:blur(2px);
 // margin-bottom:10px;
 `

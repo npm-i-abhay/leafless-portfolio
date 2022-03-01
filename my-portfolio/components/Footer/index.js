@@ -14,7 +14,10 @@ import {
   QuickLinks, 
   SocialCont, 
   SocialLinks, 
-  Text } from './styles';
+  Text,
+  Heading,
+  TechStack
+} from './styles';
 
 
 import { ProjectHeading } from '../ProjectHeading';
@@ -25,21 +28,21 @@ export const Footer = () => {
   return (
   <FooterCont bgCol={comp_theme[theme].footer} >
     <SocialCont>
-      <ProjectHeading mainHead='Get in Touch' />
+      <Heading> Get in Touch </Heading>
       <SocialLinks>
         
         <IconContainer onClick={()=>{window.location = "https://github.com/npm-i-abhay"}}>
-          <BsGithub color='white'/>
+          <TechStack  src =' /tech/github.png' />
           <Text>Github</Text>
         </IconContainer>
         
         <IconContainer onClick={()=>{window.location = "https://www.linkedin.com/in/abhay-bakshi/"}}>
-          <FiLinkedin color='white'/>
+        <TechStack  src =' /tech/linkedIn.png' />
           <Text  >LinkedIn</Text>
         </IconContainer>
         
         <IconContainer onClick={()=>{window.location = "mailto:abhaybakshi8@gmail.com"}}>
-          <AiTwotoneMail color='white'/>
+        <TechStack  src =' /tech/mail.png' />
           <Text>Email</Text>
         </IconContainer>
       
@@ -47,7 +50,7 @@ export const Footer = () => {
     </SocialCont>
     
     <QuickCont>
-      <ProjectHeading mainHead='Quick Links' />
+    <Heading> Quick Links </Heading>
       <QuickLinks>
         <Text onClick={()=>{router.push('/about')}} >About</Text>
         <Text onClick={()=>{router.push('/work')}} >Showcase</Text>
