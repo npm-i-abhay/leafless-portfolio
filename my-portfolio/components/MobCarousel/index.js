@@ -125,7 +125,7 @@ return <Cont>
                   borderCol={themer.menu}
                     animate={{
                       width:i===index ?'80vw':'60vw', 
-                      height:i===index ?'85vh':'85vh', 
+                      height:i===index ?'95vh':'95vh', 
                       originX:0, 
                       originY:0, 
                       opacity:i===index?1:.5,
@@ -145,8 +145,8 @@ return <Cont>
                   // framer motion animation on swipe
                   initial={{width:0,height:0}}
                   animate={{
-                    width:i===index ?'100%':100, 
-                    height:i===index ?'50%':100, 
+                    width:i===index ?'100%':0, 
+                    height:i===index ?'50%':'50%', 
                     originX:0, 
                     originY:0,
                     }}

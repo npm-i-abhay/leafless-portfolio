@@ -155,6 +155,7 @@ export const WorkCarouselData =
         description:'Buzzy Bee is a cross platform organizer application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
         route:'/projects/buzz',
         display:'inline'
+
     },
 
     {
@@ -172,6 +173,7 @@ export const WorkCarouselData =
         display:'inline'
 
 
+
     },
 
     {
@@ -184,18 +186,22 @@ export const WorkCarouselData =
             '/tech/Npm.png',
         ],
         description :'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences.The application uses a Dictionary Sorting algorithm to filter out drinks based on Name, Category, and Type of Glass.',
-        display:'none'
+        display:'inline',
+        route:'https://github.com/nickbarr3160/mixElixir/tree/main/mixelixir'
 
     },
     {
-        title:'Move Me',
-        link:"/caseStudies/mixElix/mixElixir.png", 
+        title:'Young Academics',
+        link:"/caseStudies/young.png", 
         techStack:[
-            '/tech/javascript.png',
-            '/tech/Npm.png',
+        '/tech/wp.png',
+        '/tech/html.png',
+        '/tech/css.png',
+        '/tech/javascript.png',
         ],
-        description :'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences.',
-        display:'none'
+        description :`Young Academic is a commercial project for a Day Care center that is built using a CMS system and core javascript bridges. The website was aimed to be simple yet purposeful and functional. This project helped me gain critical insights on CMS systems and their integral integration with PHP and Javascript.`,
+        display:'inline'
+        
 
     },
 
@@ -214,6 +220,7 @@ export const designCatData ={
     ],
         description :`Digital Design & Development program has equipped with a wide array of skills. I'm professionally trained and experienced in designing meaningful solutions using modern tool and technologies. I have a robust understanding of UI/UX as well as graphic design and I'm fluent in industry standard softwares and program to build aesthetically pleasing and seamless solutions.`,
         descriptionMob :`I have a robust understanding of UI/UX as well as graphic design and I'm fluent in industry standard softwares and program to build aesthetically pleasing and seamless solutions.`,
+
     }
 
 
@@ -377,6 +384,7 @@ export const mixElixir={
     description:'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences. The application uses a Dictionary Sorting algorithm to filter out drinks based on Name, Category, and Type of Glass. The user can also add upto 4 ingredients of their choice and the generator will use the functionality to provide suggestions based on user input.',
     gitRoute:'https://github.com/nickbarr3160/mixElixir/tree/main/mixelixir'
 }
+
 
 
 export const young={

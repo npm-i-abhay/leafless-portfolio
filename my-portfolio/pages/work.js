@@ -256,6 +256,7 @@ return <>
 
     <NavHeader>
         <Header>
+            <Logo/>
             <HeaderHam 
                 onHamClick={()=>{ 
                 setHammer(!hammer)
