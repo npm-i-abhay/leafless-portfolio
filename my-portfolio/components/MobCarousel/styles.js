@@ -84,7 +84,7 @@ background:${props=>props.bgCol};
 border:none;
 border-radius:5px;
 color:${props=>props.txtCol};
-font-size:20px;
+font-size:16px;
 font-weight:bold;
 display:${props=>props.display};
 `
@@ -105,7 +105,7 @@ export const Description = styled.div`
 color:${props => props.txtCol};
 width:100%;
 // height:150px;
-font-size:18px;
+font-size:15px;
 text-align:center;
 // border:2px solid red;
 `
@@ -114,13 +114,14 @@ export const InfoContainer = styled.div`
 // border:2px solid green;
 width:100%;
 height:100%;
-padding:10px;
+// padding:10px;
 display:flex;
 flex-direction:column;
-justify-content:space-around;
+justify-content:space-evenly;
 align-items:center;
 `
 
 export const ProjectTitle = styled.h1`
 color:${props=>props.txtCol};
+font-size:24px;
 `
