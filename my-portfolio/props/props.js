@@ -200,7 +200,8 @@ export const WorkCarouselData =
         '/tech/javascript.png',
         ],
         description :`Young Academic is a commercial project for a Day Care center that is built using a CMS system and core javascript bridges. The website was aimed to be simple yet purposeful and functional. This project helped me gain critical insights on CMS systems and their integral integration with PHP and Javascript.`,
-        display:'inline'
+        display:'inline',
+        route:'https://www.youngacademicsclub.ca/'
         
 
     },
