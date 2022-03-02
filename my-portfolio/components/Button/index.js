@@ -15,7 +15,12 @@ export const MyButton = ({
   const {theme,setTheme} = useTheme()
 
   return (<ButtonCont  >
-            <CtaButton whileHover={{boxShadow:'inset 0 0 15px #8B3AF3', transition:{duration:2, type:'spring'}}} display={display}
+            <CtaButton 
+            whileHover={{
+              boxShadow:'inset 0 0 15px #8B3AF3', 
+              transition:{duration:2, type:'spring'}}} 
+              
+              display={display}
               width={width}
               btnTxt={comp_theme[theme].mainTxt} 
               onClick={onButtClick}

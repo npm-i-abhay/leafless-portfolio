@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { MyButton } from '../Button';
 import { ImageContainer } from '../ImageCard';
 import { WelcomeHeading } from '../HomeHeading';
-
+import { useRouter } from 'next/router';
 // styled components imports
 import { 
     InfoContainer, 
@@ -15,7 +15,8 @@ import {
     TechStack,
     Explore,
     ContentCont,
-    
+    Row,
+
     
 } from './styles';
 import { ProjectTitle } from './styles';
@@ -32,17 +33,22 @@ export const ProjectInfo = ({
     order=0,
     radius='5px',
     onButtClick=()=>{},
+    onButtClick2=()=>{},
     initial,
     whileInView,
     txtCol,
     heading,
     txt,
-    display
-
+    txt2,
+    display,
+    displayGit,
+    justify='space-around',
+    gitWidth,
+    sourceRoute
 }) => {
     
     const { theme, setTheme} = useTheme()
-    
+    const router = useRouter()
   return (
         <InfoContainer 
             initial={initial}
@@ -73,11 +79,26 @@ export const ProjectInfo = ({
                                             
                                             key={i} radius={radius} src={o}/>))}
                 </StackCont>
-                <MyButton 
-                    display={display}
-                    txt={txt}
-                    onButtClick={onButtClick}
-                    />
+                <Row justify={justify} >
+                    <MyButton 
+                        display={display}
+                        txt={txt}
+                        onButtClick={onButtClick}
+                        />
+                    <MyButton 
+                        display={displayGit}
+                        // display={display2}
+                        txt='View Source'
+                        onButtClick={()=>{ window.open(`${sourceRoute}`, '_blank')}}
+                        />
+                    {/* <MyButton 
+                        width={gitWidth}
+                        display={displayGit}
+                        txt='Source Code'
+                        onButtClick={onButtClick}
+                        /> */}
+
+                </Row>
                 
             </ContentCont>
 

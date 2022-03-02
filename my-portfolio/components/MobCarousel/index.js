@@ -31,7 +31,8 @@ const default_data = [
       "https://placekitten.com/500/500",
     ],
     description : 'this is a project card for mobile size ',
-    route: '/work'
+    route: '/work',
+    display:'inline'
 
   
   },
@@ -44,7 +45,8 @@ const default_data = [
       "https://placekitten.com/500/500",
     ],
     description : 'this is a project card for mobile size ',
-    route:'/'
+    route:'/',
+    display:'none'
   
   },
   {
@@ -56,7 +58,8 @@ const default_data = [
       "https://placekitten.com/500/500",
     ],
     description : 'this is a project card for mobile size ',
-    route:'/'
+    route:'/',
+    display:'none'
   },
   
 ]
@@ -169,6 +172,7 @@ return <Cont>
                       </StackCont>
 
                       <ProjectButton 
+                      display={o.display}
                         onClick={()=>{r.push(`${o.route}`)}}
                         bgCol={themer.menu}
                         txtCol={themer.mainTxt}> 

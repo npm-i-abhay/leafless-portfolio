@@ -39,7 +39,8 @@ import {
   designCatData,
   designStack,
   mixElixir,
-  moveMe
+  moveMe,
+  young
 } from '@/props/props';
 
 // Animation variants
@@ -193,6 +194,7 @@ const wrapperHam = ()=>
             img='/caseStudies/buzzy/buzzMockup.png'
             txt='View Case Study'
             onButtClick={()=>{router.push('/projects/buzz')}}
+            sourceRoute={ProjectData[0].gitRoute}
           />
       <Tags txt='/>'/>    
       
@@ -211,6 +213,8 @@ const wrapperHam = ()=>
           order={-1}
           img='/caseStudies/ecohow/ecoHowHero.png'
           txt='View Case Study'
+          sourceRoute={ProjectData2[0].gitRoute}
+
       />
 
       <Tags txt='/>'/>
@@ -226,6 +230,9 @@ const wrapperHam = ()=>
           stackData={mixElixir.techStack}
           img='/caseStudies/mixElix/mixElixir.png'
           display='none'
+          justify='center'
+          gitWidth='500px'
+          sourceRoute={mixElixir.gitRoute }
       />
 
       <Tags txt='/>'/>
@@ -237,11 +244,13 @@ const wrapperHam = ()=>
       <Tags txt='<Img src="../'/>
         <ProjectInfo
           txtCol={themer.menu}
-          heading='Move Me'
-          description={moveMe.description}
-          stackData={moveMe.techStack}
-          img='/caseStudies/mixElix/mixElixir.png'
+          heading='Young Academics'
+          description={young.description}
+          stackData={young.techStack}
+          img='/caseStudies/young.png'
           display='none'
+          justify='center'
+          sourceRoute={young.gitRoute}
       />
 
       <Tags txt='/>'/>

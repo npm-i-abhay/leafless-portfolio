@@ -86,6 +86,7 @@ border-radius:5px;
 color:${props=>props.txtCol};
 font-size:20px;
 font-weight:bold;
+display:${props=>props.display};
 `
 
 export const StackCont = styled.div`

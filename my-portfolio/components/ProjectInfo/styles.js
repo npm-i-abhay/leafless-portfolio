@@ -26,6 +26,7 @@ display:flex;
 flex-wrap:wrap;
 // background:red;
 width:100%;
+margin:10px;
 justify-content:space-between;
 `
 
@@ -64,3 +65,16 @@ color:${props=>props.txtCol};
 // color:${props => props.txtCol};
 
 // `
+
+export const Row= styled.div`
+display:flex;
+width:100%;
+height:100%;
+// border:2px solid yellow;
+justify-content:${props=>props.justify};
+align-items:center;
+padding:10px;
+@media (max-width: 500px) {
+    flex-direction:column;
+    }
+`

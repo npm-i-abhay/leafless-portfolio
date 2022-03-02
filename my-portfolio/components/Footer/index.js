@@ -31,17 +31,17 @@ export const Footer = () => {
       <Heading> Get in Touch </Heading>
       <SocialLinks>
         
-        <IconContainer onClick={()=>{window.location = "https://github.com/npm-i-abhay"}}>
+        <IconContainer onClick={()=>{ window.open("https://github.com/npm-i-abhay", '_blank')}}>
           <TechStack  src =' /tech/github.png' />
           <Text>Github</Text>
         </IconContainer>
         
-        <IconContainer onClick={()=>{window.location = "https://www.linkedin.com/in/abhay-bakshi/"}}>
+        <IconContainer onClick={()=>{ window.open("https://www.linkedin.com/in/abhay-bakshi/", '_blank')}}>
         <TechStack  src =' /tech/linkedIn.png' />
           <Text  >LinkedIn</Text>
         </IconContainer>
         
-        <IconContainer onClick={()=>{window.location = "mailto:abhaybakshi8@gmail.com"}}>
+        <IconContainer onClick={()=>{ window.open("mailto:abhaybakshi8@gmail.com", '_blank')}}>
         <TechStack  src =' /tech/mail.png' />
           <Text>Email</Text>
         </IconContainer>

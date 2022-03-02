@@ -51,6 +51,9 @@ import { ScrollButton } from '@/components/ScrollTopButton'
 import { SectionHeader } from '@/components/SectionHeaders'
 import { NextProject } from '@/components/NextProject'
 import { Logo } from '@/components/Logo'
+import { ProjectTeamInfo } from '@/components/ProjectTeamInfo'
+
+
 export default function Project() {
  
 
@@ -116,7 +119,7 @@ window.onscroll = ()=>{
 
 
 
-console.log(data)
+// console.log(data)
 
 const wrapperHam = ()=>
 {
@@ -180,7 +183,9 @@ return (
             subHead={o.subHead}
             />
         </MarginContainer>
-        
+    
+
+
         <HeroContainer>
         <ProjectDescrip
             width='90%'
@@ -195,7 +200,15 @@ return (
 
         </HeroContainer>
             
-        
+        <HeroContainer>
+            <ProjectTeamInfo
+                txtCol = {o.subHeadCol}
+                headCol={o.subHeadCol}
+                stackData={o.techStack}
+                route={o.gitRoute}
+                team={o.team}
+                />
+        </HeroContainer>
         <HeroContainer>
             {/* <ProjectHero 
             src={o.mockSource}

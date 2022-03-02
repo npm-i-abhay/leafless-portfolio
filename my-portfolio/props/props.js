@@ -42,7 +42,7 @@ export const animPaths =[
     '/tech/php.png',
     '/tech/expo.png',
     '/tech/styled.png',
-    '/tech/Next.png',
+    '/tech/github.png',
     '/tech/Node.png',
     '/tech/Npm.png',
     ]
@@ -55,6 +55,8 @@ export const animPaths =[
     '/tech/Node.png',
     '/tech/Npm.png',
     '/tech/story.png',
+    '/tech/github.png',
+
     ]
     export const techStackThree = [
         '/tech/react.png',
@@ -151,7 +153,8 @@ export const WorkCarouselData =
 
         ],
         description:'Buzzy Bee is a cross platform organizer application primarily built with React native & php. The app uses a smart sorting algorithim to provide smart availability',
-        route:'/projects/buzz'
+        route:'/projects/buzz',
+        display:'inline'
     },
 
     {
@@ -165,7 +168,9 @@ export const WorkCarouselData =
             '/tech/Npm.png',
         ],
         description : 'EcoHow is an interactive web app built using ReactJs that teaches users on proper ways of recycling & composting in an interactive & gamified manner',
-        route:'/projects/eco'
+        route:'/projects/eco',
+        display:'inline'
+
 
     },
 
@@ -178,7 +183,20 @@ export const WorkCarouselData =
             '/tech/mongo.png',
             '/tech/Npm.png',
         ],
+        description :'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences.The application uses a Dictionary Sorting algorithm to filter out drinks based on Name, Category, and Type of Glass.',
+        display:'none'
+
+    },
+    {
+        title:'Move Me',
+        link:"/caseStudies/mixElix/mixElixir.png", 
+        techStack:[
+            '/tech/javascript.png',
+            '/tech/Npm.png',
+        ],
         description :'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences.',
+        display:'none'
+
     },
 
 ];
@@ -289,8 +307,16 @@ export const ProjectData =[
         ],
         gif1:'/caseStudies/ecohow/ecoDev1.png',
         gif2:'/caseStudies/ecohow/ecoDev2.png',
-        test:['/caseStudies/buzzy/buzzTest.png']
-        
+        test:['/caseStudies/buzzy/buzzTest.png'],
+        techStack:[ '/tech/react.png',
+        '/tech/javascript.png',
+        '/tech/php.png',
+        '/tech/expo.png',
+        '/tech/styled.png',
+        '/tech/Node.png',
+        '/tech/Npm.png',],
+        gitRoute:'https://github.com/npm-i-abhay/buzzyApp',
+        team:'Team of 5'
     }
 ]
 export const ProjectData2 =[
@@ -300,7 +326,8 @@ export const ProjectData2 =[
         titleCol:'',
         subHead:'One Step Closer to Sustainability',
         subHeadCol:'#63B0BC',
-        description:`EcoHow is a intuitive web application education users on proper ways of recycling and composting`,
+        description:`EcoHow is a intuitive web application education users on proper ways of recycling and composting. Users are guided throughout the journey with prompts and hints on how to use the application.`,
+        description2:`There are several occasions where the user is prompted self-reflect on their habits and knowledge about sustainability. Finally, users can improve learning with our built-in game of drag and drop sorting.`,
         mockSource:'/caseStudies/ecohow/ecoHowHero.png',
         heroVideo:'/videos/eco/ecoHero.mp4',
         solVideo1:'/videos/eco/ecoSubcat.mp4',
@@ -312,7 +339,7 @@ export const ProjectData2 =[
         researchImage:'/caseStudies/ecohow/ecoUserResearch.png',
         persona1:'/caseStudies/ecohow/ecoPerson1.png',
         persona2:'/caseStudies/ecohow/ecoPerson2.png',
-        problemIdentification:'Learning is challending',
+        problemIdentification:`After surveying and synthesizing results from our primary and secondary research, it was clear that people quit learning either because they get bored or they don't find learning important because it doesn't serve a purpose. Our challenge was to build a solution that not only engages the use but also make them aware "why learning about sustainability is so important?"`,
         problemImage:'/caseStudies/ecohow/ecoPro.png',
         solutionDesign:`Our team critically researched the learning curve for our target demographic and identified what enhances the learning experience. We designed an intuitive application where the user goes through a journey where they get a chance to learn and reflect on their habits. Finally to incentivize and enhance the value of our application, we added a sorting game that asked the users to sort the waste in the correct bins. This encouraged engagement and enhanced the learning experience. `,
         solutionProcess1:'/caseStudies/ecohow/ecoMod1.png',
@@ -326,7 +353,17 @@ export const ProjectData2 =[
         ],
         gif1:'',
         gif2:'',
-        test:['/caseStudies/ecohow/ecoTest1.png','/caseStudies/ecohow/ecoTest2.png']
+        test:['/caseStudies/ecohow/ecoTest1.png','/caseStudies/ecohow/ecoTest2.png'],
+        techStack:[ '/tech/react.png',
+        '/tech/javascript.png',
+        '/tech/styled.png',
+        '/tech/Next.png',
+        '/tech/Node.png',
+        '/tech/Npm.png',
+        '/tech/story.png'],
+        gitRoute:'https://github.com/npm-i-abhay/final_EcoHow_repo',
+        team:'Team of 4'
+
     }
 ]
 
@@ -337,13 +374,20 @@ export const mixElixir={
     '/tech/mongo.png',
     '/tech/Npm.png',
 ],
-    description:'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences. The application uses a Dictionary Sorting algorithm to filter out drinks based on Name, Category, and Type of Glass. The user can also add upto 4 ingredients of their choice and the generator will use the functionality to provide suggestions based on user input.'
+    description:'Mix Elixir is a work in progress web app that generates cocktails based on Ingredients inputted by users filters drinks based on user preferences. The application uses a Dictionary Sorting algorithm to filter out drinks based on Name, Category, and Type of Glass. The user can also add upto 4 ingredients of their choice and the generator will use the functionality to provide suggestions based on user input.',
+    gitRoute:'https://github.com/nickbarr3160/mixElixir/tree/main/mixelixir'
 }
-export const moveMe={
+
+
+export const young={
     techStack:[
+    '/tech/wp.png',
+    '/tech/html.png',
+    '/tech/css.png',
     '/tech/javascript.png',
-    '/tech/Npm.png',
 ],
-    description:'Move Me is a single page application that was built using vanilla Javascript as a part of our web development course LEVEL 2. This game was built to enhance our core understanding of javascript functionalities such as events and basic algorithms and functional programming'
+    description:`Young Academic is a commercial project for a Day Care center that is built using a CMS system and core javascript bridges. The website was aimed to be simple yet purposeful and functional. This project helped me gain critical insights on CMS systems and their integral integration with PHP and Javascript. I was able to efficiently customized plugins and generate results that were tailored to the client's needs`,
+    gitRoute:'https://www.youngacademicsclub.ca/'
+
 }
 
