@@ -195,6 +195,8 @@ const wrapperHam = ()=>
             txt='View Case Study'
             onButtClick={()=>{router.push('/projects/buzz')}}
             sourceRoute={ProjectData[0].gitRoute}
+            justify='center'
+            displayGit='none'
           />
       <Tags txt='/>'/>    
       
@@ -214,7 +216,8 @@ const wrapperHam = ()=>
           img='/caseStudies/ecohow/ecoHowHero.png'
           txt='View Case Study'
           sourceRoute={ProjectData2[0].gitRoute}
-
+          justify='center'
+          displayGit='none'
       />
 
       <Tags txt='/>'/>

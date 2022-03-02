@@ -80,17 +80,18 @@ export const ProjectInfo = ({
                                             key={i} radius={radius} src={o}/>))}
                 </StackCont>
                 <Row justify={justify} >
-                    <MyButton 
-                        display={display}
-                        txt={txt}
-                        onButtClick={onButtClick}
-                        />
-                    <MyButton 
+                <MyButton 
                         display={displayGit}
                         // display={display2}
                         txt='View Source'
                         onButtClick={()=>{ window.open(`${sourceRoute}`, '_blank')}}
                         />
+                    <MyButton 
+                        display={display}
+                        txt={txt}
+                        onButtClick={onButtClick}
+                        />
+                
                     {/* <MyButton 
                         width={gitWidth}
                         display={displayGit}
