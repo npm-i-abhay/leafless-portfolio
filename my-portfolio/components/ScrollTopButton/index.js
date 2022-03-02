@@ -14,8 +14,8 @@ useEffect(()=>{
     const scrollHeight = document.body.scrollHeight
 
     window.onscroll=()=>{
-        console.log(scrollHeight) 
-        console.log(scrolled) 
+        // console.log(scrollHeight) 
+        // console.log(scrolled) 
         setScrolled (window.scrollY)
     }
 

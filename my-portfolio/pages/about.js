@@ -86,7 +86,7 @@ const welcome4 =['N','i','c','e','-' ,'To']
 const welcome3=[]
 // const welcome4 =['T','h','e','r','e',]
 const welcome5 =['M','e','e','t','Y','o','u']
-// varients allows us to
+// variants allows us to
 // 1) organize the code a bit better
 // 2) pass the name of the parent motion container's initial=''hidden and animate='visible' down to each and every motion children within that container so we don't have to specify those 2 lines again as long as the children's variant's key's are the same 
 
@@ -193,7 +193,6 @@ const wrapperHam = ()=>
         <HeroContainer>
           <ImageContainer imgUrl='/about/PPortrait.jpeg'/>
         </HeroContainer>
-
 
             <AboutMe txt={aboutMe}/>
 

@@ -15,7 +15,7 @@ import {
     CatName,
     BaseContainer,
     NavHeader,
-
+    MobCategoryCont,
     ProjectsContainer,
     RevealContainer
 
@@ -31,7 +31,8 @@ import { Logo } from '@/components/Logo';
 // data imports
 import { WorkCarouselData,devData, designData, workDesignCarouselOne,workDesignCarouselTwo } from '@/props/props';
 import { MobImageCarousel } from '@/components/MobImageCarousel';
-
+import { SectionHeader } from '@/components/SectionHeaders';
+import { WelcomeHeading } from '@/components/HomeHeading';
 
 
 
@@ -47,7 +48,7 @@ export default function Work  ({
         key:0
     })
     const [sWidth, setSwidth] = useState(null)
-
+    const welcome = ['D','e','v','e','l','o','m','e','n','t']
 useEffect(()=>{
     setSwidth(window.innerWidth)
  window.onresize=()=>{setSwidth(window.innerWidth)}
@@ -257,7 +258,9 @@ return <>
 
     <NavHeader>
         <Header>
+        
             <Logo/>
+
             <HeaderHam 
                 onHamClick={()=>{ 
                 setHammer(!hammer)
@@ -274,10 +277,20 @@ return <>
                     setHammer(!hammer)
                     setToggle(!toggle)
                     }}/>
-    </NavHeader>
-    <MarginContainer>
-        <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} /> 
-    </MarginContainer>
+        </NavHeader>
+
+
+    <MobCategoryCont
+        
+        >
+        {/* <SectionHeader heading={'Development Projects'} />  */}
+        Development Projects
+    
+        
+        
+        {/* <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} />  */}
+    </MobCategoryCont>
+
 
     <MobCarousel imgData={WorkCarouselData} dim={40}/>
     <ProjectHeading headCol='#8B3AF3' mainHead={'Design Projects'} /> 

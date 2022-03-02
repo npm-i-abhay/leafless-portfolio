@@ -67,6 +67,7 @@ import { ProjectHeading } from '@/components/ProjectHeading'
 import { AnimateOnce } from '@/components/AnimateOnce'
 import { DesignCategory } from '@/components/DesignCategory'
 import { Logo } from '@/components/Logo'
+import { BsConeStriped } from 'react-icons/bs'
 
 
 export default function Home() {
@@ -81,8 +82,8 @@ const [sWidth, setSwidth] = useState()
 useEffect(()=>{
   window.onload=()=>{setSwidth(window.innerWidth)}
   window.onresize=()=>{setSwidth(window.innerWidth)}
-  setSwidth(window.innerWidth)
-
+  console.log(sWidth)
+  console.log(window.innerWidth)
 // detecting when the screen resizes
 },[sWidth])
 

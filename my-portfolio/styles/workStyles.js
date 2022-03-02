@@ -141,3 +141,12 @@ justify-content:center;
     }
   }
 `
+export const MobCategoryCont = styled.div`
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+text-align:center;
+color:#8B3AF3;
+`
