@@ -275,7 +275,10 @@ return <>
                     setToggle(!toggle)
                     }}/>
     </NavHeader>
-    <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} /> 
+    <MarginContainer>
+        <ProjectHeading headCol='#8B3AF3' mainHead={'Development Projects'} /> 
+    </MarginContainer>
+
     <MobCarousel imgData={WorkCarouselData} dim={40}/>
     <ProjectHeading headCol='#8B3AF3' mainHead={'Design Projects'} /> 
     <MobImageCarousel 
