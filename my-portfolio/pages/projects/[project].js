@@ -139,7 +139,7 @@ return (
         onClick={sWidth>=500? wrapperHam: null }
             // bgCol={o.projectCol}
         key={i} >
-        <Header>
+        <Header blur='3px' >
         <ScrollButton/>
         <Logo/>
         <HeaderHam 

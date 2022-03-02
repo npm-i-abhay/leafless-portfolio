@@ -108,7 +108,7 @@ const wrapperHam = ()=>
     initial='hidden'
     animate='visible'>
 
-      <Header>
+      <Header blur='3px' >
       <ScrollButton/>
       <Logo/>
         <HeaderHam 

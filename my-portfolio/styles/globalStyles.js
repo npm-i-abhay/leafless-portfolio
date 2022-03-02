@@ -242,7 +242,7 @@ width:100%;
 position:fixed;
 z-index:2;
 // margin-bottom:;
-backdrop-filter:blur(3px);
+backdrop-filter:blur(${props=>props.blur});
 // margin-bottom:10px;
 `
 export const MarginContainer = styled.div`

@@ -8,7 +8,7 @@ import { comp_theme, global_theme } from '@/utils/variables';
 
 
 // styled components
-import { MainCont,  Header, } from '@/styles/globalStyles';
+import { MainCont,  Header, MarginContainer, } from '@/styles/globalStyles';
 import { 
     CatButts, 
     CatCont, 
@@ -124,7 +124,7 @@ return <>
         transition={{duration:.8,ease:[.6,.05,-.01,.9]}}
         >
     <BaseContainer>
-        
+    
 
         <NavHeader>
                 <Header>
@@ -148,8 +148,9 @@ return <>
         </NavHeader>
         
 
-   
+    
         <ProjectsContainer>
+        
         <CatCont>
             <CatButts
                 onClick={handleDev}

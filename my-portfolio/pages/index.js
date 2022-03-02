@@ -109,7 +109,7 @@ const wrapperHam = ()=>
       animate='visible'
     >
       <ScrollButton/>
-      <Header>
+      <Header blur='3px' >
         <Logo/>
           <HeaderHam 
             onHamClick={()=>{ 
