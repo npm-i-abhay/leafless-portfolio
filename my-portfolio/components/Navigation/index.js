@@ -36,7 +36,7 @@ export const Navigation = (
         {
             id:4,
             title:"Resume",
-            link:'/resume'
+            link:'/AbhayBakshi.pdf'
         },
     ]
     
@@ -76,7 +76,7 @@ export const Navigation = (
                         whileHover={{x:40}}
 
                         >
-                    <div onClick={()=>r.push(o.link)}>
+                    <div onClick={()=>{ o.title==='Resume'? window.open("/AbhayBakshi.pdf", '_blank'): r.push(o.link)}}>
                         {/* <span className='arrow'>
                         {
                                 <svg

@@ -55,7 +55,7 @@ export const Footer = () => {
         <Text onClick={()=>{router.push('/about')}} >About</Text>
         <Text onClick={()=>{router.push('/work')}} >Showcase</Text>
         <Text onClick={()=>{router.push('/')}} >Home</Text>
-        <Text onClick={()=>{router.push('')}} >Resume</Text>
+        <Text onClick={()=>{ window.open("/AbhayBakshi.pdf", '_blank')}} >Resume</Text>
       </QuickLinks>
     </QuickCont>
 
