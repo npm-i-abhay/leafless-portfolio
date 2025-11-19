@@ -6,4 +6,4 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 EXPOSE 3001
-CMD npm run dev
+CMD npm run dev -- -p 3001
